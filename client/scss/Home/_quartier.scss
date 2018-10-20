@@ -1,0 +1,66 @@
+.Home {
+    .home-quartier {
+        margin-top: 100px;
+        //
+        margin-bottom: 2000px;
+        //
+        width: 100%;
+
+        .title-section {
+            position: relative;
+            width: 100%;
+            height: 300px;
+
+            .background-title {
+                margin: 0;
+                position: absolute;
+                left: 50%; 
+                transform: translate(-50%);
+                top: 0px;
+                z-index: -1;
+                color: #333333;
+                opacity: 0.1;
+                font-size: 200px;
+                font-weight: 300;
+                white-space: nowrap;
+            }
+            .title {
+                margin: 0;
+                position: absolute;
+                left: 50%; 
+                transform: translate(-50%);
+                top: 150px;
+                z-index: 1;
+                color: black;
+                font-size: 75px;
+                font-weight: 400;
+            }
+        }
+
+        .quartier-carousel {
+            margin-top: 25px;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%);
+            height: 700px;
+            width: 700px;
+
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+
+            .description-control-container {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                height: 200px;
+                width: 100%;
+                background-color: #e0e0e0;
+                opacity: 0.8;
+            }
+        }
+        
+    }
+}
