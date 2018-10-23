@@ -25,9 +25,9 @@ export default class Navbar extends React.Component{
                 <div class="links-container">
                     <ul>
                         <li class="active"><Link to="/">ACCUEIL</Link></li>
-                        <li><Link to="/"> PROJET</Link></li>
-                        <li><Link to="/">UNITES</Link></li>
-                        <li><Link to="/">QUARTIER</Link></li>
+                        <li><Link to="/projet"> PROJET</Link></li>
+                        <li><Link to="/unites">UNITES</Link></li>
+                        <li><Link to="/quartier">QUARTIER</Link></li>
                     </ul>
                 </div>
             </div>

@@ -6,6 +6,9 @@ import './scss/App.scss';
 
 import HomeContainer from './routes/Home/HomeContainer';
 import NavbarContainer from './Navbar/NavbarContainer';
+import ProjetContainer from './routes/Projet/ProjetContainer';
+import QuartierContainer from './routes/Quartier/QuartierContainer';
+import UnitesContainer from './routes/Unites/UnitesContainer';
 
 export default class App extends React.Component{
 
@@ -33,6 +36,9 @@ export default class App extends React.Component{
                 <div>
                     <NavbarContainer />
                     <Route exact path="/" component={ HomeContainer } />
+                    <Route path="/projet" component={ ProjetContainer } />
+                    <Route path="/quartier" component={ QuartierContainer } />
+                    <Route path="/unites" component={ UnitesContainer } />
                 </div>
             </BrowserRouter>
         )
