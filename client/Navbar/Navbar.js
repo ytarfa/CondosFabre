@@ -16,6 +16,7 @@ export default class Navbar extends React.Component{
 
         let NavbarClass = this.props.ypos > 75 ? "Navbar active" : "Navbar";
 
+
         return (
             <div className={NavbarClass}>
                 <div class="logo-container">
@@ -24,10 +25,10 @@ export default class Navbar extends React.Component{
 
                 <div class="links-container">
                     <ul>
-                        <li class="active"><Link to="/">ACCUEIL</Link></li>
-                        <li><Link to="/projet"> PROJET</Link></li>
-                        <li><Link to="/unites">UNITES</Link></li>
-                        <li><Link to="/quartier">QUARTIER</Link></li>
+                        <li className={this.props.route == '/' ? "active" : ""}><Link to="/">ACCUEIL</Link></li>
+                        <li className={this.props.route == '/projet' ? "active" : ""}><Link to="/projet"> PROJET</Link></li>
+                        <li className={this.props.route == '/unites' ? "active" : ""}><Link to="/unites">UNITES</Link></li>
+                        <li className={this.props.route == '/quartier' ? "active" : ""}><Link to="/quartier">QUARTIER</Link></li>
                     </ul>
                 </div>
             </div>

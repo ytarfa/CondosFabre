@@ -3,7 +3,8 @@ import Navbar from './Navbar';
 
 const mapStateToProps = state => {
     return {
-        ypos: state.interfaceReducer.ypos
+        ypos: state.interfaceReducer.ypos,
+        route: state.routingReducer.route
     }
 }
 
