@@ -92,7 +92,7 @@ export default class Home extends React.Component{
 
                 <div class="home-header">
                     <div class="home-carousel">
-                        <img src="/images/placeholder.png"/>
+                        <img src="/images/facade.jpg"/>
                     </div>
 
                     <div class="info">
