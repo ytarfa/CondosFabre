@@ -22,7 +22,6 @@ export default class App extends React.Component{
     }
 
     componentDidMount() {
-        console.log('mounted')
         window.addEventListener('scroll', _.throttle(this.pushScrollPosition, 500));
     }
 

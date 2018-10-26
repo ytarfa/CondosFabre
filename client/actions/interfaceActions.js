@@ -1,4 +1,4 @@
-const PUSH_SCROLL_POSITION = 'PUSH_SCROLL_POSITION'
+const PUSH_SCROLL_POSITION = 'PUSH_SCROLL_POSITION';
 
 export function pushScrollValues(pos) {
     return {

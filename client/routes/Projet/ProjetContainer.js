@@ -1,12 +1,19 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import {connect} from 'react-redux';
+import { pushCurrentRoute } from '../../actions/routingActions';
 
-export default class ProjetContainer extends React.Component {
-    render() {
-        return (
-            <div>
-                
-            </div>
-        )
+import Projet from './Projet';
+
+const mapStateToProps = state => {
+    return {
+
     }
 }
+
+const mapDispatchToProps = {
+    pushCurrentRoute: pushCurrentRoute
+}
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+) (Projet);

@@ -55,6 +55,10 @@ export default class Home extends React.Component{
         }
     }
 
+    componentDidMount() {
+        this.props.pushCurrentRoute(this.props.location.pathname)
+    }
+
     render() {
 
         const carouselUnits = unitArray.units.map((unit, index) => 
