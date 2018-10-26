@@ -1,5 +1,6 @@
 import React from 'react';
 import unitArray from '../../units.json';
+import quartierDiapos from './quartierDiapos.json';
 import '../../scss/Home/main.scss';
 
 export default class Home extends React.Component{
@@ -7,9 +8,11 @@ export default class Home extends React.Component{
     constructor(props) {
         super(props);
         this.state = {
-            counter: 0
+            counter: 0,
+            plateauCounter: 0
         };
         this.counter = this.counter.bind(this);
+        this.plateauCounter = this.plateauCounter.bind(this);
     }
 
     counter(x) {
@@ -32,6 +35,26 @@ export default class Home extends React.Component{
         }
     }
 
+    plateauCounter(x) {
+        if (this.state.plateauCounter == -2) {
+            if (x==1) {
+                this.setState((state) => {
+                    return { plateauCounter: state.plateauCounter + x}
+                })
+            }
+        } else if (this.state.plateauCounter == 0) {
+            if (x==-1) {
+                this.setState((state) => {
+                    return { plateauCounter: state.plateauCounter + x}
+                })
+            }
+        } else {
+            this.setState((state) => {
+                return { plateauCounter: state.plateauCounter + x}
+            })
+        }
+    }
+
     render() {
 
         const carouselUnits = unitArray.units.map((unit, index) => 
@@ -45,6 +68,23 @@ export default class Home extends React.Component{
             >
                 <img src={"/images/units/" + unit.image} />
             </div>
+        )
+
+        const quartierCarousel = quartierDiapos.diapos.map((diapo, index) => 
+                <div class="diapo" key={index}
+                    style={{
+                        top: 0,
+                        left: index*700 + "px",
+                        // opacity: index == Math.abs(this.state.plateauCounter) ? '1' : '0',
+                        transform: 'translate('+ this.state.plateauCounter*700 + 'px)',
+                        transition: 'all 0.25s'
+                    }}
+                >
+                    <img src={"/images/quartierCarousel/" + diapo.image} />
+                    <div class="description">
+                        {diapo.description}
+                    </div>
+                </div>
         )
 
         return (
@@ -81,11 +121,13 @@ export default class Home extends React.Component{
                     </div>
 
                     <div class="quartier-carousel">
-                        <img src="/images/quartier-placeholder.jpg"/>
-                        <div class="description-control-container">
-
+                        <div class="diapos-container"> 
+                            {quartierCarousel}
                         </div>
                     </div>
+
+                    <button onClick={() => this.plateauCounter(-1)}> - </button>
+                    <button onClick={() => this.plateauCounter(1)}> + </button>
                 </div>
 
             </div>
