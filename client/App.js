@@ -4,8 +4,10 @@ const _ = require('lodash');
 
 import './scss/App.scss';
 
-import HomeContainer from './routes/Home/HomeContainer';
 import NavbarContainer from './Navbar/NavbarContainer';
+import ContactOverlayContainer from './components/ContactOverlayContainer';
+
+import HomeContainer from './routes/Home/HomeContainer';
 import ProjetContainer from './routes/Projet/ProjetContainer';
 import QuartierContainer from './routes/Quartier/QuartierContainer';
 import UnitesContainer from './routes/Unites/UnitesContainer';
@@ -33,6 +35,7 @@ export default class App extends React.Component{
         return (
             <BrowserRouter>
                 <div>
+                    <ContactOverlayContainer />
                     <NavbarContainer />
                     <Route exact path="/" component={ HomeContainer } />
                     <Route path="/projet" component={ ProjetContainer } />
