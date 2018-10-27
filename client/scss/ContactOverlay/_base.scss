@@ -16,11 +16,31 @@
             width: 40%;
             float: left;
             overflow: hidden;
-            background-color: green;
         }
         .formContainer {
+            position: relative;
             height: 100%;
             width: auto;
+
+            .closeButton {
+                position: absolute;
+                right: 25px;
+                top: 25px;
+                border-radius: 100%;
+                border: none;
+                background: none;
+                &:focus {
+                    outline:0;
+                }
+                i {
+                    padding: 10px;
+                }
+                transition: background-color 0.25s;
+
+                &:hover {
+                    background-color: #e3e3e3;
+                }
+            }
         }
     }
 }

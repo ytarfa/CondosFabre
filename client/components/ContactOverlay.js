@@ -15,13 +15,17 @@ export default class ContactOverlay extends React.Component {
                 }}
             >
                 <div class="overlay">
-                    <button
-                        onClick={this.props.closeOverlay}
-                    >X</button>
                     <div class="mapContainer">
                         <MapComponent/>
                     </div>
-                    <div class="formContainer"></div>
+                    <div class="formContainer">
+                        <button
+                            class="closeButton"
+                            onClick={this.props.closeOverlay}
+                        >
+                            <i class="fas fa-times fa-3x"></i>
+                        </button>
+                    </div>
                 </div>
             </div>
         )
