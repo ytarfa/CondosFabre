@@ -29,6 +29,7 @@ export default class Navbar extends React.Component{
                         <li className={this.props.route == '/projet' ? "active" : ""}><Link to="/projet"> PROJET</Link></li>
                         <li className={this.props.route == '/unites' ? "active" : ""}><Link to="/unites">UNITES</Link></li>
                         <li className={this.props.route == '/quartier' ? "active" : ""}><Link to="/quartier">QUARTIER</Link></li>
+                        <li class="contact-button"> <Link to='/'> CONTACTEZ-NOUS </Link> </li>
                     </ul>
                 </div>
             </div>
