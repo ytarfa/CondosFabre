@@ -10,5 +10,17 @@
         top: 50%; left: 50%;
         transform: translate(-50%, -50%);
         background-color: white;
+
+        .mapContainer {
+            height: 100%;
+            width: 40%;
+            float: left;
+            overflow: hidden;
+            background-color: green;
+        }
+        .formContainer {
+            height: 100%;
+            width: auto;
+        }
     }
 }

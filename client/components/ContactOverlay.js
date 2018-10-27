@@ -2,9 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import '../scss/ContactOverlay/main.scss';
+import MapComponent from './MapComponent';
 
 export default class ContactOverlay extends React.Component {
     render() {
+
+
         return (
             <div class="ContactOverlay"
                 style={{
@@ -15,7 +18,10 @@ export default class ContactOverlay extends React.Component {
                     <button
                         onClick={this.props.closeOverlay}
                     >X</button>
-                    <p> {this.props.open.toString()} </p>
+                    <div class="mapContainer">
+                        <MapComponent/>
+                    </div>
+                    <div class="formContainer"></div>
                 </div>
             </div>
         )
