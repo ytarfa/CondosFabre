@@ -71,6 +71,14 @@ export default class Home extends React.Component{
                 }}
             >
                 <img src={"/images/units/" + unit.image} />
+                <div class="description-section">
+                    <div class="price-container">
+                        <p> {unit.price} </p>
+                    </div>
+                    <div class="info-container">
+
+                    </div>
+                </div>
             </div>
         )
 
@@ -110,8 +118,16 @@ export default class Home extends React.Component{
                         <h1 class="title">Unités</h1>
 
                         <div class="button-container">
-                            <button onClick={() => this.counter(1)}> <i class="fas fa-chevron-left fa-3x"></i> </button>
-                            <button onClick={() => this.counter(-1)}> <i class="fas fa-chevron-right fa-3x"></i> </button>
+                            <button onClick={() => this.counter(1)}
+                                style={{
+                                    opacity: this.state.counter == 0 ? '0.2' : '1'
+                                }}
+                            > <i class="fas fa-chevron-left fa-3x"></i> </button>
+                            <button onClick={() => this.counter(-1)}
+                                style={{
+                                    opacity: this.state.counter == -5 ? '0.2' : '1'
+                                }}
+                            > <i class="fas fa-chevron-right fa-3x"></i> </button>
                         </div>
                     </div>
 

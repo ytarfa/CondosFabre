@@ -2,7 +2,7 @@
     "units":[
         {
             "_id": "1A",
-            "price": "759 000$",
+            "price": "759 000 $",
             "rooms": "10",
             "bedrooms": "1+2",
             "washrooms": "2+1",
@@ -11,7 +11,7 @@
         },
         {
             "_id": "1B",
-            "price": "739 000$",
+            "price": "739 000 $",
             "rooms": "10",
             "bedrooms": "1+2",
             "washrooms": "2+1",
@@ -20,7 +20,7 @@
         },
         {
             "_id": "2A",
-            "price": "575 000$",
+            "price": "575 000 $",
             "rooms": "7",
             "bedrooms": "2+0",
             "washrooms": "2+0",
@@ -29,7 +29,7 @@
         },
         {
             "_id": "2B",
-            "price": "549 000$",
+            "price": "549 000 $",
             "rooms": "7",
             "bedrooms": "2+0",
             "washrooms": "2+0",
@@ -38,7 +38,7 @@
         },
         {
             "_id": "3A",
-            "price": "699 000$",
+            "price": "699 000 $",
             "rooms": "7",
             "bedrooms": "2+0",
             "washrooms": "2+0",
@@ -47,7 +47,7 @@
         },
         {
             "_id": "3B",
-            "price": "679 000$",
+            "price": "679 000 $",
             "rooms": "7",
             "bedrooms": "2+0",
             "washrooms": "2+0",

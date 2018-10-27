@@ -40,7 +40,7 @@
                     background: none;
                     border-radius: 50%; border: none;
                     margin: 10px;
-                    transition: background-color 0.25s;
+                    transition: background-color 0.25s, opacity 0.25s;
                     &:focus {
                         outline:0;
                     }
@@ -63,7 +63,7 @@
                 display: inline-block;
                 height: 100%;
                 width: 500px;
-                background-color: #e3e3e3;
+                background-color: #f8f8f8;
                 margin-right: 25px;
 
                 img {
@@ -72,6 +72,33 @@
                     position: absolute;
                     top: 0; left: 0;
                     object-fit: cover;
+                }
+
+                .description-section {
+                    height: 100px;
+                    width: 100%;
+                    position: absolute;
+                    bottom: 0; left: 0;
+                    .price-container {
+                        position: relative;
+                        height: 100%;
+                        width: 200px;
+                        white-space: nowrap;
+                        float: left;
+                        p {
+                            position: absolute;
+                            top: 50%; left: 50%;
+                            transform: translate(-50%, -50%);
+                            margin: 0; padding: 0;
+                            font-size: 30px;
+                            font-weight: 500;
+                            font-family: 'Playfair Display', sans-serif;
+                        }
+                    }
+                    .info-container {
+                        height: 100%;
+                        overflow: hidden;
+                    }
                 }
             }
         }
