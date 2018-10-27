@@ -65,7 +65,7 @@ export default class Home extends React.Component{
             <div class="unit" key={index} 
                 style={{
                     transform: 'translate('+ this.state.counter*500 + 'px)',
-                    opacity: index == Math.abs(this.state.counter) ? '1' : '0.1',
+                    opacity: index == Math.abs(this.state.counter) ? '1' : index > Math.abs(this.state.counter) ? '0.1': '0',
                     pointerEvents: index == Math.abs(this.state.counter) ? 'auto' : 'none',
                     transition: 'all 0.25s'
                 }}
