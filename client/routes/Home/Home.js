@@ -109,8 +109,10 @@ export default class Home extends React.Component{
                         <h1 class="background-title">Unités</h1>
                         <h1 class="title">Unités</h1>
 
-                        <button onClick={() => this.counter(-1)}> - </button>
-                        <button onClick={() => this.counter(1)}> + </button>
+                        <div class="button-container">
+                            <button onClick={() => this.counter(1)}> <i class="fas fa-chevron-left fa-3x"></i> </button>
+                            <button onClick={() => this.counter(-1)}> <i class="fas fa-chevron-right fa-3x"></i> </button>
+                        </div>
                     </div>
 
                     <div class="unit-carousel">

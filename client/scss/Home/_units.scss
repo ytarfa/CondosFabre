@@ -31,6 +31,27 @@
                 font-size: 75px;
                 font-weight: 400;
             }
+
+            .button-container {
+                position: absolute;
+                left: 50%; transform: translate(-50%);
+                bottom: 90px;
+                button {
+                    background: none;
+                    border-radius: 50%; border: none;
+                    margin: 10px;
+                    transition: background-color 0.25s;
+                    &:focus {
+                        outline:0;
+                    }
+                    i {
+                        padding: 20px;
+                    }
+                    &:hover {
+                        background-color: #e3e3e3;
+                    }
+                }
+            }
         }
     
         .unit-carousel {
