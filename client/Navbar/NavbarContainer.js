@@ -1,5 +1,7 @@
 import { connect } from "react-redux";
+
 import Navbar from './Navbar';
+import { openOverlay } from '../actions/contactActions';
 
 const mapStateToProps = state => {
     return {
@@ -9,7 +11,7 @@ const mapStateToProps = state => {
 }
 
 const mapDispatchToProps = {
-
+    openContactOverlay: openOverlay
 }
 
 export default connect(
