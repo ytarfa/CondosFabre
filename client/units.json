@@ -6,7 +6,7 @@
             "rooms": "10",
             "bedrooms": "1+2",
             "washrooms": "2+1",
-            "floor": "Rez-de-chaussée",
+            "floor": "Rdc",
             "image": "U1A.jpg"
         },
         {
@@ -15,7 +15,7 @@
             "rooms": "10",
             "bedrooms": "1+2",
             "washrooms": "2+1",
-            "floor": "Rez-de-chaussée",
+            "floor": "Rdc",
             "image": "U1A.jpg"
         },
         {

@@ -1,7 +1,7 @@
 .Home {
     .home-units {
         margin-top: 100px;
-        height: 500px;
+        height: 600px;
 
         .title-controls-container {
             height: 100%;
@@ -75,10 +75,10 @@
                 }
 
                 .description-section {
-                    height: 100px;
+                    height: 150px;
                     width: 100%;
                     position: absolute;
-                    bottom: 0; left: 0;
+                    bottom: 50px; left: 0;
                     .price-container {
                         position: relative;
                         height: 100%;
@@ -98,6 +98,50 @@
                     .info-container {
                         height: 100%;
                         overflow: hidden;
+                        .info {
+                            div {
+                                margin: 0px 15px 0px 15px;
+                                display: inline-block;
+                            }
+                        }
+                    }
+                }
+                .button-container {
+                    position: absolute;
+                    bottom: 0; left: 0;
+                    width: 100%;
+                    height: 50px;
+                    background-color: #f8f8f8;
+                    a {
+                        font-weight: 500;
+                        font-family: 'Open-Sans', sans-serif;
+                        background-color: #7F9470;
+                        padding: 15px 20px 15px 20px;
+                        color: white;
+                        text-decoration: none;
+                        margin: auto;
+                        position: absolute;
+                        left: 50%; bottom: 20px;
+                        transform: translate(-50%);
+
+                        -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+                        -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+                        -ms-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+                        -o-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+                        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+                        -webkit-transition: box-shadow 0.25s ease-in-out;
+                        -moz-transition: box-shadow 0.25s ease-in-out;
+                        -ms-transition: box-shadow 0.25s ease-in-out;
+                        -o-transition: box-shadow 0.25s ease-in-out;
+                        transition: box-shadow 0.25s ease-in-out;
+
+                        &:hover {
+                            -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+                            -moz-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+                            -ms-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+                            -o-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+                            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+                        }
                     }
                 }
             }

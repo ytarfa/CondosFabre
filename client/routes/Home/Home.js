@@ -1,7 +1,11 @@
 import React from 'react';
-import unitArray from '../../units.json';
-import quartierDiapos from './quartierDiapos.json';
 import '../../scss/Home/main.scss';
+
+// Unit Carousel related imports
+import unitArray from '../../units.json';
+import CarouselUnit from './CarouselUnit';
+// Neighborhood Carousel related imports
+import quartierDiapos from './quartierDiapos.json';
 
 export default class Home extends React.Component{
 
@@ -62,24 +66,15 @@ export default class Home extends React.Component{
     render() {
 
         const carouselUnits = unitArray.units.map((unit, index) => 
-            <div class="unit" key={index} 
-                style={{
-                    transform: 'translate('+ this.state.counter*500 + 'px)',
-                    opacity: index == Math.abs(this.state.counter) ? '1' : index > Math.abs(this.state.counter) ? '0.1': '0',
-                    pointerEvents: index == Math.abs(this.state.counter) ? 'auto' : 'none',
-                    transition: 'all 0.25s'
-                }}
-            >
-                <img src={"/images/units/" + unit.image} />
-                <div class="description-section">
-                    <div class="price-container">
-                        <p> {unit.price} </p>
-                    </div>
-                    <div class="info-container">
-
-                    </div>
-                </div>
-            </div>
+            <CarouselUnit 
+                index={index}
+                counter={this.state.counter}
+                image={unit.image}
+                price={unit.price}
+                bedrooms={unit.bedrooms}
+                washrooms={unit.washrooms}
+                floor={unit.floor}
+            />
         )
 
         const quartierCarousel = quartierDiapos.diapos.map((diapo, index) => 
@@ -87,7 +82,6 @@ export default class Home extends React.Component{
                     style={{
                         top: 0,
                         left: index*700 + "px",
-                        // opacity: index == Math.abs(this.state.plateauCounter) ? '1' : '0',
                         transform: 'translate('+ this.state.plateauCounter*700 + 'px)',
                         transition: 'all 0.25s'
                     }}
