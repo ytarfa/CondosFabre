@@ -28,37 +28,21 @@ export default class CarouselUnits extends React.Component {
             >
                 <img src={"/images/units/" + this.props.image} />
 
-                <p class="condo-id">{this.props.id}</p>
-
-                <div class="description-section">
-
-                    <div class="price-container">
-                        <p> {this.props.price} </p>
+                <div class="description">
+                    <div class="price">
+                        <p>{this.props.price}</p>
                     </div>
-
-                    <div class="info-container">
-
-                        <div class="info">
-                            <div>
-                                <p> <i class="fas fa-street-view"></i> 1200 p2</p>
-                            </div>
-                            <div>
-                                <p> <i class="fas fa-bed"></i> {this.props.bedrooms} </p>
-                            </div>
-                            <div>
-                                <p> <i class="fas fa-building"></i> {this.props.floor} </p>
-                            </div>
-                            <div>
-                                <p> <i class="fas fa-bath"></i> {this.props.washrooms}</p>
-                            </div>
-                        </div>
-                        
+                    <div class="info">
+                        <ul>
+                            <li> <i class="fas fa-bed fa-fw"></i> {this.props.bedrooms} </li>
+                            <li> <i class="fas fa-bath fa-fw"></i> {this.props.washrooms} </li>
+                            <li> <i class="fas fa-street-view fa-fw"></i> 1200 p<sup>2</sup> </li>
+                            <li> <i class="fas fa-building fa-fw"></i> {this.props.floor} </li>
+                        </ul>
                     </div>
-
-                </div>
-
-                <div class="button-container">
-                    <a href="#"> EN SAVOIR PLUS </a>
+                    <div class="link">
+                        <a href="#">Plus d'information</a>
+                    </div>
                 </div>
             </div>
         )

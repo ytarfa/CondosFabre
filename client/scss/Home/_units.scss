@@ -1,7 +1,7 @@
 .Home {
     .home-units {
         margin-top: 100px;
-        height: 600px;
+        height: 550px;
 
         .title-controls-container {
             height: 100%;
@@ -54,8 +54,10 @@
             }
         }
     
+        // Individual unit card
         .unit-carousel {
             height: 100%;
+            // TO-DO set to auto
             width: 5000px;
 
             .unit {
@@ -63,8 +65,15 @@
                 display: inline-block;
                 height: 100%;
                 width: 500px;
+                padding-top: 400px;
+                box-sizing: border-box;
                 background-color: #f8f8f8;
                 margin-right: 25px;
+                -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+                -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+                -ms-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+                -o-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+                box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 
                 img {
                     height: 400px;
@@ -74,73 +83,45 @@
                     object-fit: cover;
                 }
 
-                .description-section {
-                    height: 150px;
+                .description {
                     width: 100%;
-                    position: absolute;
-                    bottom: 50px; left: 0;
-                    .price-container {
-                        position: relative;
-                        height: 100%;
-                        width: 200px;
-                        white-space: nowrap;
-                        float: left;
+                    height: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 0 25px 0 25px;
+                    box-sizing: border-box;
+                    .price {
                         p {
-                            position: absolute;
-                            top: 50%; left: 50%;
-                            transform: translate(-50%, -50%);
-                            margin: 0; padding: 0;
-                            font-size: 30px;
-                            font-weight: 500;
                             font-family: 'Playfair Display', sans-serif;
+                            font-size: 30px;
+                            text-align: center;
                         }
                     }
-                    .info-container {
-                        height: 100%;
-                        overflow: hidden;
-                        .info {
-                            div {
-                                margin: 0px 15px 0px 15px;
-                                display: inline-block;
+                    .info {
+                        font-family: 'Open-Sans', sans-serif;
+                        ul {
+                            padding: 0;
+                            margin: 0;
+                            list-style-type: none;
+                            li {
+                                opacity: 0.8;
+                                font-size: 13px;
+                                i {
+                                    padding-right: 5px;
+                                    color: #333333;
+                                }
+                                padding: 5px;
                             }
                         }
                     }
-                }
-                .button-container {
-                    position: absolute;
-                    bottom: 0; left: 0;
-                    width: 100%;
-                    height: 50px;
-                    background-color: #f8f8f8;
-                    a {
-                        font-weight: 500;
+                    .link {
                         font-family: 'Open-Sans', sans-serif;
-                        background-color: #7F9470;
-                        padding: 15px 20px 15px 20px;
-                        color: white;
-                        text-decoration: none;
-                        margin: auto;
-                        position: absolute;
-                        left: 50%; bottom: 20px;
-                        transform: translate(-50%);
-
-                        -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-                        -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-                        -ms-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-                        -o-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-                        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-                        -webkit-transition: box-shadow 0.25s ease-in-out;
-                        -moz-transition: box-shadow 0.25s ease-in-out;
-                        -ms-transition: box-shadow 0.25s ease-in-out;
-                        -o-transition: box-shadow 0.25s ease-in-out;
-                        transition: box-shadow 0.25s ease-in-out;
-
-                        &:hover {
-                            -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-                            -moz-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-                            -ms-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-                            -o-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-                            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+                        a {
+                            padding: 10px 20px 10px 20px;
+                            background-color: #7f9470;
+                            color: white;
+                            text-decoration: none;
                         }
                     }
                 }
