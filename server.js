@@ -5,7 +5,7 @@ const app = express();
 app.use('/client', express.static(path.resolve(__dirname, 'dist/client/')));
 app.use('/images', express.static(path.resolve(__dirname, 'images/')));
 
-app.get('/', (req, res) => {
+app.get('*', (req, res) => {
     res.sendFile(path.resolve(__dirname, 'dist/index.html'));
 });
 
