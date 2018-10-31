@@ -12,6 +12,8 @@ import ProjetContainer from './routes/Projet/ProjetContainer';
 import QuartierContainer from './routes/Quartier/QuartierContainer';
 import UnitesContainer from './routes/Unites/UnitesContainer';
 
+import SingleUnit from './routes/Unites/SingleUnit';
+
 export default class App extends React.Component{
 
     constructor(props){
@@ -40,7 +42,7 @@ export default class App extends React.Component{
                     <Route exact path="/" component={ HomeContainer } />
                     <Route path="/projet" component={ ProjetContainer } />
                     <Route path="/quartier" component={ QuartierContainer } />
-                    <Route path="/unites" component={ UnitesContainer } />
+                    <Route path="/unites" component={ SingleUnit } />
                 </div>
             </BrowserRouter>
         )
