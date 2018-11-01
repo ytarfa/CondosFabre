@@ -38,7 +38,7 @@
     }
 
     .general-description-section {
-        margin: 100px 150px 100px 150px;
+        margin: 150px 150px 100px 150px;
         display: flex;
         justify-content: center;
         font-family: 'Open-sans', sans-serif;
@@ -111,14 +111,63 @@
     }
 
     .location-description-section {
+        position: relative;
         margin-top: 100px;
-        margin-bottom: 100px;
+        margin-bottom: 125px;
         background-image: url(/images/placeholder-map.png);
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
         height: 300px;
         width: 100%;
+        .score-container {
+            position: absolute;
+            right: 50px;
+            bottom: -25px;
+            background-color: #e3e3e3;
+            -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+            -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+            -ms-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+            -o-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+            .score-paragraph {
+                width: 250px;
+                padding: 25px;
+                text-align: center;
+                margin: 0;
+            }
+            ul {
+                margin: 0;
+                padding: 0;
+                list-style-type: none;
+                font-family: 'Open Sans', sans-serif;
+                li {
+                    padding-bottom: 15px;
+                    text-align: center;
+                    i {
+                        border-radius: 50%;
+                        color: white;
+                        background-color: #1E80BC;
+                        padding: 10px;
+                    }
+                    p {
+                        display: inline;
+                        padding-left: 15px;
+                    }
+                }
+            }
+            a {
+                width: 100%;
+                background-color: #7f9470;
+                color: white;
+                text-decoration: none;
+                padding: 15px;
+                box-sizing: border-box;
+                font-family: 'Open-Sans', sans-serif;
+                display: block;
+                text-align: center;
+            }
+        }
     }
 
     .contact-cta-section {

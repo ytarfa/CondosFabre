@@ -15,16 +15,6 @@ export default class SingleUnit extends React.Component {
 
                 <div class="general-description-section">
                     <div class="general-info">D’une superficie totale de 2134 à 2148 pieds carrés, cette unité sur deux étages vous propose un espace de vie généreux et contemporain. Au rez-de-chaussée, vous retrouverez le salon jumelé à la cuisine et la salle à manger, une salle d’eau, ainsi qu’une chambre avec walk-in et salle de bain privée. En descendant au sous-sol, vous atteindrez la salle de séjour ainsi que les deux autres chambres, une salle de bain et un espace de rangement.</div>
-                    {/* <div class="general-description">
-                        <ul>
-                            <li> <i class="fas fa-angle-right"></i> Facade design aux lignes très épurées </li>
-                            <li> <i class="fas fa-angle-right"></i> Toiture elastometre </li>
-                            <li> <i class="fas fa-angle-right"></i> Robinetterie haut de gamme </li>
-                            <li> <i class="fas fa-angle-right"></i> Chauffage par convecteur </li>
-                            <li> <i class="fas fa-angle-right"></i> Thermopompe et air climatisé mural </li>
-                            <li> <i class="fas fa-angle-right"></i> Échangeur d'air </li>
-                        </ul>
-                    </div> */}
                     <div class="features">
                         <ul>
                                 <li> <i class="fas fa-bed fa-fw"></i> <p>2+1 chambres</p> </li>
@@ -120,8 +110,14 @@ export default class SingleUnit extends React.Component {
                 </div>
 
                 <div class="location-description-section">
-                    {/* MAP */}
-                    <div class="neighborhood-container"></div>
+                    <div class="score-container">
+                        <p class="score-paragraph">Lorem ispum dolor amet. Plateau Mont Royal lorem ipsum.</p>
+                        <ul>
+                            <li><i class="fas fa-walking fa-fw"></i><p>Walkscore: 94</p></li>
+                            <li><i class="fas fa-bicycle fa-fw"></i><p>Bikescore: 94</p></li>
+                        </ul>
+                        <a> Plus d'information </a>
+                    </div>
                 </div>
 
                 <div class="contact-cta-section">
