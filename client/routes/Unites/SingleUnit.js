@@ -2,6 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import '../../scss/SingleUnit/main.scss';
 
+import MapComponent from '../../components/MapComponent';
+
 export default class SingleUnit extends React.Component {
     render() {
         return (
@@ -110,6 +112,7 @@ export default class SingleUnit extends React.Component {
                 </div>
 
                 <div class="location-description-section">
+                    <MapComponent />
                     <div class="score-container">
                         <p class="score-paragraph">Lorem ispum dolor amet. Plateau Mont Royal lorem ipsum.</p>
                         <ul>
