@@ -8,13 +8,14 @@ export default class SingleUnit extends React.Component {
             <div class="SingleUnit">
                 <div class="header-container">
                     <img src="/images/units/U1A.jpg"/>
-                    <h1> Condo 1A </h1>
+                    <div class="quick-info">
+                        <h1> Condo 1A </h1>
+                    </div>
                 </div>
 
                 <div class="general-description-section">
                     <div class="general-info">D’une superficie totale de 2134 à 2148 pieds carrés, cette unité sur deux étages vous propose un espace de vie généreux et contemporain. Au rez-de-chaussée, vous retrouverez le salon jumelé à la cuisine et la salle à manger, une salle d’eau, ainsi qu’une chambre avec walk-in et salle de bain privée. En descendant au sous-sol, vous atteindrez la salle de séjour ainsi que les deux autres chambres, une salle de bain et un espace de rangement.</div>
-                    <div class="general-description">
-                        {/* <h2> Avantages </h2> */}
+                    {/* <div class="general-description">
                         <ul>
                             <li> <i class="fas fa-angle-right"></i> Facade design aux lignes très épurées </li>
                             <li> <i class="fas fa-angle-right"></i> Toiture elastometre </li>
@@ -23,8 +24,15 @@ export default class SingleUnit extends React.Component {
                             <li> <i class="fas fa-angle-right"></i> Thermopompe et air climatisé mural </li>
                             <li> <i class="fas fa-angle-right"></i> Échangeur d'air </li>
                         </ul>
+                    </div> */}
+                    <div class="features">
+                        <ul>
+                                <li> <i class="fas fa-bed fa-fw"></i> <p>2+1 chambres</p> </li>
+                                <li> <i class="fas fa-bath fa-fw"></i> <p>2+1 salles de bain</p> </li>
+                                <li> <i class="fas fa-street-view fa-fw"></i> <p>1200 p<sup>2</sup></p> </li>
+                                <li> <i class="fas fa-building fa-fw"></i> <p>Rez-de-Chaussée</p> </li>
+                        </ul>
                     </div>
-                    <div class="features"></div>
                 </div>
 
                 <div class="room-description-section">
@@ -107,7 +115,7 @@ export default class SingleUnit extends React.Component {
                     </table>
                     </div>
                     <div class="plan">
-                        <img src="/images/units/plan1A.jpg" />
+                        <img src="/images/units/plan1A.png" />
                     </div>
                 </div>
 
@@ -118,7 +126,9 @@ export default class SingleUnit extends React.Component {
 
                 <div class="contact-cta-section">
                     <p>Nous vous invitons à venir voir de plus près ce beau projet dans nos bureaux où nous vous avons aménagé une belle salle de montre qui vous permettra de vous projeter dans votre nouveau nid douillet tout neuf...</p>
-                    <a> Contact Button </a>
+                    <div class="link-container">
+                        <a> Contactez Nous ! </a>
+                    </div>
                 </div>
             </div>
         )
