@@ -107,9 +107,6 @@ export default class SingleUnit extends React.Component {
                         </tbody>
                     </table>
                     </div>
-                    {/* <div class="plan">
-                        <img src="/images/units/plan1A.png" />
-                    </div> */}
                     <PlanComponent />
                 </div>
 
