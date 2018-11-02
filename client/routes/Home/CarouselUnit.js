@@ -41,7 +41,7 @@ export default class CarouselUnits extends React.Component {
                         </ul>
                     </div>
                     <div class="link">
-                        <a href="#">Plus d'information</a>
+                        <a href="/unites">Plus d'information</a>
                     </div>
                 </div>
             </div>

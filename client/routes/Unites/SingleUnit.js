@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import '../../scss/SingleUnit/main.scss';
 
 import MapComponent from '../../components/MapComponent';
+import PlanComponent from './PlanComponent';
 
 export default class SingleUnit extends React.Component {
     render() {
@@ -106,9 +107,10 @@ export default class SingleUnit extends React.Component {
                         </tbody>
                     </table>
                     </div>
-                    <div class="plan">
+                    {/* <div class="plan">
                         <img src="/images/units/plan1A.png" />
-                    </div>
+                    </div> */}
+                    <PlanComponent />
                 </div>
 
                 <div class="location-description-section">
