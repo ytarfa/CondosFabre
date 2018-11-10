@@ -37,13 +37,21 @@
             }
         }
 
+        .quartier-info-section {
+            width: 100%;
+            text-align: center;
+            p {
+                margin: auto;
+                padding: 0;
+                width: 600px;
+            }
+        }
+
         .quartier-carousel {
             margin-top: 25px;
-            position: absolute;
-            left: 50%;
-            transform: translate(-50%);
             height: 700px;
-            width: 700px;
+            width: 1000px;
+            margin: auto;
 
             .description-control-container {
                 position: absolute;
@@ -58,8 +66,9 @@
             .diapos-container {
                 position: relative;
                 height: 100%;
-                width: 100%;
+                width: 50%;
                 overflow: hidden;
+                float: left;
                 .diapo {
                     position: absolute;
                     height: 100%;
@@ -68,6 +77,50 @@
                         height: 100%;
                         width: 100%;
                         object-fit: cover;
+                    }
+                }
+            }
+            .description-container {
+                position: relative;
+                width: 50%;
+                height: 100%;
+                float: right;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                background-color: #F8F8F8;
+                .description {
+                    position: relative;
+                    height: 500px;
+                    p {
+                        width: 80%;
+                        position: absolute;
+                        top: 50%; left: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+                }
+                .controls {
+                    height: 100px;
+                    width: 100%;
+                    .button-container {
+                        position: absolute;
+                        left: 50%; transform: translate(-50%);
+                        bottom: 90px;
+                        button {
+                            background: none;
+                            border-radius: 50%; border: none;
+                            margin: 10px;
+                            transition: background-color 0.25s, opacity 0.25s;
+                            &:focus {
+                                outline: 0;
+                            }
+                            i {
+                                padding: 20px;
+                            }
+                            &:hover {
+                                background-color: #E3E3E3;
+                            }
+                        }
                     }
                 }
             }
