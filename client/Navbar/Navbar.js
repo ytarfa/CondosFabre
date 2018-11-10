@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Link} from 'react-router-dom';
 import '../scss/Navbar/base.scss';
+import ReactTooltip from 'react-tooltip';
 
 export default class Navbar extends React.Component{
 
@@ -26,9 +27,14 @@ export default class Navbar extends React.Component{
                 <div class="links-container">
                     <ul>
                         <li className={this.props.route == '/' ? "active" : ""}><Link to="/">ACCUEIL</Link></li>
-                        <li className={this.props.route == '/projet' ? "active" : ""}><Link to="/projet"> PROJET</Link></li>
                         <li className={this.props.route == '/unites' ? "active" : ""}><Link to="/unites">UNITES</Link></li>
-                        <li className={this.props.route == '/quartier' ? "active" : ""}><Link to="/quartier">QUARTIER</Link></li>
+
+                        <li data-tip data-for="coming-soon" className="coming-soon"><Link to="/projet"> PROJET</Link></li>
+                        <li data-tip data-for="coming-soon" className="coming-soon"><Link to="/quartier">QUARTIER</Link></li>
+                        <ReactTooltip id="coming-soon" type="info" place="top">
+                            <p>Coming Soon !</p>
+                        </ReactTooltip>
+
                         <li class="contact-button" onClick={this.props.openContactOverlay}> <a href="#"> CONTACTEZ-NOUS </a> </li>
                     </ul>
                 </div>
