@@ -1,11 +1,19 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import {connect} from 'react-redux';
+import { pushCurrentRoute } from '../../actions/routingActions';
 
-export default class UnitesContainer extends React.Component {
-    render() {
-        return (
-            <div>
-            </div>
-        )
+import Unites from './Unites';
+
+const mapStateToProps = state => {
+    return {
+
     }
 }
+
+const mapDispatchToProps = {
+    pushCurrentRoute: pushCurrentRoute
+}
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+) (Unites);

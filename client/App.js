@@ -42,7 +42,8 @@ export default class App extends React.Component{
                     <Route exact path="/" component={ HomeContainer } />
                     <Route path="/projet" component={ ProjetContainer } />
                     <Route path="/quartier" component={ QuartierContainer } />
-                    <Route path="/unites" component={ SingleUnit } />
+                    <Route exact path="/unites" component={ UnitesContainer } />
+                    <Route path="/unites/condo1a" component={ SingleUnit } />
                 </div>
             </BrowserRouter>
         )
