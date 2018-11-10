@@ -1,7 +1,6 @@
 .ContactOverlay {
     position: fixed;
     height: 100vh; width: 100vw;
-    padding: 25px;
     background-color: rgba(0, 0, 0, 0.4);
     z-index: 9999;
     .overlay {
@@ -20,7 +19,8 @@
         .formContainer {
             position: relative;
             height: 100%;
-            width: auto;
+            width: 60%;
+            float: right;
 
             .closeButton {
                 position: absolute;
@@ -41,6 +41,62 @@
                     background-color: #e3e3e3;
                 }
             }
+
+            padding: 50px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            .notre-courtier {
+                opacity: 0.4;
+                font-size: 40px;
+                text-align: center;
+            }
+            .contact-title {
+                font-size: 50px;
+                text-align: center;
+            }
+            .samia-info {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                margin-top: 75px;
+                margin-bottom: 75px;
+                img {
+                    float: left;
+                    height: 150px;
+                    width: 150px;
+                    border-radius: 50%;
+                    margin-right: 30px;
+                }
+                .info {
+                    margin-left: 30px;
+                    float: right;
+                }
+            }
+            .contact-info {
+                clear: both;
+                font-family: 'Open Sans', sans-serif;
+
+                ul {
+                    text-align: center;
+                    padding: 0;
+                    margin: 0;
+                    list-style-type: none;
+                    li {
+                        padding: 5px 0 5px 0;
+                        i {
+                            padding-right: 15px;
+                        }
+                        a {
+                            text-decoration: none;
+                            color: #365899;
+                        }
+                    }
+                }
+            }
+
         }
     }
 }
