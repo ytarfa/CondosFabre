@@ -1,5 +1,6 @@
 import React from 'react';
 import '../../scss/Home/main.scss';
+import Footer from '../../components/Footer';
 
 // Unit Carousel related imports
 import unitArray from '../../units.json';
@@ -179,6 +180,8 @@ export default class Home extends React.Component{
                     </div>
                 </div>
 
+            
+            <Footer />
             </div>
         )
     }
