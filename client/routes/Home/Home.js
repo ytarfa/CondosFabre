@@ -111,10 +111,16 @@ export default class Home extends React.Component{
                     <div class="home-carousel">
                         <img src="/images/facade.jpg"/>
                     </div>
-
-                    <div class="info">
-
-                    </div>
+                </div>
+                <div class="home-header-intro">
+                    <h1> Sentez vous à la maison au premier regard.</h1>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt fa-fw"></i> <p>Emplacement idéal au sein du Plateau</p> </li>
+                        <li><i class="fas fa-tree fa-fw"></i> <p>À deux pieds du parc LaFontaine</p> </li>
+                        <li><i class="fas fa-parking fa-fw"></i> <p> Places de parking disponibles </p> </li>
+                        <li><i class="fas fa-bicycle fa-fw"></i> <p> Location idéale pour se déplacer à pied ou à vélo </p> </li>
+                        <li><i class="fas fa-bus fa-fw"></i> <p> Lignes de bus et métros à proximité </p> </li>
+                    </ul>
                 </div>
 
                 <div class="home-units">
