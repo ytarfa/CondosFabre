@@ -6,6 +6,7 @@ import MapComponent from '../../components/MapComponent';
 // Unit Carousel related imports
 import unitArray from '../../units.json';
 import CarouselUnit from './CarouselUnit';
+import MobileCarouselUnit from './MobileCarouselUnit';
 // Neighborhood Carousel related imports
 import quartierDiapos from './quartierDiapos.json';
 
@@ -69,6 +70,17 @@ export default class Home extends React.Component{
 
         const carouselUnits = unitArray.units.map((unit, index) => 
             <CarouselUnit 
+                index={index}
+                counter={this.state.counter}
+                image={unit.image}
+                price={unit.price}
+                bedrooms={unit.bedrooms}
+                washrooms={unit.washrooms}
+                floor={unit.floor}
+            />
+        )
+        const mobileCarouselUnits = unitArray.units.map((unit, index) => 
+            <MobileCarouselUnit 
                 index={index}
                 counter={this.state.counter}
                 image={unit.image}
@@ -146,6 +158,11 @@ export default class Home extends React.Component{
 
                     <div class="unit-carousel">
                         {carouselUnits}
+                    </div>
+                    <div class="mobile-scroll-wrapper">
+                        <div class="mobile-unit-carousel">
+                            {mobileCarouselUnits}
+                        </div>
                     </div>
                 </div>
 
