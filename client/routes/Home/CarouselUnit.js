@@ -22,7 +22,6 @@ export default class CarouselUnits extends React.Component {
                 style={{
                     transform: 'translate('+ this.state.counter*500 + 'px)',
                     opacity: this.props.index == Math.abs(this.state.counter) ? '1' : this.props.index > Math.abs(this.state.counter) ? '0.1': '0',
-                    pointerEvents: this.props.index == Math.abs(this.state.counter) ? 'auto' : 'none',
                     transition: 'all 0.25s'
                 }}
             >
@@ -43,7 +42,12 @@ export default class CarouselUnits extends React.Component {
                         </ul>
                     </div>
                     <div class="link">
-                        <a href={"/unites/condo" +  this.props.unit._id}>Plus d'information</a>
+                        <a 
+                            href={"/unites/condo" +  this.props.unit._id}
+                            style={{
+                                pointerEvents: this.props.index == Math.abs(this.state.counter) ? 'all' : 'none'
+                            }}
+                        >Plus d'information</a>
                     </div>
                 </div>
             </div>
