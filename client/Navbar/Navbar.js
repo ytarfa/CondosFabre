@@ -14,6 +14,10 @@ export default class Navbar extends React.Component{
         }
     }
 
+    componentDidMount() {
+        console.log(this.props.route)
+    }
+
     render() {
 
         let NavbarClass = this.props.ypos > 75 ? "Navbar active" : "Navbar";
@@ -63,9 +67,9 @@ export default class Navbar extends React.Component{
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
                         <li className={this.props.route == '/' ? "nav-item active" : "nav-item"}>
-                            <a class="nav-link" href="#">HOME</a>
+                            <Link class="nav-link" to="/">HOME</Link>
                         </li>
-                        <li className={this.props.route == '/unites' ? "nav-item dropdown active" : "nav-item dropdown"}>
+                        <li className={this.props.route.includes('unites') ? "nav-item dropdown active" : "nav-item dropdown"}>
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 UNITES
                             </a>

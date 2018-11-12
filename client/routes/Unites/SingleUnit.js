@@ -6,6 +6,15 @@ import MapComponent from '../../components/MapComponent';
 import PlanComponent from './PlanComponent';
 
 export default class SingleUnit extends React.Component {
+
+    constructor(props) {
+        super(props);
+    }
+
+    componentDidMount() {
+        this.props.pushCurrentRoute(this.props.pathname);
+    }
+
     render() {
         return (
             <div class="SingleUnit">

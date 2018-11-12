@@ -13,7 +13,7 @@ import QuartierContainer from './routes/Quartier/QuartierContainer';
 import UnitesContainer from './routes/Unites/UnitesContainer';
 
 import units from './units.json';
-import SingleUnit from './routes/Unites/SingleUnit';
+import SingleUnitContainer from './routes/Unites/SingleUnitContainer';
 
 export default class App extends React.Component{
 
@@ -40,7 +40,7 @@ export default class App extends React.Component{
             <Route 
                 key={index} 
                 path={"/unites/condo" + unit._id} 
-                render={(props) => < SingleUnit {...unit} />} 
+                render={(props) => < SingleUnitContainer {...unit} pathname={"/unites/condo" + unit._id} />}
             />
         )
 
