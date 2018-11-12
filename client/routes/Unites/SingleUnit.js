@@ -113,12 +113,12 @@ export default class SingleUnit extends React.Component {
                 <div class="location-description-section">
                     <MapComponent />
                     <div class="score-container">
-                        <p class="score-paragraph">Lorem ispum dolor amet. Plateau Mont Royal lorem ipsum.</p>
+                        <p class="score-paragraph">4217-4223 Rue Fabre <br/> Montréal, QC H2J 3T5</p>
                         <ul>
                             <li><i class="fas fa-walking fa-fw"></i><p>Walkscore: 94</p></li>
-                            <li><i class="fas fa-bicycle fa-fw"></i><p>Bikescore: 94</p></li>
+                            <li><i class="fas fa-bicycle fa-fw"></i><p>Bikescore: 100</p></li>
                         </ul>
-                        <a> Plus d'information </a>
+                        <a href="https://www.walkscore.com/score/4217-rue-fabre-montr%C3%A9al-qc-canada" target="_blank"> Plus d'information </a>
                     </div>
                 </div>
 
