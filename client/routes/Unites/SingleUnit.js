@@ -12,7 +12,7 @@ export default class SingleUnit extends React.Component {
                 <div class="header-container">
                     <img src="/images/units/U1A.jpg"/>
                     <div class="quick-info">
-                        <h1> Condo 1A </h1>
+                        <h1> Condo {this.props._id} </h1>
                     </div>
                 </div>
 
@@ -20,10 +20,10 @@ export default class SingleUnit extends React.Component {
                     <div class="general-info">D’une superficie totale de 2134 à 2148 pieds carrés, cette unité sur deux étages vous propose un espace de vie généreux et contemporain. Au rez-de-chaussée, vous retrouverez le salon jumelé à la cuisine et la salle à manger, une salle d’eau, ainsi qu’une chambre avec walk-in et salle de bain privée. En descendant au sous-sol, vous atteindrez la salle de séjour ainsi que les deux autres chambres, une salle de bain et un espace de rangement.</div>
                     <div class="features">
                         <ul>
-                                <li> <i class="fas fa-bed fa-fw"></i> <p>2+1 chambres</p> </li>
+                                <li> <i class="fas fa-bed fa-fw"></i> <p>{this.props.rooms} chambres</p> </li>
                                 <li> <i class="fas fa-bath fa-fw"></i> <p>2+1 salles de bain</p> </li>
                                 <li> <i class="fas fa-street-view fa-fw"></i> <p>1200 p<sup>2</sup></p> </li>
-                                <li> <i class="fas fa-building fa-fw"></i> <p>Rez-de-Chaussée</p> </li>
+                                <li> <i class="fas fa-building fa-fw"></i> <p>{this.props.floor}</p> </li>
                         </ul>
                     </div>
                 </div>
