@@ -62,13 +62,22 @@
             -ms-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
             -o-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
             box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+            transition: 0.25s box-shadow;
+            pointer-events: none;
+            &:hover {
+                -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+                -moz-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+                -ms-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+                -o-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+            }
             .contact-section-items {
                 padding-bottom: 75px;
                 height: 100%;
                 box-sizing: border-box;
                 display: flex;
                 flex-direction: column;
-                justify-content: space-around;
+                justify-content: space-between;
                 ul {
                     list-style-type: none;
                     margin-bottom: 0;
@@ -83,6 +92,9 @@
                             margin-left: 10px;
                             display: inline;
                         }
+                    }
+                    &:first-of-type {
+                        padding-top: 25px;
                     }
                 }
                 ul.contact-info {
@@ -116,6 +128,8 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                pointer-events: all;
+                cursor: pointer;
                 p {
                     color: white;
                     padding: 0;
