@@ -37,7 +37,11 @@ export default class App extends React.Component{
     render() {
 
         let unitRoutes = units.units.map((unit, index) => 
-            <Route path={"/unites/condo" + unit._id} component={ SingleUnit } key={index} />
+            <Route 
+                key={index} 
+                path={"/unites/condo" + unit._id} 
+                render={(props) => < SingleUnit {...unit} />} 
+            />
         )
 
         return (
