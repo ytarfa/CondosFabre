@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import {Link} from 'react-router-dom';
 import '../scss/Navbar/base.scss';
 import ReactTooltip from 'react-tooltip';
+import units from '../units.json';
 
 export default class Navbar extends React.Component{
 
@@ -17,6 +18,13 @@ export default class Navbar extends React.Component{
 
         let NavbarClass = this.props.ypos > 75 ? "Navbar active" : "Navbar";
 
+        let unitList = units.units.map((unit, index) =>
+            <Link class="dropdown-item" to=""> 
+                <p key="index" >Unité {unit._id}</p> 
+                {/* <p>{unit.floor}</p> */}
+                <p>{unit.price}</p> 
+            </Link>
+        )
 
         return (
             // <div className={NavbarClass}>
@@ -43,7 +51,7 @@ export default class Navbar extends React.Component{
             //         </ul>
             //     </div>
             // </div>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
 
                 <a class="navbar-brand" href="#">
                     <img src="/images/logo.png"/>
@@ -62,10 +70,7 @@ export default class Navbar extends React.Component{
                                 UNITES
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Something else here</a>
+                                {unitList}
                             </div>
                         </li>
                         <li class="nav-item">

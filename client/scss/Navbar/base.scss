@@ -129,6 +129,7 @@
 
 .navbar {
     background-color: white !important;
+    border-bottom: solid 1px #E3E3E3;
 
     .navbar-brand {
         width: 200px;
@@ -160,7 +161,28 @@
                 color: black;
                 font-weight: 600;
             }
-        }   
+        }
+        .dropdown-menu {
+            border: none;
+            border-radius: 0;
+            background-color: #F8F8F8;
+            .dropdown-item {
+                width: 300px;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                padding: 10px 0 10px 0;
+                p {
+                    font-family: 'Open Sans', sans-serif;
+                    padding: 0;
+                    margin: 0;
+                    font-weight: 400;
+                }
+                &:hover {
+                    padding: 10px;
+                }
+            }
+        }
     }
 
     .contact-button {
