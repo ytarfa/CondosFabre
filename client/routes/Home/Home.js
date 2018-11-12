@@ -115,7 +115,7 @@ export default class Home extends React.Component{
 
                 <div class="home-header">
                     <div class="home-carousel">
-                        <img src="/images/facade.jpg"/>
+                        <img src="/images/facade-cropped.jpg"/>
                     </div>
                 </div>
                 <div class="home-header-intro">
