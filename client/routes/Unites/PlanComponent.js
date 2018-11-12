@@ -41,7 +41,7 @@ export default class PlanComponent extends React.Component {
                 <div class="plan-overlay"
                     style={{
                         opacity: this.state.overlay ? '1' : '0',
-                        display: this.state.overlay ? 'block' : 'none'
+                        pointerEvents: this.state.overlay ? 'all' : 'none'
                     }}
                 >
                     <button onClick={this.closeOverlay}> <i class="fa fa-times fa-fw"></i> </button>
