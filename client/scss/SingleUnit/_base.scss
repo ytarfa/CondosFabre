@@ -102,7 +102,6 @@
         position: relative;
         margin-top: 100px;
         margin-bottom: 125px;
-        background-image: url(/images/placeholder-map.png);
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
@@ -112,30 +111,22 @@
             position: absolute;
             right: 50px;
             bottom: -25px;
-            background-color: #e3e3e3;
+            background-color: #F8F8F8;
             -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
             -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
             -ms-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
             -o-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
             box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-            .score-paragraph {
-                width: 250px;
-                padding: 25px;
-                text-align: center;
-                margin: 0;
-            }
             ul {
                 margin: 0;
-                padding: 0;
+                padding: 25px;
                 list-style-type: none;
                 font-family: 'Open Sans', sans-serif;
                 li {
                     padding-bottom: 15px;
-                    text-align: center;
                     i {
                         border-radius: 50%;
-                        color: white;
-                        background-color: #1E80BC;
+                        background-color: #E3E3E3;
                         padding: 10px;
                     }
                     p {

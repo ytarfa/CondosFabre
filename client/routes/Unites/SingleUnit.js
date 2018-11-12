@@ -67,8 +67,8 @@ export default class SingleUnit extends React.Component {
                 <div class="location-description-section">
                     <MapComponent />
                     <div class="score-container">
-                        <p class="score-paragraph">4217-4223 Rue Fabre <br/> Montréal, QC H2J 3T5</p>
                         <ul>
+                            <li><i class="fas fa-map-marker-alt fa-fw"></i><p>4217-4223 Rue Fabre</p></li>
                             <li><i class="fas fa-walking fa-fw"></i><p>Walkscore: 94</p></li>
                             <li><i class="fas fa-bicycle fa-fw"></i><p>Bikescore: 100</p></li>
                         </ul>
