@@ -12,6 +12,7 @@ import ProjetContainer from './routes/Projet/ProjetContainer';
 import QuartierContainer from './routes/Quartier/QuartierContainer';
 import UnitesContainer from './routes/Unites/UnitesContainer';
 
+import units from './units.json';
 import SingleUnit from './routes/Unites/SingleUnit';
 
 export default class App extends React.Component{
@@ -34,6 +35,11 @@ export default class App extends React.Component{
     }
 
     render() {
+
+        let unitRoutes = units.units.map((unit, index) => 
+            <Route path={"/unites/condo" + unit._id} component={ SingleUnit } key={index} />
+        )
+
         return (
             <BrowserRouter>
                 <div>
@@ -43,7 +49,7 @@ export default class App extends React.Component{
                     <Route path="/projet" component={ ProjetContainer } />
                     <Route path="/quartier" component={ QuartierContainer } />
                     <Route exact path="/unites" component={ UnitesContainer } />
-                    <Route path="/unites/condo1a" component={ SingleUnit } />
+                    {unitRoutes}
                 </div>
             </BrowserRouter>
         )

@@ -72,22 +72,14 @@ export default class Home extends React.Component{
             <CarouselUnit 
                 index={index}
                 counter={this.state.counter}
-                image={unit.image}
-                price={unit.price}
-                bedrooms={unit.bedrooms}
-                washrooms={unit.washrooms}
-                floor={unit.floor}
+                unit={unit}
             />
         )
         const mobileCarouselUnits = unitArray.units.map((unit, index) => 
             <MobileCarouselUnit 
                 index={index}
                 counter={this.state.counter}
-                image={unit.image}
-                price={unit.price}
-                bedrooms={unit.bedrooms}
-                washrooms={unit.washrooms}
-                floor={unit.floor}
+                unit={unit}
             />
         )
 

@@ -19,7 +19,7 @@ export default class Navbar extends React.Component{
         let NavbarClass = this.props.ypos > 75 ? "Navbar active" : "Navbar";
 
         let unitList = units.units.map((unit, index) =>
-            <Link class="dropdown-item" to=""> 
+            <Link class="dropdown-item" to={"/unites/condo" + unit._id}> 
                 <p key="index" >Unité {unit._id}</p> 
                 {/* <p>{unit.floor}</p> */}
                 <p>{unit.price}</p> 

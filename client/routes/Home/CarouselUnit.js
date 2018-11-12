@@ -26,22 +26,22 @@ export default class CarouselUnits extends React.Component {
                     transition: 'all 0.25s'
                 }}
             >
-                <img src={"/images/units/" + this.props.image} />
+                <img src={"/images/units/" + this.props.unit.image} />
 
                 <div class="description">
                     <div class="price">
-                        <p>{this.props.price}</p>
+                        <p>{this.props.unit.price}</p>
                     </div>
                     <div class="info">
                         <ul>
-                            <li> <i class="fas fa-bed fa-fw"></i> {this.props.bedrooms} </li>
-                            <li> <i class="fas fa-bath fa-fw"></i> {this.props.washrooms} </li>
+                            <li> <i class="fas fa-bed fa-fw"></i> {this.props.unit.bedrooms} </li>
+                            <li> <i class="fas fa-bath fa-fw"></i> {this.props.unit.washrooms} </li>
                             <li> <i class="fas fa-street-view fa-fw"></i> 1200 p<sup>2</sup> </li>
-                            <li> <i class="fas fa-building fa-fw"></i> {this.props.floor} </li>
+                            <li> <i class="fas fa-building fa-fw"></i> {this.props.unit.floor} </li>
                         </ul>
                     </div>
                     <div class="link">
-                        <a href="/unites">Plus d'information</a>
+                        <a href={"/unites/condo" +  this.props.unit._id}>Plus d'information</a>
                     </div>
                 </div>
             </div>
