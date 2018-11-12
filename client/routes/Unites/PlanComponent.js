@@ -27,7 +27,7 @@ export default class PlanComponent extends React.Component {
 
                 <div class="small-image-container">
                     <img
-                        src="/images/units/plan1A.png"
+                        src={"/images/units/cropped-plan/" + this.props.unit_id +".jpg"}
                         class="small-image"
                     />
                     <span 
@@ -45,7 +45,7 @@ export default class PlanComponent extends React.Component {
                     }}
                 >
                     <button onClick={this.closeOverlay}> <i class="fa fa-times fa-fw"></i> </button>
-                    <img src="/images/units/plan1A.jpg"/>
+                    <img src={"/images/units/full-plan/" + this.props.unit_id +".jpg"}/>
                 </div>
 
             </div>

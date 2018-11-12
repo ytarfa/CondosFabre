@@ -38,7 +38,7 @@ export default class CarouselUnits extends React.Component {
                             <li> <i class="fas fa-bed fa-fw"></i> {this.props.unit.bedrooms} </li>
                             <li> <i class="fas fa-bath fa-fw"></i> {this.props.unit.washrooms} </li>
                             <li> <i class="fas fa-street-view fa-fw"></i> 1200 p<sup>2</sup> </li>
-                            <li> <i class="fas fa-building fa-fw"></i> {this.props.unit.floor} </li>
+                            <li> <i class="fas fa-building fa-fw"></i> {this.props.unit.floor.short} </li>
                         </ul>
                     </div>
                     <div class="link">

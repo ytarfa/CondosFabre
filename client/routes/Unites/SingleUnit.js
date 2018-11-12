@@ -61,7 +61,7 @@ export default class SingleUnit extends React.Component {
                             </tbody>
                         </table>
                     </div>
-                    <PlanComponent />
+                    <PlanComponent unit_id={this.props._id}/>
                 </div>
 
                 <div class="location-description-section">
