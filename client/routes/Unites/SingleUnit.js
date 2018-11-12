@@ -16,6 +16,16 @@ export default class SingleUnit extends React.Component {
     }
 
     render() {
+
+        let tableRows = this.props.rooms_table.map((room, index) =>
+        <tr key={index}>
+            <td>{room[0]}</td>
+            <td>{room[1]}</td>
+            <td>{room[2]}</td>
+            <td>{room[3]}</td>
+        </tr>
+        )
+
         return (
             <div class="SingleUnit">
                 <div class="header-container">
@@ -26,95 +36,30 @@ export default class SingleUnit extends React.Component {
                 </div>
 
                 <div class="general-description-section">
-                    <div class="general-info">D’une superficie totale de 2134 à 2148 pieds carrés, cette unité sur deux étages vous propose un espace de vie généreux et contemporain. Au rez-de-chaussée, vous retrouverez le salon jumelé à la cuisine et la salle à manger, une salle d’eau, ainsi qu’une chambre avec walk-in et salle de bain privée. En descendant au sous-sol, vous atteindrez la salle de séjour ainsi que les deux autres chambres, une salle de bain et un espace de rangement.</div>
+                    <div class="general-info">{this.props.description}</div>
                     <div class="features">
                         <ul>
-                                <li> <i class="fas fa-bed fa-fw"></i> <p>{this.props.rooms} chambres</p> </li>
-                                <li> <i class="fas fa-bath fa-fw"></i> <p>2+1 salles de bain</p> </li>
-                                <li> <i class="fas fa-street-view fa-fw"></i> <p>1200 p<sup>2</sup></p> </li>
-                                <li> <i class="fas fa-building fa-fw"></i> <p>{this.props.floor}</p> </li>
+                                <li> <i class="fas fa-bed fa-fw"></i> <p>{this.props.bedrooms} chambres</p> </li>
+                                <li> <i class="fas fa-bath fa-fw"></i> <p>{this.props.washrooms} salles de bain</p> </li>
+                                <li> <i class="fas fa-street-view fa-fw"></i> <p>{this.props.area} p<sup>2</sup></p> </li>
+                                <li> <i class="fas fa-building fa-fw"></i> <p>{this.props.floor.full}</p> </li>
                         </ul>
                     </div>
                 </div>
 
                 <div class="room-description-section">
                     <div class="room-table">
-                    <table>
-                        <tbody>
-                            <tr class="title-r">
-                                <td>PIECE</td>
-                                <td>NIVEAU</td>
-                                <td>DIMENSIONS</td>
-                                <td>REVETEMENT DE SOL</td>
-                            </tr>
-                            <tr>
-                                <td>Salon</td>
-                                <td>Rez-de-chaussée</td>
-                                <td>17,0 X 11,5</td>
-                                <td>Bois</td>
-                            </tr>
-                            <tr>
-                                <td>Cuisine</td>
-                                <td>Rez-de-chaussée</td>
-                                <td>20,0 X 9,6</td>
-                                <td>Ceramique</td>
-                            </tr>
-                            <tr>
-                                <td>Salle à manger</td>
-                                <td>Rez-de-chaussée</td>
-                                <td>20,0 X 7,3</td>
-                                <td>Bois</td>
-                            </tr>
-                            <tr>
-                                <td>Salle de bain</td>
-                                <td>Rez-de-chaussée</td>
-                                <td>5,6 X 3,2</td>
-                                <td>Ceramique</td>
-                            </tr>
-                            <tr>
-                                <td>Chambre</td>
-                                <td>Rez-de-chaussée</td>
-                                <td>12,4 X 13,10</td>
-                                <td>Bois</td>
-                            </tr>
-                            <tr>
-                                <td>Chambre</td>
-                                <td>Rez-de-chaussée</td>
-                                <td>7,6 X 5,0</td>
-                                <td>Ceramique</td>
-                            </tr>
-                            <tr>
-                                <td>Chambre 2</td>
-                                <td>Sous-sol</td>
-                                <td>12,2 X 14,2</td>
-                                <td>Bois</td>
-                            </tr>
-                            <tr>
-                                <td>Chambre 3</td>
-                                <td>Sous-sol</td>
-                                <td>14,10 X 8,11</td>
-                                <td>Bois</td>
-                            </tr>
-                            <tr>
-                                <td>Salle de séjour</td>
-                                <td>Sous-sol</td>
-                                <td>16,6 X 14,2</td>
-                                <td>Bois</td>
-                            </tr>
-                            <tr>
-                                <td>Rangement</td>
-                                <td>Sous-sol</td>
-                                <td>15,0 X 6,10</td>
-                                <td>Bois</td>
-                            </tr>
-                            <tr>
-                                <td>Sale de bain</td>
-                                <td>Sous-sol</td>
-                                <td>8,11 X 5,10</td>
-                                <td>Céramique</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                        <table>
+                            <tbody>
+                                <tr class="title-r">
+                                    <td>PIECE</td>
+                                    <td>NIVEAU</td>
+                                    <td>DIMENSIONS</td>
+                                    <td>REVETEMENT DE SOL</td>
+                                </tr>
+                                {tableRows}
+                            </tbody>
+                        </table>
                     </div>
                     <PlanComponent />
                 </div>

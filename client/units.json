@@ -6,8 +6,25 @@
             "rooms": "10",
             "bedrooms": "1+2",
             "washrooms": "2+1",
-            "floor": "Rdc",
-            "image": "U1A.jpg"
+            "area": "2148",
+            "floor": {
+                "short": "Rdc",
+                "full": "Rez-de-chaussée"
+            },
+            "image": "U1A.jpg",
+            "description": "D’une superficie totale de 2134 à 2148 pieds carrés, cette unité sur deux étages vous propose un espace de vie généreux et contemporain. Au rez-de-chaussée, vous retrouverez le salon jumelé à la cuisine et la salle à manger, une salle d’eau, ainsi qu’une chambre avec walk-in et salle de bain privée. En descendant au sous-sol, vous atteindrez la salle de séjour ainsi que les deux autres chambres, une salle de bain et un espace de rangement.",
+            "rooms_table": [
+                ["Salon", "Rez-de-chaussée", "17,0 X 11,5", "Bois"],
+                ["Cuisine", "Rez-de-chaussée", "20,0 X 9,6", "Céramique"],
+                ["Salle de bain", "Rez-de-chaussée", "5,6 X 3,2", "Céramique"],
+                ["Chambre", "Rez-de-chaussée", "12,4 X 13,10", "Bois"],
+                ["Chambre", "Rez-de-chaussée", "7,6 X 5,0", "Céramique"],
+                ["Chambre 2", "Sous-sol", "12,2 X 14,2", "Bois"],
+                ["Chambre 3", "Sous-sol", "14,10 X 8,11", "Bois"],
+                ["Salle de séjour", "Sous-sol", "16,6 X 14,2", "Bois"],
+                ["Rangement", "Sous-sol", "15,0 X 6,10", "Bois"],
+                ["Salle de bain", "Sous-sol", "8,11 X 5,10", "Céramique"]
+            ]
         },
         {
             "_id": "1B",
@@ -15,8 +32,26 @@
             "rooms": "10",
             "bedrooms": "1+2",
             "washrooms": "2+1",
-            "floor": "Rdc",
-            "image": "U1A.jpg"
+            "area": "2134",
+            "floor": {
+                "short": "Rdc",
+                "full": "Rez-de-chaussée"
+            },
+            "image": "U1A.jpg",
+            "description": "D’une superficie totale de 2134 à 2148 pieds carrés, cette unité sur deux étages vous propose un espace de vie généreux et contemporain. Au rez-de-chaussée, vous retrouverez le salon jumelé à la cuisine et la salle à manger, une salle d’eau, ainsi qu’une chambre avec walk-in et salle de bain privée. En descendant au sous-sol, vous atteindrez la salle de séjour ainsi que les deux autres chambres, une salle de bain et un espace de rangement.",
+            "rooms_table": [
+                ["Salon", "Rez-de-chaussée", "17,0 X 11,5", "Bois"],
+                ["Cuisine", "Rez-de-chaussée", "20,0 X 9,6", "Céramique"],
+                ["Salle à manger", "Rez-de-chaussée", "20,0 X 7,3", "Bois"],
+                ["Salle de bain", "Rez-de-chaussée", "5,6 X 3,2", "Céramique"],
+                ["Chambre", "Rez-de-chaussée", "12,4 X 13,10", "Bois"],
+                ["Chambre", "Rez-de-chaussée", "7,6 X 5,0", "Céramique"],
+                ["Chambre 2", "Sous-sol", "12,2 X 14,2", "Bois"],
+                ["Chambre 3", "Sous-sol", "14,10 X 8,11", "Bois"],
+                ["Salle de séjour", "Sous-sol", "16,6 X 14,2", "Bois"],
+                ["Rangement", "Sous-sol", "15,0 X 6,10", "Bois"],
+                ["Salle de bain", "Sous-sol", "8,11 X 5,10", "Céramique"]
+            ]
         },
         {
             "_id": "2A",
@@ -24,8 +59,22 @@
             "rooms": "7",
             "bedrooms": "2+0",
             "washrooms": "2+0",
-            "floor": "Deuxième étage",
-            "image": "U2A.jpg"
+            "area": "1207",
+            "floor": {
+                "short": "2ie",
+                "full": "Deuxième étage"
+            },
+            "image": "U2A.jpg",
+            "description": "D’une superficie totale de 1202-1207 pieds carrés, cette unité sur un étage vous propose un espace de vie généreux et contemporain. Le condo de 7 pièces au 2e étage comprend un salon, une cuisine, une salle à manger ainsi que deux chambres à coucher et deux salles de bains. Vous bénéficierez aussi d’une jolie terrasse de 100 pieds carrés.",
+            "rooms_table": [
+                ["Salon", "2ème étage", "15,7 X 12,1", "Bois"],
+                ["Cuisine", "2ème étage", "12,2 X 12,1", "Céramique"],
+                ["Salle à manger", "2ème étage", "12,1 X 10,7", "Bois"],
+                ["Chambre", "2ème étage", "13,10 X 10,9", "Bois"],
+                ["Salle de bain", "2ème étage", "7,6 X 5,0", "Céramique"],
+                ["Chambre", "2ème étage", "15,8 X 9,0", "Bois"],
+                ["Salle de bain", "2ème étage", "9,3 X 4,11", "Céramique"]
+            ]
         },
         {
             "_id": "2B",
@@ -33,8 +82,22 @@
             "rooms": "7",
             "bedrooms": "2+0",
             "washrooms": "2+0",
-            "floor": "Deuxième étage",
-            "image": "U2A.jpg"
+            "area": "1202",
+            "floor": {
+                "short": "2ie",
+                "full": "Deuxième étage"
+            },
+            "image": "U2A.jpg",
+            "description": "D’une superficie totale de 1202-1207 pieds carrés, cette unité sur un étage vous propose un espace de vie généreux et contemporain. Le condo de 7 pièces au 2e étage comprend un salon, une cuisine, une salle à manger ainsi que deux chambres à coucher et deux salles de bains. Vous bénéficierez aussi d’une jolie terrasse de 100 pieds carrés.",
+            "rooms_table": [
+                ["Salon", "2ème étage", "15,7 X 12,1", "Bois"],
+                ["Cuisine", "2ème étage", "12,2 X 12,1", "Céramique"],
+                ["Salle à manger", "2ème étage", "12,1 X 10,7", "Bois"],
+                ["Chambre", "2ème étage", "13,10 X 10,9", "Bois"],
+                ["Salle de bain", "2ème étage", "7,6 X 5,0", "Céramique"],
+                ["Chambre", "2ème étage", "15,8 X 9,0", "Bois"],
+                ["Salle de bain", "2ème étage", "9,3 X 4,11", "Céramique"]
+            ]
         },
         {
             "_id": "3A",
@@ -42,8 +105,23 @@
             "rooms": "7",
             "bedrooms": "2+0",
             "washrooms": "2+0",
-            "floor": "Troisième étage",
-            "image": "U3A.jpg"
+            "area": "1438",
+            "floor": {
+                "short": "3ie",
+                "full": "Troisième étage"
+            },
+            "image": "U3A.jpg",
+            "description": "D’une superficie totale de 1429 – 1438 pieds carrés, cette unité sur un étage vous propose un espace de vie généreux et contemporain. Le condo de 7 pièces au 3e étage comprend un salon, une cuisine, une salle à manger ainsi que deux chambres à coucher et deux salles de bains. En montant à l’étage supérieur, vous serez surpris de découvrir la spacieuse terrasse sur le toit.",
+            "rooms_table": [
+                ["Salon", "2ème étage", "14,7 X 11,1", "Bois"],
+                ["Cuisine", "2ème étage", "16,7 X 12,1", "Céramique"],
+                ["Salle à manger", "2ème étage", "12,1 X 12,4", "Bois"],
+                ["Chambre", "2ème étage", "14,2 X 13,1", "Bois"],
+                ["Salle de bain", "2ème étage", "7,6 X 5,0", "Céramique"],
+                ["Chambre", "2ème étage", "14,4 X 9,10", "Bois"],
+                ["Salle de bain", "2ème étage", "8,9 X 6,6", "Céramique"],
+                ["Terrasse", "Toiture", "10,8 X 30,7", "Bois"]
+            ]
         },
         {
             "_id": "3B",
@@ -51,8 +129,23 @@
             "rooms": "7",
             "bedrooms": "2+0",
             "washrooms": "2+0",
-            "floor": "Troisième étage",
-            "image": "U3A.jpg"
+            "area": "1429",
+            "floor": {
+                "short": "3ie",
+                "full": "Troisième étage"
+            },
+            "image": "U3A.jpg",
+            "description": "D’une superficie totale de 1429 – 1438 pieds carrés, cette unité sur un étage vous propose un espace de vie généreux et contemporain. Le condo de 7 pièces au 3e étage comprend un salon, une cuisine, une salle à manger ainsi que deux chambres à coucher et deux salles de bains. En montant à l’étage supérieur, vous serez surpris de découvrir la spacieuse terrasse sur le toit.",
+            "rooms_table": [
+                ["Salon", "3ème étage", "14,7 X 11,1", "Bois"],
+                ["Cuisine", "3ème étage", "16,7 X 12,1", "Céramique"],
+                ["Salle à manger", "3ème étage", "12,1 X 12,4", "Bois"],
+                ["Chambre", "3ème étage", "14,2 X 13,1", "Bois"],
+                ["Salle de bain", "3ème étage", "7,6 X 5,0", "Céramique"],
+                ["Chambre", "3ème étage", "14,4 X 9,10", "Bois"],
+                ["Salle de bain", "3ème étage", "8,9 X 6,6", "Céramique"],
+                ["Terrasse", "Toiture", "10,8 X 30,7", "Bois"]
+            ]
         }
     ]
 }
