@@ -45,9 +45,84 @@
         }
     }
     .map-container {
+        position: relative;
         margin-top: 150px;
         width: 100%;
         height: 400px;
+        .contact-section-container {
+            position: absolute;
+            top: -50px;
+            right: 50px;
+            height: 500px;
+            width: 300px;
+            background-color: #F8F8F8;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+            -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+            -ms-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+            -o-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+            .contact-section-items {
+                padding-bottom: 100px;
+                ul {
+                    list-style-type: none;
+                    li {
+                        padding: 15px 0 15px 0;
+                        i {
+                            padding: 10px;
+                            border-radius: 50%;
+                            background-color: #E3E3E3;
+                        }
+                        p {
+                            margin-left: 10px;
+                            display: inline;
+                        }
+                    }
+                }
+                .directions {
+                    display: block;
+                    width: 90%;
+                    margin: auto;
+                    padding: 10px 15px 10px 15px;
+                    background-color: transparent;
+                    border: 1px solid #4285F4;
+                    color: #4285F4;
+                    text-decoration: none;
+                    i {
+                        padding-right: 15px;
+                    }
+                    p {
+                        display: inline;
+                        color: #4285F4;
+                    }
+                }
+            }
+            .cta {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 75px;
+                background-color: #7F9470;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                p {
+                    color: white;
+                    padding: 0;
+                    margin: 0;
+                }
+            }
+        }
+        
+    }
+    @media only screen and (max-width: 1080px) {
+        .map-container {
+            height: 700px;
+            
+        }
     }
 }
 

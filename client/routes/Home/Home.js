@@ -192,6 +192,19 @@ export default class Home extends React.Component{
 
                 <div class="map-container">
                     <MapComponent />
+                    
+                    <div class="contact-section-container">
+                        <div class="contact-section-items">
+                            <ul>
+                                <li><i class="fas fa-map-marker-alt fa-fw"></i><p>4217-4223 Rue Fabre</p></li>
+                                <li><i class="fas fa-walking fa-fw"></i><p>Walkscore: 94</p></li>
+                                <li><i class="fas fa-bicycle fa-fw"></i><p>Bikescore: 100</p></li>
+                            </ul>
+                            <a class="directions" href="https://goo.gl/maps/bpjCzVJmnFr" target="_blank"> <i class="fas fa-map-marked-alt"></i> <p>Directions to your condo</p> </a>
+                        </div>
+                        
+                        <a class="cta"> <p>Intéressés? Contactez-nous!</p> </a>
+                    </div>
                 </div>
             
             <Footer />
