@@ -26,7 +26,9 @@ export default class CarouselUnits extends React.Component {
                     transition: 'all 0.25s'
                 }}
             >
-                <img src={"/images/units/" + this.props.unit.image} />
+                <div class="img-container">
+                    <img src={"/images/units/" + this.props.unit.image} />
+                </div>
 
                 <div class="description">
                     <div class="price">
