@@ -11,7 +11,8 @@ export default class ContactOverlay extends React.Component {
         return (
             <div class="ContactOverlay"
                 style={{
-                    display: this.props.open == true ? 'block' : 'none'
+                    pointerEvents: this.props.open == true ? 'all' : 'none',
+                    opacity: this.props.open == true ? '1' : '0'
                 }}
             >
                 <div class="overlay">
@@ -23,14 +24,14 @@ export default class ContactOverlay extends React.Component {
                             class="closeButton"
                             onClick={this.props.closeOverlay}
                         >
-                            <i class="fas fa-times fa-3x"></i>
+                            <i class="fas fa-times fa-2x"></i>
                         </button>
 
-                        <span class="notre-courtier"> Notre courtier: <br/> </span>
+                        <span class="notre-courtier"> Notre courtier <br/> </span>
                         <span class="contact-title"> Samia Ouertani </span>
                         <div class="samia-info">
                             <img src="/images/samia-ouertani.jpg" />
-                            <div class=".info">
+                            <div class="info">
                                 <p> Via Capitale du Mont-Royal</p>
                                 <p> 152, Mont-Royal Est <br/> Le Plateau-Mont-Royal <br/> Québec H2J 1X8</p>
                             </div>
