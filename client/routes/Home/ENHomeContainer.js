@@ -1,7 +1,7 @@
 import {connect} from 'react-redux';
 import { pushCurrentRoute } from '../../actions/routingActions';
 
-import Home from './Home';
+import ENHome from './ENHome';
 
 const mapStateToProps = state => {
     return {
@@ -16,4 +16,4 @@ const mapDispatchToProps = {
 export default connect(
     mapStateToProps,
     mapDispatchToProps
-) (Home);
+) (ENHome);

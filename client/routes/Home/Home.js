@@ -227,7 +227,7 @@ export default class Home extends React.Component{
                             </ul>
                         </div>
                         
-                        <a class="cta"> <p>Intéressés? Contactez-nous!</p> </a>
+                        <a class="cta"> <p>Intéressés? Contactez nous!</p> </a>
                     </div>
                 </div>
             

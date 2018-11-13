@@ -5,8 +5,8 @@ import MapComponent from '../../components/MapComponent';
 
 // Unit Carousel related imports
 import unitArray from '../../units.json';
-import CarouselUnit from './CarouselUnit';
-import MobileCarouselUnit from './MobileCarouselUnit';
+import ENCarouselUnit from './ENCarouselUnit';
+import ENMobileCarouselUnit from './ENMobileCarouselUnit';
 // Neighborhood Carousel related imports
 import quartierDiapos from './quartierDiapos.json';
 
@@ -79,14 +79,14 @@ export default class Home extends React.Component{
     render() {
 
         const carouselUnits = unitArray.units.map((unit, index) => 
-            <CarouselUnit 
+            <ENCarouselUnit 
                 index={index}
                 counter={this.state.counter}
                 unit={unit}
             />
         )
         const mobileCarouselUnits = unitArray.units.map((unit, index) => 
-            <MobileCarouselUnit 
+            <ENMobileCarouselUnit 
                 index={index}
                 counter={this.state.counter}
                 unit={unit}
@@ -124,9 +124,6 @@ export default class Home extends React.Component{
             <div class="Home page">
 
                 <div class="home-header">
-                    {/* <div class="home-carousel">
-                        <LazyImage hd="/images/facade-cropped.jpg" preload="/images/facade-cropped-scaled.jpg" />
-                    </div> */}
                     <SimpleCarousel 
                         class="home-carousel" 
                         imageList={
@@ -140,20 +137,20 @@ export default class Home extends React.Component{
                     />
                 </div>
                 <div class="home-header-intro">
-                    <h1> Sentez vous à la maison au premier regard.</h1>
+                    <h1> Feel at home at first glance.</h1>
                     <ul>
-                        <li><i class="fas fa-map-marker-alt fa-fw"></i> <p>Emplacement idéal au sein du Plateau</p> </li>
-                        <li><i class="fas fa-tree fa-fw"></i> <p>À deux pieds du parc LaFontaine</p> </li>
-                        <li><i class="fas fa-parking fa-fw"></i> <p> Places de parking disponibles </p> </li>
-                        <li><i class="fas fa-bicycle fa-fw"></i> <p> Location idéale pour se déplacer à pied ou à vélo </p> </li>
-                        <li><i class="fas fa-bus fa-fw"></i> <p> Lignes de bus et métros à proximité </p> </li>
+                        <li><i class="fas fa-map-marker-alt fa-fw"></i> <p>Ideal location in the Plateau</p> </li>
+                        <li><i class="fas fa-tree fa-fw"></i> <p>A minute away from beautiful LaFontaine park</p> </li>
+                        <li><i class="fas fa-parking fa-fw"></i> <p> Parking spots available </p> </li>
+                        <li><i class="fas fa-bicycle fa-fw"></i> <p> Ideal for cycling and walking </p> </li>
+                        <li><i class="fas fa-bus fa-fw"></i> <p> Bus and metro stations close by </p> </li>
                     </ul>
                 </div>
 
                 <div class="home-units">
                     <div class="title-controls-container">
-                        <h1 class="background-title">Unités</h1>
-                        <h1 class="title">Unités</h1>
+                        <h1 class="background-title">Units</h1>
+                        <h1 class="title">Units</h1>
 
                         <div class="button-container">
                             <button onClick={() => this.counter(1)}
@@ -181,8 +178,8 @@ export default class Home extends React.Component{
 
                 <div class="home-quartier">
                     <div class="title-section">
-                        <h1 class="background-title">Le Plateau</h1>
-                        <h1 class="title">Le Plateau</h1>
+                        <h1 class="background-title">The Plateau</h1>
+                        <h1 class="title">The Plateau</h1>
                     </div>
 
                     <div class="quartier-carousel">
@@ -217,7 +214,7 @@ export default class Home extends React.Component{
                     <div class="contact-section-container">
                         <div class="contact-section-items">
                             <ul>
-                                <li><i class="fas fa-map-marker-alt fa-fw"></i><p>4217-4223 Rue Fabre</p></li>
+                                <li><i class="fas fa-map-marker-alt fa-fw"></i><p>4217-4223 Fabre St.</p></li>
                                 <li><i class="fas fa-walking fa-fw"></i><p>Walkscore: 94</p></li>
                                 <li><i class="fas fa-bicycle fa-fw"></i><p>Bikescore: 100</p></li>
                             </ul>
@@ -227,7 +224,7 @@ export default class Home extends React.Component{
                             </ul>
                         </div>
                         
-                        <a class="cta"> <p>Intéressés? Contactez-nous!</p> </a>
+                        <a class="cta"> <p>Interested? Contact us!</p> </a>
                     </div>
                 </div>
             
