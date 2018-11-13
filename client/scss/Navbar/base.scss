@@ -130,6 +130,9 @@
 .navbar {
     background-color: white !important;
     border-bottom: solid 1px #E3E3E3;
+    height: 100px;
+    position: fixed;
+    width: 100%;
 
     .navbar-brand {
         width: 200px;
@@ -246,6 +249,9 @@
 }
 
 @media only screen and (max-width: 992px) {
+    .navbar {
+        height: auto;
+    }
     .contact-button {
         display: none;
     }

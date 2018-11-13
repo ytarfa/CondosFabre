@@ -111,7 +111,7 @@ export default class Home extends React.Component{
         )
 
         return (
-            <div class="Home">
+            <div class="Home page">
 
                 <div class="home-header">
                     <div class="home-carousel">

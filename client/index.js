@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import {applyMiddleware, createStore, compose} from 'redux';
 import {Provider} from 'react-redux';
 import thunk from 'redux-thunk';
+import { BrowserRouter, Route } from 'react-router-dom';
 
 //REDUX SET-UP
 import rootReducer from './reducers/index';
@@ -21,7 +22,9 @@ const root = document.getElementById('root');
 
 ReactDOM.render(
     <Provider store={store}>
-        <AppContainer />
+        <BrowserRouter>
+            <Route path="/" component={AppContainer} />
+        </BrowserRouter>
     </Provider>,
     root
 );

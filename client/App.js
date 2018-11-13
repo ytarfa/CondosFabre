@@ -1,6 +1,7 @@
 import React from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 const _ = require('lodash');
+import { TransitionGroup, CSSTransition } from "react-transition-group";
 
 import './scss/App.scss';
 
@@ -45,17 +46,29 @@ export default class App extends React.Component{
         )
 
         return (
-            <BrowserRouter>
+            <div>
+                <ContactOverlayContainer />
+                <NavbarContainer />
                 <div>
-                    <ContactOverlayContainer />
-                    <NavbarContainer />
-                    <Route exact path="/" component={ HomeContainer } />
-                    <Route path="/projet" component={ ProjetContainer } />
-                    <Route path="/quartier" component={ QuartierContainer } />
-                    <Route exact path="/unites" component={ UnitesContainer } />
-                    {unitRoutes}
+                <Route render={({location}) =>
+                    <TransitionGroup>
+                        <CSSTransition
+                            classNames="slide"
+                            timeout={750}
+                            key={location.key}
+                        >
+                                <Switch location={location}>
+                                    <Route exact path="/" component={ HomeContainer } />
+                                    <Route path="/projet" component={ ProjetContainer } />
+                                    <Route path="/quartier" component={ QuartierContainer } />
+                                    <Route exact path="/unites" component={ UnitesContainer } />
+                                    {unitRoutes}
+                                </Switch>
+                        </CSSTransition>
+                </TransitionGroup>
+                } />
                 </div>
-            </BrowserRouter>
+            </div>
         )
     }
 }

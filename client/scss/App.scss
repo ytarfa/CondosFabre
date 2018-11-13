@@ -26,3 +26,52 @@ p {
 i {
     box-sizing: content-box !important;
 }
+
+// ROUTE TRANSITION CSS
+
+.page {
+    position: absolute;
+    top: 83.3px;
+    left: 0;
+    width: 100vw;
+}
+.fade-appear,
+.fade-enter {
+    opacity: 0;
+    z-index: 1;
+}
+.fade-appear-active,
+.fade-enter.fade-enter-active {
+    opacity: 1;
+    transition: opacity 150ms linear 150ms;
+}
+
+.fade-exit {
+    opacity: 1;
+}
+
+.fade-exit.fade-exit-active {
+    opacity: 0;
+    transition: opacity 150ms linear;
+}
+
+
+.slide-appear,
+.slide-enter {
+    transform: translate(100%);
+}
+
+.slide-appear-active,
+.slide-enter.slide-enter-active {
+    transform: translate(0%);
+    transition: transform 750ms ease-in-out;
+}
+
+.slide-exit {
+    transform: translate(0%);
+}
+
+.slide-exit.slide-exit-active {
+    transform: translate(-100%);
+    transition: transform 750ms ease-in-out;
+}

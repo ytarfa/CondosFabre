@@ -27,7 +27,7 @@ export default class SingleUnit extends React.Component {
         )
 
         return (
-            <div class="SingleUnit">
+            <div class="SingleUnit page">
                 <div class="header-container">
                     <img src="/images/units/U1A.jpg"/>
                     <div class="quick-info">
