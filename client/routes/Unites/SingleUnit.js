@@ -2,7 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import '../../scss/SingleUnit/main.scss';
 
-import LazyImage from '../../components/LazyImage';
+import unitData from '../../units.json';
+import SimpleCarousel from '../../components/SimpleCarousel';
 
 import MapComponent from '../../components/MapComponent';
 import PlanComponent from './PlanComponent';
@@ -39,7 +40,10 @@ export default class SingleUnit extends React.Component {
             <div class="SingleUnit page">
                 <div class="header-container">
                     {/* <img src="/images/units/U1A.jpg"/> */}
-                    <LazyImage hd="/images/units/U1A.jpg" preload="/images/units/U1A-scaled.jpg" />
+                    {/* <LazyImage hd="/images/units/U1A.jpg" preload="/images/units/U1A-scaled.jpg" /> */}
+                    <SimpleCarousel 
+                        imageList={unitData.images}
+                    />
                     <div class="quick-info">
                         <h1> Condo {this.props._id} </h1>
                     </div>

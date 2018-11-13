@@ -147,5 +147,10 @@
                 ["Terrasse", "Toiture", "10,8 X 30,7", "Bois"]
             ]
         }
+    ],
+    "images": [
+        ["/images/units/U1A-scaled.jpg", "/images/units/U1A.jpg"],
+        ["/images/units/U2A-scaled.jpg", "/images/units/U2A.jpg"],
+        ["/images/units/U3A-scaled.jpg", "/images/units/U3A.jpg"]
     ]
 }
