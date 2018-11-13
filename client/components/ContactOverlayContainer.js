@@ -5,7 +5,8 @@ import { closeOverlay } from '../actions/contactActions';
 
 const mapStateToProps = state => {
     return {
-        open: state.contactReducer
+        open: state.contactReducer,
+        route: state.routingReducer.route
     }
 };
 

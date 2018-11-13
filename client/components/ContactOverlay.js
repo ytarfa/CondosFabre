@@ -27,7 +27,7 @@ export default class ContactOverlay extends React.Component {
                             <i class="fas fa-times fa-2x"></i>
                         </button>
 
-                        <span class="notre-courtier"> Notre courtier <br/> </span>
+                        <span class="notre-courtier"> {this.props.route.includes('en') ? 'Our broker' : 'Notre courtier'} <br/> </span>
                         <span class="contact-title"> Samia Ouertani </span>
                         <div class="samia-info">
                             <img src="/images/samia-ouertani.jpg" />
