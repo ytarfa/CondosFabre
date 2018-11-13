@@ -55,44 +55,46 @@ export default class Navbar extends React.Component{
             //         </ul>
             //     </div>
             // </div>
-            <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+            <div id="navbar-component" >
+                <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
 
-                <a class="navbar-brand" href="#">
-                    <img src="/images/logo.png"/>
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-                </button>
-            
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mr-auto">
-                        <li className={this.props.route == '/' ? "nav-item active" : "nav-item"}>
-                            <Link class="nav-link" to="/">HOME</Link>
-                        </li>
-                        <li className={this.props.route.includes('unites') ? "nav-item dropdown active" : "nav-item dropdown"}>
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                UNITES
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                {unitList}
-                            </div>
-                        </li>
-                        <li class="nav-item" data-tip data-for="coming-soon">
-                            <a class="nav-link disabled" href="#" style={{pointerEvents: 'none'}}>PROJET</a>
-                        </li>
-                        <li class="nav-item" data-tip data-for="coming-soon">
-                            <a class="nav-link disabled" href="#" style={{pointerEvents: 'none'}}>QUARTIER</a>
-                        </li>
-                        <ReactTooltip id="coming-soon" type="light" className="disabled-tooltip" place="bottom">
-                            <p>Coming Soon !</p>
-                        </ReactTooltip>
-                    </ul>
-                    <span class="contact-button" onClick={this.props.openContactOverlay}>
-                        <a> CONTACTEZ-NOUS </a>
-                    </span>
-                </div>
+                    <a class="navbar-brand" href="#">
+                        <img src="/images/logo.png"/>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+                
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                            <li className={this.props.route == '/' ? "nav-item active" : "nav-item"}>
+                                <Link class="nav-link" to="/">HOME</Link>
+                            </li>
+                            <li className={this.props.route.includes('unites') ? "nav-item dropdown active" : "nav-item dropdown"}>
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    UNITES
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    {unitList}
+                                </div>
+                            </li>
+                            <li class="nav-item" data-tip data-for="coming-soon">
+                                <a class="nav-link disabled" href="#" style={{pointerEvents: 'none'}}>PROJET</a>
+                            </li>
+                            <li class="nav-item" data-tip data-for="coming-soon">
+                                <a class="nav-link disabled" href="#" style={{pointerEvents: 'none'}}>QUARTIER</a>
+                            </li>
+                            <ReactTooltip id="coming-soon" type="light" className="disabled-tooltip" place="bottom">
+                                <p>Coming Soon !</p>
+                            </ReactTooltip>
+                        </ul>
+                        <span class="contact-button" onClick={this.props.openContactOverlay}>
+                            <a> CONTACTEZ-NOUS </a>
+                        </span>
+                    </div>
 
-            </nav>
+                </nav>
+            </div>
         )
     }
 }

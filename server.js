@@ -4,6 +4,7 @@ const app = express();
 
 app.use('/client', express.static(path.resolve(__dirname, 'dist/client/')));
 app.use('/images', express.static(path.resolve(__dirname, 'images/')));
+app.use('/vendor', express.static(path.resolve(__dirname, 'vendor/')));
 
 app.get('*', (req, res) => {
     res.sendFile(path.resolve(__dirname, 'dist/index.html'));
