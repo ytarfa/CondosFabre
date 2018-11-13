@@ -88,7 +88,7 @@ export default class Navbar extends React.Component{
                         </ReactTooltip>
                     </ul>
                     <span class="contact-button" onClick={this.props.openContactOverlay}>
-                        <a href="#"> CONTACTEZ-NOUS </a>
+                        <a> CONTACTEZ-NOUS </a>
                     </span>
                 </div>
 
