@@ -10,51 +10,37 @@ export default class Navbar extends React.Component{
     constructor(props) {
         super(props);
         this.state = {
-            active: false
+            active: false,
+            route: '/',
+            en: false
         }
     }
 
-    componentDidMount() {
-        console.log(this.props.route)
+    static getDerivedStateFromProps(props, state, prevProps) {
+        let enRegex = RegExp('\/en');
+        if (enRegex.test(props.route)) {
+            return {
+                route: props.route,
+                en: true
+            }
+        } else {
+            return {
+                route: props.route,
+                en: false
+            }
+        }
     }
 
     render() {
 
-        let NavbarClass = this.props.ypos > 75 ? "Navbar active" : "Navbar";
-
         let unitList = units.units.map((unit, index) =>
-            <Link class="dropdown-item" to={"/unites/condo" + unit._id}> 
-                <p key="index" >Unité {unit._id}</p> 
-                {/* <p>{unit.floor}</p> */}
+            <Link class="dropdown-item" to={this.state.en ? "/en/unites/condo" + unit._id : "/unites/condo" + unit._id}> 
+                <p key="index" >Condo {unit._id}</p>
                 <p>{unit.price}</p> 
             </Link>
         )
 
         return (
-            // <div className={NavbarClass}>
-            //     <div class="logo-container">
-            //         <img src="/images/logo.png"/>
-            //     </div>
-
-            //     <div class="links-container">
-            //         <ul>
-            //             <li className={this.props.route == '/' ? "active" : ""}><Link to="/">ACCUEIL</Link></li>
-            //             <li className={this.props.route == '/unites' ? "active" : ""}>
-            //                 <Link to="/unites">UNITES</Link>
-            //                 <div class="unites-dropdown"></div>
-            //             </li>
-                        
-
-            //             <li data-tip data-for="coming-soon" className="coming-soon"><Link to="/projet"> PROJET</Link></li>
-            //             <li data-tip data-for="coming-soon" className="coming-soon"><Link to="/quartier">QUARTIER</Link></li>
-            //             <ReactTooltip id="coming-soon" type="info" place="top">
-            //                 <p>Coming Soon !</p>
-            //             </ReactTooltip>
-
-            //             <li class="contact-button" onClick={this.props.openContactOverlay}> <a href="#"> CONTACTEZ-NOUS </a> </li>
-            //         </ul>
-            //     </div>
-            // </div>
             <div id="navbar-component" >
                 <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
 
@@ -67,29 +53,40 @@ export default class Navbar extends React.Component{
                 
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav mr-auto">
-                            <li className={this.props.route == '/' ? "nav-item active" : "nav-item"}>
-                                <Link class="nav-link" to="/">HOME</Link>
+                            <li className={(this.props.route == '/') || (this.props.route == '/en') || (this.props.route == '/en/') ? "nav-item active" : "nav-item"}>
+                                <Link class="nav-link" to={this.state.en ? '/en/' : '/'}> {this.state.en ? 'HOME' : 'ACCUEIL'} </Link>
                             </li>
                             <li className={this.props.route.includes('unites') ? "nav-item dropdown active" : "nav-item dropdown"}>
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    UNITES
+                                    {this.state.en ? 'UNITS' : 'UNITÉS'}
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     {unitList}
                                 </div>
                             </li>
                             <li class="nav-item" data-tip data-for="coming-soon">
-                                <a class="nav-link disabled" href="#" style={{pointerEvents: 'none'}}>PROJET</a>
+                                <a class="nav-link disabled" href="#" style={{pointerEvents: 'none'}}> {this.state.en ? 'PROJECT' : 'PROJET'} </a>
                             </li>
                             <li class="nav-item" data-tip data-for="coming-soon">
-                                <a class="nav-link disabled" href="#" style={{pointerEvents: 'none'}}>QUARTIER</a>
+                                <a class="nav-link disabled" href="#" style={{pointerEvents: 'none'}}> {this.state.en ? 'THE NEIGHBORHOOD' : 'LE QUARTIER'} </a>
                             </li>
                             <ReactTooltip id="coming-soon" type="light" className="disabled-tooltip" place="bottom">
-                                <p>Coming Soon !</p>
+                                <p>{this.state.en ? 'Coming soon !' : 'Disponible prochainement !'}</p>
                             </ReactTooltip>
                         </ul>
                         <span class="contact-button" onClick={this.props.openContactOverlay}>
-                            <a> CONTACTEZ-NOUS </a>
+                            <a> {this.state.en ? 'CONTACT US' : 'CONTACTEZ NOUS'} </a>
+                        </span>
+                        <span class="en-fr">
+                            <Link 
+                                to={this.state.en ? this.props.route.split('en')[1] : this.props.route} 
+                                className={this.state.en == true ? ' ' : 'active'}
+                            > FR </Link> 
+                            <p>|</p> 
+                            <Link 
+                                to={this.state.en == true ? this.props.route : "/en" + this.props.route} 
+                                className={this.state.en == true ? 'active' : ' '}
+                            > EN</Link>
                         </span>
                     </div>
 

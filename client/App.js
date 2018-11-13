@@ -9,12 +9,12 @@ import NavbarContainer from './Navbar/NavbarContainer';
 import ContactOverlayContainer from './components/ContactOverlayContainer';
 
 import HomeContainer from './routes/Home/HomeContainer';
-import ProjetContainer from './routes/Projet/ProjetContainer';
-import QuartierContainer from './routes/Quartier/QuartierContainer';
-import UnitesContainer from './routes/Unites/UnitesContainer';
+import ENHomeContainer from './routes/Home/ENHomeContainer';
 
 import units from './units.json';
+import ENunits from './units.json';
 import SingleUnitContainer from './routes/Unites/SingleUnitContainer';
+import ENSingleUnitContainer from './routes/Unites/ENSingleUnitContainer';
 
 export default class App extends React.Component{
 
@@ -44,6 +44,13 @@ export default class App extends React.Component{
                 render={(props) => < SingleUnitContainer {...unit} pathname={"/unites/condo" + unit._id} />}
             />
         )
+        let ENunitRoutes = ENunits.units.map((unit, index) => 
+            <Route 
+                key={index} 
+                path={"/en/unites/condo" + unit._id} 
+                render={(props) => < ENSingleUnitContainer {...unit} pathname={"/en/unites/condo" + unit._id} />}
+            />
+        )
 
         return (
             <div>
@@ -60,10 +67,9 @@ export default class App extends React.Component{
                         >
                                 <Switch location={location}>
                                     <Route exact path="/" component={ HomeContainer } />
-                                    <Route path="/projet" component={ ProjetContainer } />
-                                    <Route path="/quartier" component={ QuartierContainer } />
-                                    <Route exact path="/unites" component={ UnitesContainer } />
                                     {unitRoutes}
+                                    <Route exact path="/en" component={ ENHomeContainer } />
+                                    {ENunitRoutes}
                                 </Switch>
                         </CSSTransition>
                 </TransitionGroup>
