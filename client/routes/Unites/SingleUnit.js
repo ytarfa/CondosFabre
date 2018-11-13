@@ -46,6 +46,7 @@ export default class SingleUnit extends React.Component {
                     />
                     <div class="quick-info">
                         <h1> Condo {this.props._id} </h1>
+                        <p> {this.props.price} </p>
                     </div>
                 </div>
 
