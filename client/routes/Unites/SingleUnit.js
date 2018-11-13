@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import '../../scss/SingleUnit/main.scss';
+import ReactTooltip from 'react-tooltip';
 
 import unitData from '../../units.json';
 import SimpleCarousel from '../../components/SimpleCarousel';
@@ -87,7 +88,10 @@ export default class SingleUnit extends React.Component {
                             <li><i class="fas fa-walking fa-fw"></i><p>Walkscore: 94</p></li>
                             <li><i class="fas fa-bicycle fa-fw"></i><p>Bikescore: 100</p></li>
                         </ul>
-                        <a href="https://www.walkscore.com/score/4217-rue-fabre-montr%C3%A9al-qc-canada" target="_blank"> Plus d'information </a>
+                        <a href="https://www.walkscore.com/score/4217-rue-fabre-montr%C3%A9al-qc-canada" target="_blank" data-tip data-for="unit-coming-soon"> Le Plateau </a>
+                        <ReactTooltip id="unit-coming-soon" type="light" className="disabled-tooltip" place="bottom">
+                            <p>Prochainement disponible !</p>
+                        </ReactTooltip>
                     </div>
                 </div>
 

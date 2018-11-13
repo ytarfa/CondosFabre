@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import ReactTooltip from 'react-tooltip';
 import '../../scss/SingleUnit/main.scss';
 
 import unitData from '../../units.json';
@@ -85,7 +86,11 @@ export default class SingleUnit extends React.Component {
                             <li><i class="fas fa-walking fa-fw"></i><p>Walkscore: 94</p></li>
                             <li><i class="fas fa-bicycle fa-fw"></i><p>Bikescore: 100</p></li>
                         </ul>
-                        <a href="https://www.walkscore.com/score/4217-rue-fabre-montr%C3%A9al-qc-canada" target="_blank"> More info </a>
+                        <a href="https://www.walkscore.com/score/4217-rue-fabre-montr%C3%A9al-qc-canada" target="_blank" data-tip data-for="unit-coming-soon"> The Plateau </a>
+                        <ReactTooltip id="unit-coming-soon" type="light" className="disabled-tooltip" place="bottom">
+                            <p>Coming soon !</p>
+                        </ReactTooltip>
+
                     </div>
                 </div>
 
