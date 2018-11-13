@@ -113,13 +113,13 @@
             "image": "U3A.jpg",
             "description": "D’une superficie totale de 1429 – 1438 pieds carrés, cette unité sur un étage vous propose un espace de vie généreux et contemporain. Le condo de 7 pièces au 3e étage comprend un salon, une cuisine, une salle à manger ainsi que deux chambres à coucher et deux salles de bains. En montant à l’étage supérieur, vous serez surpris de découvrir la spacieuse terrasse sur le toit.",
             "rooms_table": [
-                ["Salon", "2ème étage", "14,7 X 11,1", "Bois"],
-                ["Cuisine", "2ème étage", "16,7 X 12,1", "Céramique"],
-                ["Salle à manger", "2ème étage", "12,1 X 12,4", "Bois"],
-                ["Chambre", "2ème étage", "14,2 X 13,1", "Bois"],
-                ["Salle de bain", "2ème étage", "7,6 X 5,0", "Céramique"],
-                ["Chambre", "2ème étage", "14,4 X 9,10", "Bois"],
-                ["Salle de bain", "2ème étage", "8,9 X 6,6", "Céramique"],
+                ["Salon", "3ème étage", "14,7 X 11,1", "Bois"],
+                ["Cuisine", "3ème étage", "16,7 X 12,1", "Céramique"],
+                ["Salle à manger", "3ème étage", "12,1 X 12,4", "Bois"],
+                ["Chambre", "3ème étage", "14,2 X 13,1", "Bois"],
+                ["Salle de bain", "3ème étage", "7,6 X 5,0", "Céramique"],
+                ["Chambre", "3ème étage", "14,4 X 9,10", "Bois"],
+                ["Salle de bain", "3ème étage", "8,9 X 6,6", "Céramique"],
                 ["Terrasse", "Toiture", "10,8 X 30,7", "Bois"]
             ]
         },

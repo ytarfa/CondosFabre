@@ -4,7 +4,7 @@ import Footer from '../../components/Footer';
 import MapComponent from '../../components/MapComponent';
 
 // Unit Carousel related imports
-import unitArray from '../../units.json';
+import unitArray from '../../ENunits.json';
 import ENCarouselUnit from './ENCarouselUnit';
 import ENMobileCarouselUnit from './ENMobileCarouselUnit';
 // Neighborhood Carousel related imports

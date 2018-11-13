@@ -12,7 +12,7 @@ import HomeContainer from './routes/Home/HomeContainer';
 import ENHomeContainer from './routes/Home/ENHomeContainer';
 
 import units from './units.json';
-import ENunits from './units.json';
+import ENunits from './ENunits.json';
 import SingleUnitContainer from './routes/Unites/SingleUnitContainer';
 import ENSingleUnitContainer from './routes/Unites/ENSingleUnitContainer';
 
