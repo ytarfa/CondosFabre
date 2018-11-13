@@ -52,9 +52,9 @@
         height: 400px;
         .contact-section-container {
             position: absolute;
-            top: -62.5px;
+            top: -25px;
             right: 50px;
-            height: 550px;
+            height: 450px;
             width: 300px;
             background-color: #F8F8F8;
             -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
@@ -99,23 +99,6 @@
                 }
                 ul.contact-info {
                     background-color: #E3E3E3;
-                }
-                .directions {
-                    display: block;
-                    width: 90%;
-                    margin: 0 auto 0 auto;
-                    padding: 10px 15px 10px 15px;
-                    background-color: transparent;
-                    border: 1px solid #4285F4;
-                    color: #4285F4;
-                    text-decoration: none;
-                    i {
-                        padding-right: 15px;
-                    }
-                    p {
-                        display: inline;
-                        color: #4285F4;
-                    }
                 }
             }
             .cta {

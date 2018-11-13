@@ -200,7 +200,6 @@ export default class Home extends React.Component{
                                 <li><i class="fas fa-walking fa-fw"></i><p>Walkscore: 94</p></li>
                                 <li><i class="fas fa-bicycle fa-fw"></i><p>Bikescore: 100</p></li>
                             </ul>
-                            <a class="directions" href="https://goo.gl/maps/bpjCzVJmnFr" target="_blank"> <i class="fas fa-map-marked-alt"></i> <p>Directions to your condo</p> </a>
                             <ul class="contact-info">
                                 <li><i class="fas fa-phone"></i> <p>(514)-597-2121</p> </li>
                                 <li><i class="fas fa-envelope"></i> <p>viasamia@gmail.com</p> </li>
