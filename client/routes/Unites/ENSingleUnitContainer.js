@@ -1,5 +1,6 @@
 import {connect} from 'react-redux';
 import { pushCurrentRoute } from '../../actions/routingActions';
+import { openOverlay } from '../../actions/contactActions';
 
 import ENSingleUnit from './ENSingleUnit';
 
@@ -10,7 +11,8 @@ const mapStateToProps = state => {
 }
 
 const mapDispatchToProps = {
-    pushCurrentRoute: pushCurrentRoute
+    pushCurrentRoute: pushCurrentRoute,
+    openContactOverlay: openOverlay
 }
 
 export default connect(
