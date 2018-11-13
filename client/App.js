@@ -9,12 +9,10 @@ import NavbarContainer from './Navbar/NavbarContainer';
 import ContactOverlayContainer from './components/ContactOverlayContainer';
 
 import HomeContainer from './routes/Home/HomeContainer';
-import ENHomeContainer from './routes/Home/ENHomeContainer';
 
 import units from './units.json';
 import ENunits from './ENunits.json';
 import SingleUnitContainer from './routes/Unites/SingleUnitContainer';
-import ENSingleUnitContainer from './routes/Unites/ENSingleUnitContainer';
 
 export default class App extends React.Component{
 
@@ -41,14 +39,14 @@ export default class App extends React.Component{
             <Route 
                 key={index} 
                 path={"/unites/condo" + unit._id} 
-                render={(props) => < SingleUnitContainer {...unit} pathname={"/unites/condo" + unit._id} />}
+                render={(props) => < SingleUnitContainer {...unit} pathname={"/unites/condo" + unit._id} en={false}/>}
             />
         )
         let ENunitRoutes = ENunits.units.map((unit, index) => 
             <Route 
                 key={index} 
                 path={"/en/unites/condo" + unit._id} 
-                render={(props) => < ENSingleUnitContainer {...unit} pathname={"/en/unites/condo" + unit._id} />}
+                render={(props) => < SingleUnitContainer {...unit} pathname={"/en/unites/condo" + unit._id} en={true} />}
             />
         )
 
@@ -68,7 +66,7 @@ export default class App extends React.Component{
                                 <Switch location={location}>
                                     <Route exact path="/" component={ HomeContainer } />
                                     {unitRoutes}
-                                    <Route exact path="/en" component={ ENHomeContainer } />
+                                    <Route exact path="/en" component={ HomeContainer } />
                                     {ENunitRoutes}
                                 </Switch>
                         </CSSTransition>

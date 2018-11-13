@@ -5,7 +5,6 @@ import Home from './Home';
 
 const mapStateToProps = state => {
     return {
-
     }
 }
 

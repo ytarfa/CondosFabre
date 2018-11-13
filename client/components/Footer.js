@@ -10,7 +10,7 @@ export default class Footer extends React.Component {
     render() {
         return (
             <div class="Footer">
-                <p> &copy; 2018 Condos Fabre. Tous droits réservés. </p>
+                <p> &copy; 2018 Condos Fabre. {this.props.en == true ? 'All rights reserved' : 'Tous droits réservés'} </p>
                 {/* <ul>
                     <li></li>
                 </ul> */}

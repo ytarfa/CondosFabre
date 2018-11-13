@@ -8,6 +8,7 @@ import SimpleCarousel from '../../components/SimpleCarousel';
 
 import MapComponent from '../../components/MapComponent';
 import PlanComponent from './PlanComponent';
+import Footer from '../../components/Footer';
 
 export default class SingleUnit extends React.Component {
 
@@ -55,8 +56,8 @@ export default class SingleUnit extends React.Component {
                     <div class="general-info">{this.props.description}</div>
                     <div class="features">
                         <ul>
-                                <li> <i class="fas fa-bed fa-fw"></i> <p>{this.props.bedrooms} chambres</p> </li>
-                                <li> <i class="fas fa-bath fa-fw"></i> <p>{this.props.washrooms} salles de bain</p> </li>
+                                <li> <i class="fas fa-bed fa-fw"></i> <p>{this.props.bedrooms} {this.props.en == true ? 'bedrooms' : 'chambres'}</p> </li>
+                                <li> <i class="fas fa-bath fa-fw"></i> <p>{this.props.washrooms} {this.props.en == true ? 'bathrooms' : 'salles de bain'} </p> </li>
                                 <li> <i class="fas fa-street-view fa-fw"></i> <p>{this.props.area} p<sup>2</sup></p> </li>
                                 <li> <i class="fas fa-building fa-fw"></i> <p>{this.props.floor.full}</p> </li>
                         </ul>
@@ -68,10 +69,10 @@ export default class SingleUnit extends React.Component {
                         <table>
                             <tbody>
                                 <tr class="title-r">
-                                    <td>PIECE</td>
-                                    <td>NIVEAU</td>
+                                    <td>{this.props.en == true ? 'ROOM' : 'PIECE'}</td>
+                                    <td>{this.props.en == true ? 'FLOOR' : 'NIVEAU'}</td>
                                     <td>DIMENSIONS</td>
-                                    <td>REVETEMENT DE SOL</td>
+                                    <td>{this.props.en == true ? 'FLOORING' : 'REVETEMENT DE SOL'}</td>
                                 </tr>
                                 {tableRows}
                             </tbody>
@@ -84,13 +85,13 @@ export default class SingleUnit extends React.Component {
                     <MapComponent />
                     <div class="score-container">
                         <ul>
-                            <li><i class="fas fa-map-marker-alt fa-fw"></i><p>4217-4223 Rue Fabre</p></li>
+                            <li><i class="fas fa-map-marker-alt fa-fw"></i><p>4217-4223 {this.props.en == true ? 'Fabre St.' : 'Rue Fabre'}</p></li>
                             <li><i class="fas fa-walking fa-fw"></i><p>Walkscore: 94</p></li>
                             <li><i class="fas fa-bicycle fa-fw"></i><p>Bikescore: 100</p></li>
                         </ul>
                         <a href="https://www.walkscore.com/score/4217-rue-fabre-montr%C3%A9al-qc-canada" target="_blank" data-tip data-for="unit-coming-soon"> Le Plateau </a>
                         <ReactTooltip id="unit-coming-soon" type="light" className="disabled-tooltip" place="bottom">
-                            <p>Prochainement disponible !</p>
+                            <p>{this.props.en == true ? 'Coming soon !' : 'Prochainement disponible !'}</p>
                         </ReactTooltip>
                     </div>
                 </div>
@@ -98,9 +99,10 @@ export default class SingleUnit extends React.Component {
                 <div class="contact-cta-section">
                     <p>Nous vous invitons à venir voir de plus près ce beau projet dans nos bureaux où nous vous avons aménagé une belle salle de montre qui vous permettra de vous projeter dans votre nouveau nid douillet tout neuf...</p>
                     <div class="link-container">
-                        <a onClick={this.props.openContactOverlay}> Contactez Nous ! </a>
+                        <a onClick={this.props.openContactOverlay}> {this.props.en == true ? 'Contact Us' : 'Contactez Nous'} </a>
                     </div>
                 </div>
+                <Footer en={this.props.en}/>
             </div>
         )
     }

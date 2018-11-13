@@ -44,11 +44,11 @@ export default class CarouselUnits extends React.Component {
                     </div>
                     <div class="link">
                         <Link
-                            to={"/unites/condo" +  this.props.unit._id}
+                            to={this.props.en == true ? "/en/unites/condo" +this.props.unit._id : "/unites/condo" +  this.props.unit._id}
                             style={{
                                 pointerEvents: this.props.index == Math.abs(this.state.counter) ? 'all' : 'none'
                             }}
-                        >Plus d'information</Link>
+                        >{this.props.en == true ? 'More information' : 'Plus d\'information'}</Link>
                     </div>
                 </div>
             </div>
