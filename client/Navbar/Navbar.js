@@ -71,7 +71,7 @@ export default class Navbar extends React.Component{
                                 <a class="nav-link disabled" href="#" style={{pointerEvents: 'none'}}> {this.state.en ? 'THE NEIGHBORHOOD' : 'LE QUARTIER'} </a>
                             </li>
                             <ReactTooltip id="coming-soon" type="light" className="disabled-tooltip" place="bottom">
-                                <p>{this.state.en ? 'Coming soon !' : 'Disponible prochainement !'}</p>
+                                <p>{this.state.en ? 'Coming soon !' : 'Prochainement disponible !'}</p>
                             </ReactTooltip>
                         </ul>
                         <span class="contact-button" onClick={this.props.openContactOverlay}>
