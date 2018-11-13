@@ -53,7 +53,8 @@ export default class App extends React.Component{
                 <Route render={({location}) =>
                     <TransitionGroup>
                         <CSSTransition
-                            classNames="slide"
+                            classNames="fade"
+                            appear={true}
                             timeout={750}
                             key={location.key}
                         >
