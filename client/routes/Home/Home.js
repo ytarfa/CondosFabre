@@ -64,6 +64,13 @@ export default class Home extends React.Component{
         }
     }
 
+    componentWillMount() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
+
     componentDidMount() {
         this.props.pushCurrentRoute(this.props.location.pathname)
     }

@@ -13,6 +13,13 @@ export default class SingleUnit extends React.Component {
         super(props);
     }
 
+    componentWillMount() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
+
     componentDidMount() {
         this.props.pushCurrentRoute(this.props.pathname);
     }
