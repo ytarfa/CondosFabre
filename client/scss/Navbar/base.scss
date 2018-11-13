@@ -166,6 +166,10 @@
             border: none;
             border-radius: 0;
             background-color: #F8F8F8;
+            pointer-events: none;
+            display: block;
+            opacity: 0;
+            transition: 0.25s opacity;
             .dropdown-item {
                 width: 300px;
                 display: flex;
@@ -181,6 +185,13 @@
                 &:hover {
                     padding: 10px;
                 }
+                &:focus {
+                    background-color: #E3E3E3;
+                }
+            }
+            &.show {
+                opacity: 1;
+                pointer-events: all;
             }
         }
     }
