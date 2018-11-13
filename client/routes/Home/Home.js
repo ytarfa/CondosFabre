@@ -10,6 +10,8 @@ import MobileCarouselUnit from './MobileCarouselUnit';
 // Neighborhood Carousel related imports
 import quartierDiapos from './quartierDiapos.json';
 
+import LazyImage from '../../components/LazyImage';
+
 export default class Home extends React.Component{
 
     constructor(props) {
@@ -115,7 +117,7 @@ export default class Home extends React.Component{
 
                 <div class="home-header">
                     <div class="home-carousel">
-                        <img src="/images/facade-cropped.jpg"/>
+                        <LazyImage hd="/images/facade.jpg" preload="/images/facade-scaled.jpg" />
                     </div>
                 </div>
                 <div class="home-header-intro">
