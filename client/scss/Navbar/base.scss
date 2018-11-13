@@ -195,6 +195,18 @@
             }
         }
     }
+    .disabled-tooltip {
+        border: 1px solid #E3E3E3 !important;
+        p {
+            margin: 0
+        }
+    }
+    .disabled-tooltip::before {
+        content: none !important;
+    }
+    .disabled-tooltip::after {
+        content: none !important;
+    }
 
     .contact-button {
         float: right;

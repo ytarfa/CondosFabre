@@ -77,12 +77,15 @@ export default class Navbar extends React.Component{
                                 {unitList}
                             </div>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link disabled" href="#">PROJET</a>
+                        <li class="nav-item" data-tip data-for="coming-soon">
+                            <a class="nav-link disabled" href="#" style={{pointerEvents: 'none'}}>PROJET</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link disabled" href="#">QUARTIER</a>
+                        <li class="nav-item" data-tip data-for="coming-soon">
+                            <a class="nav-link disabled" href="#" style={{pointerEvents: 'none'}}>QUARTIER</a>
                         </li>
+                        <ReactTooltip id="coming-soon" type="light" className="disabled-tooltip" place="bottom">
+                            <p>Coming Soon !</p>
+                        </ReactTooltip>
                     </ul>
                     <span class="contact-button" onClick={this.props.openContactOverlay}>
                         <a href="#"> CONTACTEZ-NOUS </a>
