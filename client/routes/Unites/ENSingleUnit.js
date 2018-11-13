@@ -4,9 +4,9 @@ import '../../scss/SingleUnit/main.scss';
 
 import unitData from '../../units.json';
 import SimpleCarousel from '../../components/SimpleCarousel';
-
 import MapComponent from '../../components/MapComponent';
 import PlanComponent from './PlanComponent';
+import ENFooter from '../../components/ENFooter';
 
 export default class SingleUnit extends React.Component {
 
@@ -95,6 +95,7 @@ export default class SingleUnit extends React.Component {
                         <a> Contact Us ! </a>
                     </div>
                 </div>
+            <ENFooter />
             </div>
         )
     }
