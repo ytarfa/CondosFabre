@@ -16,7 +16,6 @@ export default class LazyImage extends React.Component {
         const hdImage = new Image();
         hdImage.src = this.props.hd;
         hdImage.onload = () => {
-            console.log('loaded');
             this.setState({hdImageLoaded: true});
             this.imageHd.current.setAttribute(
                 'style',
