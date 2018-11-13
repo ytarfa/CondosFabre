@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Link } from 'react-router-dom';
 
 export default class CarouselUnits extends React.Component {
 
@@ -42,12 +43,12 @@ export default class CarouselUnits extends React.Component {
                         </ul>
                     </div>
                     <div class="link">
-                        <a 
-                            href={"/unites/condo" +  this.props.unit._id}
+                        <Link
+                            to={"/unites/condo" +  this.props.unit._id}
                             style={{
                                 pointerEvents: this.props.index == Math.abs(this.state.counter) ? 'all' : 'none'
                             }}
-                        >Plus d'information</a>
+                        >Plus d'information</Link>
                     </div>
                 </div>
             </div>
