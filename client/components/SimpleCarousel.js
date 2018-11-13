@@ -13,11 +13,12 @@ export default class SimpleCarousel extends React.Component{
         }
         this.autoplay = this.autoplay.bind(this);
         this.changeImage = this.changeImage.bind(this);
+        this.toggleAutoplay = this.toggleAutoplay;
     }
 
     componentDidMount() {
         this.setState({ length: this.props.imageList.length});
-        this.interval = setInterval(this.autoplay, 5000);
+        this.interval = setInterval(this.autoplay, 3000);
     }
 
     autoplay() {
@@ -33,12 +34,21 @@ export default class SimpleCarousel extends React.Component{
     }
 
     changeImage(x) {
-
         this.setState({counter: x});
 
         if (this.state.autoplay == true) {
             clearInterval(this.interval);
-            this.setState({autoplay: false});
+            this.interval = setInterval(this.autoplay, 3000);
+            this.setState({autoplay: true});
+        }
+    }
+
+    toggleAutoplay(bool) {
+        this.setState({autoplay: bool});
+        if (bool == true) {
+            this.interval = setInterval(this.autoplay, 3000);
+        } else {
+            clearInterval(this.interval);
         }
     }
 
@@ -76,6 +86,22 @@ export default class SimpleCarousel extends React.Component{
                     <ul>
                         {controlElements}
                     </ul>
+                    <span class="pause-play">
+                        <i 
+                            class="fas fa-pause"
+                            onClick={() => this.toggleAutoplay(false)}
+                            style={{
+                                display: this.state.autoplay == true ? 'inline' : 'none'
+                            }}
+                        ></i>
+                        <i 
+                            class="fas fa-play"
+                            onClick={() => this.toggleAutoplay(true)}
+                            style={{
+                                display: this.state.autoplay == true ? 'none' : 'inline'
+                            }}
+                        ></i>
+                    </span>
                 </div>
             </div>  
         )
