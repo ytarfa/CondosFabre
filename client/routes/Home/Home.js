@@ -11,6 +11,7 @@ import MobileCarouselUnit from './MobileCarouselUnit';
 import quartierDiapos from './quartierDiapos.json';
 
 import LazyImage from '../../components/LazyImage';
+import SimpleCarousel from '../../components/SimpleCarousel';
 
 export default class Home extends React.Component{
 
@@ -123,9 +124,20 @@ export default class Home extends React.Component{
             <div class="Home page">
 
                 <div class="home-header">
-                    <div class="home-carousel">
+                    {/* <div class="home-carousel">
                         <LazyImage hd="/images/facade-cropped.jpg" preload="/images/facade-cropped-scaled.jpg" />
-                    </div>
+                    </div> */}
+                    <SimpleCarousel 
+                        class="home-carousel" 
+                        imageList={
+                            [
+                                ['/images/facade-cropped-scaled.jpg', '/images/facade-cropped.jpg'],
+                                ['/images/units/U1A-scaled.jpg', '/images/units/U1A.jpg'],
+                                ['/images//images/units/U2A.jpg', '/images/units/U2A.jpg'],
+                                ['/images//images/units/U3A.jpg', '/images/units/U3A.jpg']
+                            ]
+                        }
+                    />
                 </div>
                 <div class="home-header-intro">
                     <h1> Sentez vous à la maison au premier regard.</h1>
