@@ -124,7 +124,7 @@ export default class Home extends React.Component{
 
                 <div class="home-header">
                     <div class="home-carousel">
-                        <LazyImage hd="/images/facade.jpg" preload="/images/facade-scaled.jpg" />
+                        <LazyImage hd="/images/facade-cropped.jpg" preload="/images/facade-cropped-scaled.jpg" />
                     </div>
                 </div>
                 <div class="home-header-intro">
