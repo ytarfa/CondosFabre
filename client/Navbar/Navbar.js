@@ -14,6 +14,8 @@ export default class Navbar extends React.Component{
             route: '/',
             en: false
         }
+        this.collapseRef = React.createRef();
+        this.collapseNav = this.collapseNav.bind(this);
     }
 
     static getDerivedStateFromProps(props, state, prevProps) {
@@ -31,6 +33,14 @@ export default class Navbar extends React.Component{
         }
     }
 
+    collapseNav() {
+        if (this.collapseRef.current != null) {
+            if(this.collapseRef.current.classList.contains('show')) {
+                this.collapseRef.current.classList.remove('show');
+            }
+        }
+    }
+
     render() {
 
         let unitList = units.units.map((unit, index) =>
@@ -41,18 +51,18 @@ export default class Navbar extends React.Component{
         )
 
         return (
-            <div id="navbar-component" >
+            <div id="navbar-component">
                 <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
 
                     <a class="navbar-brand" href="#">
                         <img src="/images/logo.png"/>
                     </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon" ></span>
                     </button>
                 
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav mr-auto">
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent" ref={this.collapseRef}>
+                        <ul class="navbar-nav mr-auto" onClick={() => {this.collapseNav()}}>
                             <li className={(this.props.route == '/') || (this.props.route == '/en') || (this.props.route == '/en/') ? "nav-item active" : "nav-item"}>
                                 <Link class="nav-link" to={this.state.en ? '/en/' : '/'}> {this.state.en ? 'HOME' : 'ACCUEIL'} </Link>
                             </li>

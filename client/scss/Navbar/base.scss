@@ -141,12 +141,74 @@
         }
     }
     
-    @media only screen and (max-width: 992px) {
+    @media only screen and (max-width: 991px) {
         .navbar {
+            justify-content: space-between;
             height: auto;
+            .navbar-toggler {
+                display: inline-block;
+            }
+            .collapse:not(.show) {
+                display: none !important;
+            }
+            .navbar-collapse {
+                width: 100%;
+                text-align: center;
+                flex-direction: column;
+                flex-basis: 100%;
+                align-items: center;
+                justify-content: center;
+                ul {
+                    flex-direction: column;
+                }
+                .navbar-nav {
+                    margin-right: 0 !important;
+                    .nav-item {
+                        margin-top: 10px;
+                        margin-bottom: 10px;
+                        &.dropdown {
+                            .dropdown-toggle {
+                                pointer-events: none;
+                            }
+                            .dropdown-toggle::after {
+                                display: none;
+                            }
+                            .dropdown-menu {
+                                opacity: 1 !important;
+                                pointer-events: all !important;
+                                background-color: transparent !important;
+                                .dropdown-item {
+                                    margin: auto;
+                                }
+                            }
+                        }
+                    }
+                }
+                .en-fr {
+                    margin: 10px auto 10px auto;
+                }
+            }
+            .navbar-collapse.show {
+                display: flex;
+            }
+            .contact-button {
+                margin: 25px 0 25px 0;
+            }
         }
-        .contact-button {
-            display: none;
+
+    }
+
+    @media only screen and (max-width: 1071px) and (min-width: 991px) {
+        .navbar {
+            li {
+                padding: 0 10px 0 10px !important;
+            }
+            .contact-button {
+                font-size: 12px;
+            }
+            .en-fr {
+                font-size: 12px;
+            }
         }
     }
 }
