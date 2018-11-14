@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Link } from 'react-router-dom';
+import LazyImage from '../../components/LazyImage';
 
 export default class CarouselUnits extends React.Component {
 
@@ -27,7 +28,7 @@ export default class CarouselUnits extends React.Component {
                 }}
             >
                 <div class="img-container">
-                    <img src={"/images/units/" + this.props.unit.image} />
+                    <LazyImage hd={"/images/units/" + this.props.unit.image} preload={"/images/units/" + (this.props.unit.image).split(".jpg")[0] + "-scaled.jpg"} />
                 </div>
 
                 <div class="description">
@@ -38,7 +39,7 @@ export default class CarouselUnits extends React.Component {
                         <ul>
                             <li> <i class="fas fa-bed fa-fw"></i> {this.props.unit.bedrooms} </li>
                             <li> <i class="fas fa-bath fa-fw"></i> {this.props.unit.washrooms} </li>
-                            <li> <i class="fas fa-street-view fa-fw"></i> 1200 p<sup>2</sup> </li>
+                            <li> <i class="fas fa-street-view fa-fw"></i> {this.props.unit.area} p<sup>2</sup> </li>
                             <li> <i class="fas fa-building fa-fw"></i> {this.props.unit.floor.short} </li>
                         </ul>
                     </div>
