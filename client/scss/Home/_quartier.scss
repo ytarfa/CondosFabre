@@ -128,6 +128,10 @@
 
 @media only screen and (max-width: 1050px) {
     .Home {
+        .title-section {
+            white-space: nowrap;
+            margin-bottom: 20px;
+        }
         .home-quartier {
             .quartier-carousel {
                 width: 100%;
