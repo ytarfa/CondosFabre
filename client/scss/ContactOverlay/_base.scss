@@ -78,8 +78,9 @@
                 .info {
                     margin-left: 30px;
                     float: right;
-                    p {
-                        margin: 0;
+                    a {
+                        text-decoration: none;
+                        color: #555555;
                         &:first-of-type {
                             margin-bottom: 10px;
                         }
@@ -102,7 +103,10 @@
                         }
                         a {
                             text-decoration: none;
-                            color: #365899;
+                            color: #555555;
+                            &.website {
+                                color: #365899;
+                            }
                         }
                     }
                 }

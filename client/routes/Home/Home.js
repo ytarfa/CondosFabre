@@ -13,7 +13,6 @@ import MobileCarouselUnit from './MobileCarouselUnit';
 // Neighborhood Carousel related imports
 import quartierDiapos from './quartierDiapos.json';
 
-
 export default class Home extends React.Component{
 
     constructor(props) {
@@ -236,14 +235,23 @@ export default class Home extends React.Component{
                                     4217-4223 {this.state.en ? 'Fabre St.' : 'Rue Fabre'}</a>
                                 </li>
                                 <ReactTooltip id="google-maps-tooltip" type="light" className="disabled-tooltip" place="bottom">
-                                    <p>{this.props.en == true ? 'Click here to open in Google Maps' : 'Cliquer pour ouvrir dans Google Maps'}</p>
+                                    <p>{this.state.en == true ? 'Click here to open in Google Maps' : 'Cliquez ici pour ouvrir dans Google Maps'}</p>
                                 </ReactTooltip>
-                                <li><i class="fas fa-walking fa-fw"></i><p>Walkscore: 94</p></li>
-                                <li><i class="fas fa-bicycle fa-fw"></i><p>Bikescore: 100</p></li>
+                                <li><i class="fas fa-walking fa-fw"></i><a href="https://www.walkscore.com/score/4217-rue-fabre-montr%C3%A9al-qc-canada" target="_blank" data-tip data-for="bike-walk-score-tooltip">Walkscore: 94</a></li>
+                                <li><i class="fas fa-bicycle fa-fw"></i><a href="https://www.walkscore.com/score/4217-rue-fabre-montr%C3%A9al-qc-canada" target="_blank" data-tip data-for="bike-walk-score-tooltip">Bikescore: 100</a></li>
+                                <ReactTooltip id="bike-walk-score-tooltip" type="light" className="disabled-tooltip" place="bottom">
+                                    <p>{this.state.en == true ? 'Click here to learn more about Walkscore' : 'Cliquez ici pour en apprendre plus sur Walkscore.'}</p>
+                                </ReactTooltip>
                             </ul>
                             <ul class="contact-info">
-                                <li><i class="fas fa-phone"></i> <p> 514 597 2121 </p> </li>
-                                <li><i class="fas fa-envelope"></i> <p>viasamia@gmail.com</p> </li>
+                                <li><i class="fas fa-phone"></i> <a href="tel:1-514-597-2121" data-tip data-for="phone-tooltip"> 514 597 2121 </a> </li>
+                                <ReactTooltip id="phone-tooltip" type="light" className="disabled-tooltip">
+                                    <p>{this.state.en == true ?  'Click here to call' : 'Cliquez ici pour appeler'}</p>
+                                </ReactTooltip>
+                                <li><i class="fas fa-envelope"></i> <a href="mailto:viasamia@gmail.com" data-tip data-for="email-tooltip">viasamia@gmail.com</a> </li>
+                                <ReactTooltip id="email-tooltip" type="light" className="disabled-tooltip">
+                                    <p>{this.state.en == true ? 'Click here to open your mail app' : 'Cliquez ici pour ouvrir votre application de messagerie'}</p>
+                                </ReactTooltip>
                             </ul>
                         </div>
                         

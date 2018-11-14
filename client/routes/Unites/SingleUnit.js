@@ -98,8 +98,11 @@ export default class SingleUnit extends React.Component {
                             <ReactTooltip id="google-maps-tooltip" type="light" className="disabled-tooltip" place="bottom">
                                 <p>{this.props.en == true ? 'Click here to open in Google Maps' : 'Cliquer pour ouvrir dans Google Maps'}</p>
                             </ReactTooltip>
-                            <li><i class="fas fa-walking fa-fw"></i><p>Walkscore: 94</p></li>
-                            <li><i class="fas fa-bicycle fa-fw"></i><p>Bikescore: 100</p></li>
+                            <li><i class="fas fa-walking fa-fw"></i><a href="https://www.walkscore.com/score/4217-rue-fabre-montr%C3%A9al-qc-canada" target="_blank" data-tip data-for="bike-walk-score-tooltip">Walkscore: 94</a></li>
+                            <li><i class="fas fa-bicycle fa-fw"></i><a href="https://www.walkscore.com/score/4217-rue-fabre-montr%C3%A9al-qc-canada" target="_blank" data-tip data-for="bike-walk-score-tooltip">Bikescore: 100</a></li>
+                            <ReactTooltip id="bike-walk-score-tooltip" type="light" className="disabled-tooltip" place="bottom">
+                                <p>{this.props.en == true ? 'Click here to learn more about Walkscore' : 'Cliquez ici pour en apprendre plus sur Walkscore.'}</p>
+                            </ReactTooltip>
                         </ul>
                         <a data-tip data-for="unit-coming-soon"> Le Plateau </a>
                         <ReactTooltip id="unit-coming-soon" type="light" className="disabled-tooltip" place="bottom">
