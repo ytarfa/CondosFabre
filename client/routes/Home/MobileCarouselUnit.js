@@ -9,8 +9,11 @@ export default class MobileCarouselUnits extends React.Component {
 
     render() {
         return (
-            <div class="unit" key={this.props.index}>
-                <img src={"/images/units/" + this.props.unit.image} />
+            <div class="mobile-unit" key={this.props.index}>
+                <div class="img-container">
+                    <p class="condo-id">Condo {this.props.unit._id}</p>
+                    <img src={"/images/units/" + this.props.unit.image} />
+                </div>
 
                 <div class="description">
                     <div class="price">
