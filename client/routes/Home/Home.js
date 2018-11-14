@@ -247,7 +247,7 @@ export default class Home extends React.Component{
                             </ul>
                         </div>
                         
-                        <a class="cta"> <p>{this.state.en ? 'Interested? Contact us!' : 'Intéressés? Contactez nous!'}</p> </a>
+                        <a class="cta" onClick={this.props.openContactOverlay}> <p>{this.state.en ? 'Interested? Contact us!' : 'Intéressés? Contactez nous!'}</p> </a>
                     </div>
                 </div>
             
