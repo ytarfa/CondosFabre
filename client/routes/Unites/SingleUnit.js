@@ -79,6 +79,7 @@ export default class SingleUnit extends React.Component {
                         </table>
                     </div>
                     <PlanComponent unit_id={this.props._id}/>
+                    <button class="mobile-plan-component-toggle"> <i class="fas fa-file-alt"></i> <p>{this.props.en == true ? 'See the full unit plan' : 'Consulter le plan complet de l\'unité' }</p> </button>
                 </div>
 
                 <div class="location-description-section">

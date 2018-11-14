@@ -30,6 +30,7 @@
             -ms-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
             -o-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
             box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+            white-space: nowrap;
             h1 {
                 display: block;
                 margin: 0; 
@@ -60,7 +61,6 @@
         }
         .general-info {
             margin-right: 50px;
-            // margin-left: 50px;
             color: #333333;
             font-size: 17px;
             width: 600px;
@@ -106,6 +106,36 @@
                 }
                 tr, td {
                     padding: 10px 20px 10px 20px;
+                }
+            }
+        }
+        .mobile-plan-component-toggle {
+            display: none;
+            background: transparent;
+            border: 1px solid #555555;
+            padding: 10px 20px 10px 20px;
+            font-size: 20px;
+            margin: 50px 25px 0 25px;;
+            transition: 0.25s all;
+            cursor: pointer;
+            i {
+                padding-right: 15px;
+                color: #555555;
+            }
+            p {
+                display: inline;
+                margin: 0;
+                padding: 0;
+            }
+            &:hover {
+                background-color: #7f9470;
+                padding: 10px 25px 10px 25px;
+                border: none;
+                i {
+                    color: white;
+                }
+                p {
+                    color: white;
                 }
             }
         }
@@ -216,6 +246,101 @@
                     -o-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
                     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
                 }
+            }
+        }
+    }
+}
+
+// 642px - Header section
+// IMPORTANT REMOVE CONTROLS
+@media only screen and (max-width: 642px) {
+    .SingleUnit {
+        .header-container {
+            position: relative;
+            .quick-info {
+                left: 50%;
+                transform: translate(-50%, 50%);
+                bottom: 0;
+            }
+        }
+    }
+}
+
+// 1044px - description
+@media only screen and (max-width: 1044px) {
+    .SingleUnit {
+        .general-description-section {
+            margin: 150px 0 100px 0;
+            flex-direction: column;
+            .general-info {
+                margin-right: 0;
+                margin-bottom: 50px;
+                padding: 0 50px 0 50px;
+                width: 100%;
+                box-sizing: border-box;
+                text-align: center;
+            }
+            .features {
+                margin: 0;
+            }
+        }
+    }
+}
+
+// 1170px - plan
+// IMPORTANT ADD MOBILE PLAN COMPONENT TOGGLE
+@media only screen and (max-width: 1044px) {
+    .SingleUnit {
+        .room-description-section { 
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            .PlanComponent {
+                display: none;
+            }
+            .mobile-plan-component-toggle {
+                display: block;
+            }
+        }
+        .contact-cta-section {
+            p {
+                margin: 0 50px 0 50px;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 570px) {
+    .SingleUnit {
+        .general-description-section {
+            margin-bottom: 0;
+        }
+        .room-description-section {
+            table {
+                display: none;
+            }
+        }
+    }
+}
+
+// 900px - map & contact-cta
+@media only screen and (max-width: 1044px) {
+    .SingleUnit {
+        .location-description-section {
+            margin-bottom: 250px;
+            height: 400px;
+            .score-container {
+                bottom: 0;
+                left: 50%;
+                transform: translate(-50%, 70%);
+                width: 300px;
+                margin: auto;
+            }
+        }
+        .contact-cta-section {
+            p {
+                font-size: 25px;
             }
         }
     }
