@@ -67,6 +67,9 @@
                     &:focus {
                         background-color: #E3E3E3;
                     }
+                    &:active {
+                        background-color: #E3E3E3;
+                    }
                 }
                 &.show {
                     opacity: 1;
