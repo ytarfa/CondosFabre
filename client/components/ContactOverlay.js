@@ -28,7 +28,11 @@ export default class ContactOverlay extends React.Component {
             >
                 <div class="overlay">
                     <div class="mapContainer">
-                        <MapComponent/>
+                        <MapComponent 
+                            zoom={14}
+                            center={{ lat:  45.529591, lng: -73.571390 }}
+                            markerPosition={{ lat:  45.529591, lng: -73.571390 }}
+                        />
                     </div>
                     <div class="formContainer">
                         <button
@@ -50,7 +54,7 @@ export default class ContactOverlay extends React.Component {
                                 <a 
                                     class="google-maps" 
                                     data-tip data-for="google-maps-tooltip"
-                                    href="https://goo.gl/maps/mmLLC1pKGds" target="_blank"
+                                    href="https://goo.gl/maps/a2vLJx4L2TK2" target="_blank"
                                 >
                                     <p>152, Mont-Royal Est <br/> Le Plateau-Mont-Royal <br/> Québec H2J 1X8</p>
                                 </a>
