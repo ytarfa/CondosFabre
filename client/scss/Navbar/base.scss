@@ -38,6 +38,9 @@
                     font-weight: 600;
                 }
             }
+            .dropdown-toggle::after {
+                margin-left: 10px !important;
+            }
             .dropdown-menu {
                 border: none;
                 border-radius: 0;
@@ -201,6 +204,9 @@
     @media only screen and (max-width: 1071px) and (min-width: 991px) {
         .navbar {
             li {
+                padding: 0 10px 0 10px !important;
+            }
+            .nav-link:hover {
                 padding: 0 10px 0 10px !important;
             }
             .contact-button {
