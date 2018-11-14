@@ -313,6 +313,14 @@
 }
 @media only screen and (max-width: 570px) {
     .SingleUnit {
+        .header-container {
+            height: 200px;
+            .quick-info {
+                position: static;
+                transform: translate(0);
+                box-shadow: none;
+            }
+        }
         .general-description-section {
             margin-bottom: 0;
         }

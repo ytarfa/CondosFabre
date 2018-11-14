@@ -163,6 +163,11 @@
 }
 @media only screen and (max-width: 500px) {
     .Home {
+        .home-header {
+            .home-carousel {
+                height: 300px;
+            }
+        }
         .home-header-intro {
             display: block;
             h1 {
