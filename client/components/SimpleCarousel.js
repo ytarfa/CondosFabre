@@ -76,6 +76,7 @@ export default class SimpleCarousel extends React.Component{
                     transform: this.state.counter == index ? 'scale(2)' : 'scale(1)'
                 }}
                 onClick={() => this.changeImage(index)}
+                onTouchEnd={() => this.changeImage(index)}
             ></li>
         )
 
