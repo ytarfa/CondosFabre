@@ -25,6 +25,13 @@ export default class PlanComponent extends React.Component {
         return (
             <div class="PlanComponent">
 
+                <button 
+                    onClick={this.openOverlay}
+                    class="mobile-plan-component-toggle"> 
+                        <i class="fas fa-file-alt"></i> 
+                        <p>{this.props.en == true ? 'See the full unit plan' : 'Consulter le plan complet de l\'unité' }</p> 
+                    </button>
+
                 <div class="small-image-container">
                     <img
                         src={"/images/units/cropped-plan/" + this.props.unit_id +".jpg"}
