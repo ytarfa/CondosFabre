@@ -99,6 +99,14 @@
                 }
                 ul.contact-info {
                     background-color: #E3E3E3;
+                    li {
+                        a {
+                            color: #333333;
+                        }
+                        i {
+                            background-color: #F8F8F8;
+                        }
+                    }
                 }
             }
             .cta {
