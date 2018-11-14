@@ -64,7 +64,7 @@ export default class SimpleCarousel extends React.Component{
                 }}
             >
                 <LazyImage
-                    preset={img[0]}
+                    preload={img[0]}
                     hd={img[1]}
                 />
             </div>
