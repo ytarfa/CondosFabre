@@ -1,35 +1,20 @@
 .SingleUnit {
 
     .header-container {
-        position: relative;
-        height: 500px;
         width: 100%;
 
-        img {
-            height: 100%;
-            width: 100%;
-            position: absolute;
-            top: 0; left: 0;
-            object-fit: cover
+        .single-unit-carousel {
+            height: 500px;
         }
 
         .quick-info {
-            position: absolute;
-            left: 50px;
-            bottom: 0px;
             background-color: #F8F8F8;
             z-index: 3;
-            transform: translate(0, 50%);
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center; 
-            padding: 20px 40px 20px 40px;
-            -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-            -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-            -ms-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-            -o-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+            padding: 40px;
             white-space: nowrap;
             h1 {
                 display: block;
@@ -43,15 +28,22 @@
                 font-family: 'Playfair Display', sans-serif;
                 font-size: 25px;
                 font-weight: 300;
+                color: #333333;
                 margin: 0;
             }
+            span {
+                width: 120px;
+                height: 1px;
+                margin: 20px 0 20px 0;
+                border-radius: 10%;
+                background-color: #555555;
+            }
         }
-
         
     }
 
     .general-description-section {
-        margin: 150px 150px 100px 150px;
+        margin: 100px 150px 100px 150px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -225,14 +217,6 @@
 // IMPORTANT REMOVE CONTROLS
 @media only screen and (max-width: 642px) {
     .SingleUnit {
-        .header-container {
-            position: relative;
-            .quick-info {
-                left: 50%;
-                transform: translate(-50%, 50%);
-                bottom: 0;
-            }
-        }
     }
 }
 
@@ -240,7 +224,7 @@
 @media only screen and (max-width: 1044px) {
     .SingleUnit {
         .general-description-section {
-            margin: 150px 0 100px 0;
+            margin: 100px 0 100px 0;
             flex-direction: column;
             .general-info {
                 margin-right: 0;
@@ -278,11 +262,8 @@
 @media only screen and (max-width: 570px) {
     .SingleUnit {
         .header-container {
-            height: 200px;
-            .quick-info {
-                position: static;
-                transform: translate(0);
-                box-shadow: none;
+            .single-unit-carousel {
+                height: 300px;
             }
         }
         .general-description-section {

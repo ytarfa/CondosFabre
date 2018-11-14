@@ -41,13 +41,13 @@ export default class SingleUnit extends React.Component {
         return (
             <div class="SingleUnit page">
                 <div class="header-container">
-                    {/* <img src="/images/units/U1A.jpg"/> */}
-                    {/* <LazyImage hd="/images/units/U1A.jpg" preload="/images/units/U1A-scaled.jpg" /> */}
                     <SimpleCarousel 
                         imageList={unitData.images}
+                        className={'single-unit-carousel'}
                     />
                     <div class="quick-info">
                         <h1> Condo {this.props._id} </h1>
+                        <span></span>
                         <p> {this.props.price} </p>
                     </div>
                 </div>
