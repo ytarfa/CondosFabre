@@ -111,7 +111,7 @@ export default class Home extends React.Component{
                         transition: 'all 0.25s'
                     }}
                 >
-                    <img src={"/images/quartierCarousel/" + diapo.image} />
+                    {/* <img src={"/images/quartierCarousel/" + diapo.image} />  */}
                     <div class="description">
                         {diapo.description}
                     </div>
@@ -142,8 +142,8 @@ export default class Home extends React.Component{
                             [
                                 ['/images/facade-cropped-scaled.jpg', '/images/facade-cropped.jpg'],
                                 ['/images/units/U1A-scaled.jpg', '/images/units/U1A.jpg'],
-                                ['/images//images/units/U2A.jpg', '/images/units/U2A.jpg'],
-                                ['/images//images/units/U3A.jpg', '/images/units/U3A.jpg']
+                                ['/images/units/U2A-scaled.jpg', '/images/units/U2A.jpg'],
+                                ['/images/units/U3A-scaled.jpg', '/images/units/U3A.jpg']
                             ]
                         }
                     />
@@ -242,7 +242,7 @@ export default class Home extends React.Component{
                                 <li><i class="fas fa-bicycle fa-fw"></i><p>Bikescore: 100</p></li>
                             </ul>
                             <ul class="contact-info">
-                                <li><i class="fas fa-phone"></i> <p>(514)-597-2121</p> </li>
+                                <li><i class="fas fa-phone"></i> <p> 514 597 2121 </p> </li>
                                 <li><i class="fas fa-envelope"></i> <p>viasamia@gmail.com</p> </li>
                             </ul>
                         </div>

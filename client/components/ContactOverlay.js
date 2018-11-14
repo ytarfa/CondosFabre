@@ -38,7 +38,7 @@ export default class ContactOverlay extends React.Component {
                         </div>
                         <div class="contact-info">
                             <ul>
-                                <li> <i class="fas fa-phone fa-fw"></i> 514-999-3433</li>
+                                <li> <i class="fas fa-phone fa-fw"></i> 514 597 2121 </li>
                                 <li> <i class="fas fa-envelope fa-fw"></i> viasamia@gmail.com</li>
                                 <li> <i class="fas fa-link fa-fw"></i> <a href="http://www.viasamia.com" target="_blank">www.viasamia.com</a> </li>
                             </ul>
