@@ -8,14 +8,15 @@ const Map = withScriptjs(withGoogleMap((props) => {
 
     return (
         <GoogleMap
-            defaultZoom={14}
-            center={{ lat:  45.529591, lng: -73.571390 }}
+            defaultZoom={props.zoom}
+            center={props.center}
             defaultOptions={{
                 disableDefaultUI: true
             }}
         >
             <Marker 
-                position={{ lat:  45.529591, lng: -73.571390 }}
+                // position={{ lat:  45.529591, lng: -73.571390 }}
+                position={props.markerPosition}
             />
         </GoogleMap>
     )
@@ -29,6 +30,9 @@ export default class MapContainer extends React.Component {
                 loadingElement={<div style={{ height: `100%` }} />}
                 containerElement={<div style={{ height: `100%`, width: `100%` }} />}
                 mapElement={<div style={{ height: `100%` }} />}
+                zoom={this.props.zoom}
+                center={this.props.center}
+                markerPosition={this.props.markerPosition}
             />
         )
     }

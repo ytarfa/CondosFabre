@@ -220,7 +220,11 @@ export default class Home extends React.Component{
                 </div>
 
                 <div class="map-container">
-                    <MapComponent />
+                    <MapComponent 
+                        zoom={15}
+                        center={{ lat: 45.530326, lng: -73.560793 }}
+                        markerPosition={{ lat: 45.529591, lng: -73.571390 }}
+                    />
                     
                     <div class="contact-section-container">
                         <div class="contact-section-items">

@@ -30,8 +30,8 @@ export default class ContactOverlay extends React.Component {
                     <div class="mapContainer">
                         <MapComponent 
                             zoom={14}
-                            center={{ lat:  45.529591, lng: -73.571390 }}
-                            markerPosition={{ lat:  45.529591, lng: -73.571390 }}
+                            center={{ lat:  45.517726, lng: -73.576570 }}
+                            markerPosition={{ lat:  45.517726, lng: -73.576570 }}
                         />
                     </div>
                     <div class="formContainer">

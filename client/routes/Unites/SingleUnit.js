@@ -82,7 +82,11 @@ export default class SingleUnit extends React.Component {
                 </div>
 
                 <div class="location-description-section">
-                    <MapComponent />
+                    <MapComponent 
+                        zoom={15}
+                        center={{ lat: 45.530326, lng: -73.560793 }}
+                        markerPosition={{ lat:  45.529591, lng: -73.571390 }}
+                    />
                     <div class="score-container">
                         <ul>
                             <li>
