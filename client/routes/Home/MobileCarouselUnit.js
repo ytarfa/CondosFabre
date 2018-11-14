@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Link } from 'react-router-dom';
 
 export default class MobileCarouselUnits extends React.Component {
 
@@ -20,7 +21,11 @@ export default class MobileCarouselUnits extends React.Component {
                         <p>{this.props.unit.price}</p>
                     </div>
                     <div class="link">
-                        <a href={"/unites/condo" + this.props.unit._id}>Plus d'information</a>
+                        <Link 
+                            to={this.props.en == true ? "/en/unites/condo" + this.props.unit._id : "/unites/condo" + this.props.unit._id}
+                        >
+                            {this.props.en == true ? 'More information' : 'Plus d\'information'}
+                        </Link>
                     </div>
                 </div>
             </div>

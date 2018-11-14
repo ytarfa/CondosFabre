@@ -189,6 +189,9 @@
                                 margin: 0 0 40px 0;
                             }
                         }
+                        .link {
+                            pointer-events: all;
+                        }
                     }
                     &:first-of-type {
                         margin-left: 25px;
