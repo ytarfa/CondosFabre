@@ -84,6 +84,14 @@
                             margin-left: 10px;
                             display: inline;
                         }
+                        a {
+                            text-decoration: none;
+                            margin-left: 10px;
+                            display: inline;
+                            pointer-events: all;
+                            font-family: 'Open Sans', sans-serif;
+                            color: #555555;
+                        }
                     }
                     &:first-of-type {
                         padding-top: 25px;

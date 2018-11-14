@@ -1,7 +1,10 @@
 import React from 'react';
 import '../../scss/Home/main.scss';
+import ReactTooltip from 'react-tooltip';
+
 import Footer from '../../components/Footer';
 import MapComponent from '../../components/MapComponent';
+import SimpleCarousel from '../../components/SimpleCarousel';
 
 // Unit Carousel related imports
 import unitArray from '../../units.json';
@@ -10,8 +13,6 @@ import MobileCarouselUnit from './MobileCarouselUnit';
 // Neighborhood Carousel related imports
 import quartierDiapos from './quartierDiapos.json';
 
-import LazyImage from '../../components/LazyImage';
-import SimpleCarousel from '../../components/SimpleCarousel';
 
 export default class Home extends React.Component{
 
@@ -225,7 +226,18 @@ export default class Home extends React.Component{
                     <div class="contact-section-container">
                         <div class="contact-section-items">
                             <ul>
-                                <li><i class="fas fa-map-marker-alt fa-fw"></i><p>4217-4223 {this.state.en ? 'Fabre St.' : 'Rue Fabre'}</p></li>
+                                <li>
+                                    <i class="fas fa-map-marker-alt fa-fw"></i>
+                                    <a 
+                                        class="google-maps" 
+                                        data-tip data-for="google-maps-tooltip"
+                                        href="https://goo.gl/maps/mmLLC1pKGds" target="_blank"
+                                    >
+                                    4217-4223 {this.state.en ? 'Fabre St.' : 'Rue Fabre'}</a>
+                                </li>
+                                <ReactTooltip id="google-maps-tooltip" type="light" className="disabled-tooltip" place="bottom">
+                                    <p>{this.props.en == true ? 'Click here to open in Google Maps' : 'Cliquer pour ouvrir dans Google Maps'}</p>
+                                </ReactTooltip>
                                 <li><i class="fas fa-walking fa-fw"></i><p>Walkscore: 94</p></li>
                                 <li><i class="fas fa-bicycle fa-fw"></i><p>Bikescore: 100</p></li>
                             </ul>
