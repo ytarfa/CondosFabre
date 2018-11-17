@@ -13,6 +13,7 @@ import HomeContainer from './routes/Home/HomeContainer';
 import units from './units.json';
 import ENunits from './ENunits.json';
 import SingleUnitContainer from './routes/Unites/SingleUnitContainer';
+import ProjetContainer from './routes/Projet/ProjetContainer';
 
 export default class App extends React.Component{
 
@@ -68,6 +69,7 @@ export default class App extends React.Component{
                                     {unitRoutes}
                                     <Route exact path="/en" component={ HomeContainer } />
                                     {ENunitRoutes}
+                                    <Route path="/projet" component={ ProjetContainer } />
                                 </Switch>
                         </CSSTransition>
                 </TransitionGroup>

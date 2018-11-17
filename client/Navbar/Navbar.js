@@ -75,7 +75,7 @@ export default class Navbar extends React.Component{
                                 </div>
                             </li>
                             <li class="nav-item">
-                                <Link class="nav-link" to="/project"> {this.state.en ? 'PROJECT' : 'PROJET'} </Link>
+                                <Link class="nav-link" to="/projet"> {this.state.en ? 'PROJECT' : 'PROJET'} </Link>
                             </li>
                             <li class="nav-item" data-tip data-for="coming-soon">
                                 <a class="nav-link disabled" href="#" style={{pointerEvents: 'none'}}> {this.state.en ? 'THE NEIGHBORHOOD' : 'LE QUARTIER'} </a>
