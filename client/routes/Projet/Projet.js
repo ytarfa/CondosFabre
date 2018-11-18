@@ -4,6 +4,7 @@ import '../../scss/Projet/main.scss';
 
 import LazyImage from '../../components/LazyImage';
 import Features from './Features';
+import Timeline from './Timeline';
 export default class ProjetContainer extends React.Component {
 
     componentDidMount() {
@@ -29,6 +30,7 @@ export default class ProjetContainer extends React.Component {
                     </div>
                 </div>
                 <Features />
+                <Timeline />
             </div>
         )
     }

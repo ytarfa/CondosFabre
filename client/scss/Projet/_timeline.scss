@@ -1,0 +1,63 @@
+.Timeline {
+    width: 800px;
+    margin: auto;
+
+    .point-container {
+        position: relative;
+        float: left;
+        width: 200px;
+        height: 300px;
+        .point {
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            height: 10px;
+            width: 10px;
+            border-radius: 50%;
+            background-color: #748965;
+            z-index: 3;
+        }
+        .point-active {
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            height: 25px;
+            width: 25px;
+            border-radius: 50%;
+            background-color: white;
+            -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+            -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+            -ms-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+            -o-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+            z-index: 2;
+        }
+
+        .line-top {
+            position: absolute;
+            height: 50%;
+            width: 1px;
+            left: 50%;
+            transform: translate(-50%);
+            top: 0;
+            background-color: #748965;
+        }
+        .line-bottom {
+            position: absolute;
+            height: 50%;
+            width: 1px;
+            left: 50%;
+            transform: translate(-50%);
+            top: 50%;
+            background-color: #748965;
+        }
+    }
+    .description {
+        height: 300px;
+        overflow: hidden;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+}
