@@ -53,14 +53,15 @@ export default class Features extends React.Component{
         })
 
         const descriptions = data.map((data, index) => 
-            <p 
+            <div 
                 key={index}
                 style={{
                     opacity: this.state.activeFeature == index ? '1' : '0'
                 }}
             >
-                {data[0]}
-            </p>
+                <h1> <i class={data[0]}></i> {data[1]} </h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sem viverra aliquet eget sit amet tellus cras. Magna sit amet purus gravida quis blandit turpis. Suspendisse faucibus interdum posuere lorem ipsum. Ut placerat orci nulla pellentesque dignissim enim sit amet.</p>
+            </div>
         )
 
         return (
