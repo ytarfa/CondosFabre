@@ -44,7 +44,7 @@ export default class Navbar extends React.Component{
     render() {
 
         let unitList = units.units.map((unit, index) =>
-            <Link class="dropdown-item" to={this.state.en ? "/en/unites/condo" + unit._id : "/unites/condo" + unit._id}> 
+            <Link key={index} class="dropdown-item" to={this.state.en ? "/en/unites/condo" + unit._id : "/unites/condo" + unit._id}> 
                 <p key="index" >Condo {unit._id}</p>
                 <p>{unit.price}</p> 
             </Link>
@@ -74,7 +74,7 @@ export default class Navbar extends React.Component{
                                     {unitList}
                                 </div>
                             </li>
-                            <li class="nav-item">
+                            <li className={this.props.route.includes('projet') ? "nav-item active" : "nav-item"}>
                                 <Link class="nav-link" to="/projet"> {this.state.en ? 'PROJECT' : 'PROJET'} </Link>
                             </li>
                             <li class="nav-item" data-tip data-for="coming-soon">
