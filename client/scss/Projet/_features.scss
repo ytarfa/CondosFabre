@@ -1,0 +1,89 @@
+.Features {
+    width: 100%;
+    padding: 100px 0 100px 0;
+    display: flex;
+    justify-content: center;
+    .cubes {
+        width: 604px;
+        display: flex;
+        flex-flow: row wrap;
+        overflow: hidden;
+        .feature {
+            width: 300px;
+            height: 100px;
+            background-color: white;
+
+            &.first {
+                border-left: 1px solid #E3E3E3;
+                border-top: 1px solid #E3E3E3;
+                border-right: 1px solid #E3E3E3;
+                
+            }
+            &.before-last {
+                border-left: 1px solid #E3E3E3;
+                border-top: 1px solid #E3E3E3;
+                border-right: 1px solid #E3E3E3;
+                border-bottom: 1px solid #E3E3E3;
+            }
+            &.second {
+                border-top: 1px solid #E3E3E3;
+                border-right: 1px solid #E3E3E3;
+                
+            }
+            &.last {
+                border-top: 1px solid #E3E3E3;
+                border-right: 1px solid #E3E3E3;
+                border-bottom: 1px solid #E3E3E3;
+            }
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            i {
+                padding: 10px;
+                background-color: #e3e3e3;
+                margin-right: 20px;
+                border-radius: 50%;
+                transition: all 0.25s;
+            }
+            p {
+                transition: all 0.25s;
+            }
+            transition: all 0.25s;
+
+            &.active {
+                background-color: rgba(116, 137, 101, 0.9);
+                border-color: rgba(116, 137, 101, 0.9);
+                cursor: pointer;
+                i {
+                    background-color: #F8F8F8;
+                    transform: scale(1.03);
+                    margin-right: 25px;
+                }
+                p {
+                    color: white;
+                    font-weight: 600;
+                }
+            }
+            &:hover {
+                background-color: rgba(116, 137, 101, 0.9);
+                border-color: rgba(116, 137, 101, 0.9);
+                cursor: pointer;
+                i {
+                    background-color: #F8F8F8;
+                    transform: scale(1.2);
+                    margin-right: 25px;
+                }
+                p {
+                    color: white;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+    .description {
+        height: 250px;
+        width: 604px;
+        margin-left: 50px;
+    }
+}

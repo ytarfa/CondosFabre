@@ -1,0 +1,42 @@
+.Projet {
+    margin-top: 100px;
+    .projet-header-container {
+        height: 600px;
+        width: 100%;
+    }
+    .maquette-promotion {
+        padding: 100px 0 100px 0;
+        background-color: #F8F8F8;
+        h1 {
+            margin: 0 auto 50px auto;
+            width: 800px;
+            text-align: center;
+            color: #333333;
+        }
+        .maquette-info {
+            display: flex;
+            justify-content: center;
+            p {
+                width: 500px;
+                margin: 0 0 0 50px;
+                line-height: 1.75;
+            }
+            ul {
+                margin: 0 0 0 50px;
+                padding: 0;
+                list-style-type: none;
+                li {
+                    padding: 10px 0 10px 0;
+                    &:first-of-type {
+                        padding: 0 0 10px 0;
+                    }
+                    p {
+                        margin: 0;
+                        padding: 0;
+                        white-space: nowrap;
+                    }
+                }
+            }
+        }
+    }
+}
