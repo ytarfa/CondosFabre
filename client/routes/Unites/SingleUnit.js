@@ -8,6 +8,7 @@ import SimpleCarousel from '../../components/SimpleCarousel';
 
 import MapComponent from '../../components/MapComponent';
 import PlanComponent from './PlanComponent';
+import PlanDimensions from './PlanDimensions';
 import Footer from '../../components/Footer';
 
 export default class SingleUnit extends React.Component {
@@ -64,7 +65,7 @@ export default class SingleUnit extends React.Component {
                     </div>
                 </div>
 
-                <div class="room-description-section">
+                {/* <div class="room-description-section">
                     <div class="room-table">
                         <table>
                             <tbody>
@@ -79,7 +80,9 @@ export default class SingleUnit extends React.Component {
                         </table>
                     </div>
                     <PlanComponent unit_id={this.props._id}/>
-                </div>
+                </div> */}
+
+                <PlanDimensions data={this.props}/>
 
                 <div class="location-description-section">
                     <MapComponent 
