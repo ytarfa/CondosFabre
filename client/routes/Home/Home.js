@@ -47,7 +47,7 @@ export default class Home extends React.Component{
     }
 
     plateauCounter(x) {
-        if (this.state.plateauCounter == -2) {
+        if (this.state.plateauCounter == -(quartierDiapos.diapos.length-1)) {
             if (x==1) {
                 this.setState((state) => {
                     return { plateauCounter: state.plateauCounter + x}
@@ -110,10 +110,7 @@ export default class Home extends React.Component{
                         transition: 'all 0.25s'
                     }}
                 >
-                    {/* <img src={"/images/quartierCarousel/" + diapo.image} />  */}
-                    <div class="description">
-                        {diapo.description}
-                    </div>
+                    <img src={"/images/quartierCarousel/" + diapo.image} />
                 </div>
         )
         const quartierCarouselDescription = quartierDiapos.diapos.map((diapo, index) => 
@@ -210,7 +207,7 @@ export default class Home extends React.Component{
                                     > <i class="fas fa-chevron-left fa-3x"></i> </button>
                                     <button onClick={() => this.plateauCounter(-1)}
                                         style={{
-                                            opacity: this.state.plateauCounter == -2 ? '0.2' : '1'
+                                            opacity: this.state.plateauCounter == -(quartierDiapos.diapos.length-1) ? '0.2' : '1'
                                         }}
                                     > <i class="fas fa-chevron-right fa-3x"></i> </button>
                                 </div>
