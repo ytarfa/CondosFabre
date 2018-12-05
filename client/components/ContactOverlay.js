@@ -43,7 +43,8 @@ export default class ContactOverlay extends React.Component {
                         </button>
 
                         <span class="notre-courtier"> {this.state.en == true ? 'Our broker' : 'Notre courtier'} <br/> </span>
-                        <span class="contact-title"> Samia Ouertani </span>
+                        {/* <span class="contact-title"> Samia Ouertani </span> */}
+                        <img class="logo-samia" src="/images/logo_samia.png" />
                         <div class="samia-info">
                             <img src="/images/samia-ouertani.jpg" />
                             <div class="info">
