@@ -36,6 +36,19 @@
             }
         }
     }
+    .delivery-date {
+        padding: 50px 0 50px 0;
+        background-color: #F3F3F3;
+        h1 {
+            font-size: 50px;
+            font-weight: 400;
+            color: #333333;
+            padding: 0;
+            margin: auto;
+            width: 400px;
+            text-align: center;
+        }
+    }
     .map-container {
         position: relative;
         margin-top: 150px;

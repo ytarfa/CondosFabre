@@ -129,9 +129,6 @@ export default class Home extends React.Component{
             <div class="Home page">
 
                 <div class="home-header">
-                    {/* <div class="home-carousel">
-                        <LazyImage hd="/images/facade-cropped.jpg" preload="/images/facade-cropped-scaled.jpg" />
-                    </div> */}
                     <SimpleCarousel 
                         class="home-carousel" 
                         imageList={
@@ -144,6 +141,7 @@ export default class Home extends React.Component{
                         }
                     />
                 </div>
+                <div class="delivery-date"><h1> {this.state.en ? 'Available from July 2019' : 'Livraison en Juillet 2019'} </h1></div>
                 <div class="home-header-intro">
                     <h1> {this.state.en == true ? 'Feel at home at first glance' : 'Sentez vous à la maison au premier regard.'}</h1>
                     <ul>
