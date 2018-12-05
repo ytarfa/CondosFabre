@@ -245,7 +245,7 @@ export default class Home extends React.Component{
                                 </ReactTooltip>
                             </ul>
                             <ul class="contact-info">
-                                <li><i class="fas fa-phone"></i> <a href="tel:1-514-597-2121" data-tip data-for="phone-tooltip"> 514 597 2121 </a> </li>
+                                <li><i class="fas fa-phone"></i> <a href="tel:1-514-572-1213" data-tip data-for="phone-tooltip"> 514 572 1213 </a> </li>
                                 <ReactTooltip id="phone-tooltip" type="light" className="disabled-tooltip">
                                     <p>{this.state.en == true ?  'Click here to call' : 'Cliquez ici pour appeler'}</p>
                                 </ReactTooltip>

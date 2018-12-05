@@ -56,7 +56,7 @@ export default class ContactOverlay extends React.Component {
                                     data-tip data-for="google-maps-tooltip"
                                     href="https://goo.gl/maps/a2vLJx4L2TK2" target="_blank"
                                 >
-                                    <p>152, Mont-Royal Est <br/> Le Plateau-Mont-Royal <br/> Québec H2J 1X8</p>
+                                    <p>1152, Mont-Royal Est <br/> Le Plateau-Mont-Royal <br/> Québec H2J 1X8</p>
                                 </a>
                                 <ReactTooltip id="google-maps-tooltip" type="light" className="disabled-tooltip">
                                     <p>{this.state.en == true ? 'Click here to open in Google Maps' : 'Cliquez ici pour ouvrir dans Google Maps'}</p>
@@ -65,7 +65,7 @@ export default class ContactOverlay extends React.Component {
                         </div>
                         <div class="contact-info">
                             <ul>
-                                <li> <i class="fas fa-phone fa-fw"></i> <a href="tel:1-514-597-2121" data-tip data-for="phone-tooltip"> 514 597 2121 </a> </li>
+                                <li> <i class="fas fa-phone fa-fw"></i> <a href="tel:1-514-597-2121" data-tip data-for="phone-tooltip"> 514 572 1213 </a> </li>
                                 <ReactTooltip id="phone-tooltip" type="light" className="disabled-tooltip">
                                     <p>{this.state.en == true ?  'Click here to call' : 'Cliquez ici pour appeler'}</p>
                                 </ReactTooltip>
