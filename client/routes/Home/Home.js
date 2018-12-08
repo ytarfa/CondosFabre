@@ -153,6 +153,7 @@ export default class Home extends React.Component{
                     />
                 </div>
                 <div class="delivery-date"><h1> {this.state.en ? 'Available from July 2019' : 'Livraison en Juillet 2019'} </h1></div>
+
                 <div class="home-header-intro">
                     <h1> {this.state.en == true ? 'Feel at home at first glance' : 'Sentez vous à la maison au premier regard.'}</h1>
                     <ul>
@@ -162,6 +163,9 @@ export default class Home extends React.Component{
                         <li><i class="fas fa-bicycle fa-fw"></i> <p> {this.state.en ? 'Ideal for cycling and walking' : 'Location idéale pour se déplacer à pied ou à vélo'} </p> </li>
                         <li><i class="fas fa-bus fa-fw"></i> <p> {this.state.en ? 'Bus and metro stations close by' : 'Lignes de bus et métros à proximité'} </p> </li>
                     </ul>
+                </div>
+                <div class="intro-paragraph">
+                    <p>{this.state.en ? 'Condos Fabre is the result of the thorough work of devoted professionals that have real estate, not only as a job, but also as a passion. The idea for this project is to offer brand new spacious and luminous spaces in one of Montreal’s most dynamic and lively neighborhoods.' : 'Condos Fabre est le fruit d’un travail minutieux de professionnels dévoués qui ont l’habitat comme métier mais également comme passion. Le concept est de pouvoir offrir des espaces de vie spacieux, lumineux et neufs  dans l’un des quartiers les plus sympathiques et les plus dynamiques de Montréal. '}</p>
                 </div>
 
                 <div class="home-units">

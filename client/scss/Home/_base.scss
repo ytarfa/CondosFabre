@@ -36,6 +36,16 @@
             }
         }
     }
+    .intro-paragraph {
+        text-align: center;
+        margin-top: 50px;
+        p {
+            margin: auto;
+            width: 800px;
+            line-height: 1.8;
+            font-size: 20px;
+        }
+    }
     .delivery-date {
         padding: 50px 0 50px 0;
         background-color: #F3F3F3;
