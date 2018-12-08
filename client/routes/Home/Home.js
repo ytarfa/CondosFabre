@@ -152,13 +152,13 @@ export default class Home extends React.Component{
                         }
                     />
                 </div>
-                <div class="delivery-date"><h1> {this.state.en ? 'Available from July 2019' : 'Livraison en Juillet 2019'} </h1></div>
+                <div class="delivery-date">{this.state.en ? (<h1>On sale now. <br/> Delivery July 2019</h1>) : (<h1>En vente dès maintenant. <br/> Livraison en Juillet 2019 </h1>)}</div>
 
                 <div class="home-header-intro">
                     <h1> {this.state.en == true ? 'Feel at home at first glance' : 'Sentez vous à la maison au premier regard.'}</h1>
                     <ul>
                         <li><i class="fas fa-map-marker-alt fa-fw"></i> <p> {this.state.en ? 'Prime location in the Plateau' : 'Emplacement idéal au coeur du Plateau'} </p> </li>
-                        <li><i class="fas fa-tree fa-fw"></i> <p> {this.state.en ? 'A skip away from beautiful LaFontaine park' : 'À deux pieds du parc LaFontaine'}</p> </li>
+                        <li><i class="fas fa-tree fa-fw"></i> <p> {this.state.en ? 'A skip away from beautiful LaFontaine park' : 'À deux pas du parc LaFontaine'}</p> </li>
                         <li><i class="fas fa-parking fa-fw"></i> <p> {this.state.en ? 'Parking spots available' : 'Places de parking disponibles'} </p> </li>
                         <li><i class="fas fa-bicycle fa-fw"></i> <p> {this.state.en ? 'Ideal for cycling and walking' : 'Location idéale pour se déplacer à pied ou à vélo'} </p> </li>
                         <li><i class="fas fa-bus fa-fw"></i> <p> {this.state.en ? 'Bus and metro stations close by' : 'Lignes de bus et métros à proximité'} </p> </li>
