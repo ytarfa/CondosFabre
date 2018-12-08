@@ -44,6 +44,7 @@ export default class PlanComponent extends React.Component {
                         <i class="fas fa-search-plus"></i>
                     </span>
                 </div>
+                <p> {this.props.en ? 'Click here to make the image larger.' : 'Cliquez ici pour aggrandir l\'image.'} </p>
 
                 <div class="plan-overlay"
                     style={{
