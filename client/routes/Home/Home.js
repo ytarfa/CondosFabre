@@ -124,6 +124,17 @@ export default class Home extends React.Component{
                         {diapo.description}
                     </p>
         )
+        const quartierCarouselDescriptionEN = quartierDiapos.diaposEN.map((diapo, index) => 
+                    <p 
+                        key="index"
+                        style= {{
+                            opacity: this.state.plateauCounter == -index ? '1' : '0',
+                            transition: 'all 0.25s'
+                        }}
+                    >
+                        {diapo.description}
+                    </p>
+        )
 
         return (
             <div class="Home page">
@@ -194,7 +205,7 @@ export default class Home extends React.Component{
                         </div>
                         <div class="description-container">
                             <div class="description">
-                                {quartierCarouselDescription}
+                                {this.state.en == true ? quartierCarouselDescriptionEN : quartierCarouselDescription}
                             </div>
                             <div class="controls">
                                 <div class="button-container">

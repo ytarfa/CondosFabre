@@ -57,8 +57,8 @@
             "_id": "2A",
             "price": "575 000 $",
             "rooms": "7",
-            "bedrooms": "2+0",
-            "washrooms": "2+0",
+            "bedrooms": "2",
+            "washrooms": "2",
             "area": "1207",
             "floor": {
                 "short": "2ie",
@@ -80,8 +80,8 @@
             "_id": "2B",
             "price": "549 000 $",
             "rooms": "7",
-            "bedrooms": "2+0",
-            "washrooms": "2+0",
+            "bedrooms": "2",
+            "washrooms": "2",
             "area": "1202",
             "floor": {
                 "short": "2ie",
@@ -103,8 +103,8 @@
             "_id": "3A",
             "price": "699 000 $",
             "rooms": "7",
-            "bedrooms": "2+0",
-            "washrooms": "2+0",
+            "bedrooms": "2",
+            "washrooms": "2",
             "area": "1438",
             "floor": {
                 "short": "3ie",
@@ -127,8 +127,8 @@
             "_id": "3B",
             "price": "679 000 $",
             "rooms": "7",
-            "bedrooms": "2+0",
-            "washrooms": "2+0",
+            "bedrooms": "2",
+            "washrooms": "2",
             "area": "1429",
             "floor": {
                 "short": "3ie",
