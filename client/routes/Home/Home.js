@@ -12,6 +12,7 @@ import CarouselUnit from './CarouselUnit';
 import MobileCarouselUnit from './MobileCarouselUnit';
 // Neighborhood Carousel related imports
 import quartierDiapos from './quartierDiapos.json';
+import LazyImage from '../../components/LazyImage';
 
 export default class Home extends React.Component{
 
@@ -110,7 +111,7 @@ export default class Home extends React.Component{
                         transition: 'all 0.25s'
                     }}
                 >
-                    <img src={"/images/quartierCarousel/" + diapo.image} />
+                    <LazyImage preload={'/images/quartierCarousel/' + diapo.imageScaled} hd={'/images/quartierCarousel/' + diapo.image}/>
                 </div>
         )
         const quartierCarouselDescription = quartierDiapos.diapos.map((diapo, index) => 

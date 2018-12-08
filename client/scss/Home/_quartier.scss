@@ -75,6 +75,12 @@
                         width: 100%;
                         object-fit: cover;
                     }
+                    .lazy-image-hd {
+                        background-position: center;
+                    }
+                    .lazy-image-preload {
+                        background-position: center;
+                    }
                 }
             }
             .description-container {
