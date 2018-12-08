@@ -64,7 +64,7 @@ export default class Navbar extends React.Component{
                     <div class="collapse navbar-collapse" id="navbarSupportedContent" ref={this.collapseRef}>
                         <ul class="navbar-nav mr-auto" onClick={() => {this.collapseNav()}}>
                             <li className={(this.props.route == '/') || (this.props.route == '/en') || (this.props.route == '/en/') ? "nav-item active" : "nav-item"}>
-                                <Link class="nav-link" to={this.state.en ? '/en/' : '/'}> {this.state.en ? 'HOME' : 'ACCUEIL'} </Link>
+                                <Link class="nav-link" to={this.state.en ? '/en/' : '/'}> {this.state.en ? 'PROJECT' : 'PROJET'} </Link>
                             </li>
                             <li className={this.props.route.includes('unites') ? "nav-item dropdown active" : "nav-item dropdown"}>
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -74,9 +74,9 @@ export default class Navbar extends React.Component{
                                     {unitList}
                                 </div>
                             </li>
-                            <li class="nav-item" data-tip data-for="coming-soon">
+                            {/* <li class="nav-item" data-tip data-for="coming-soon">
                                 <a class="nav-link disabled" href="#" style={{pointerEvents: 'none'}}> {this.state.en ? 'PROJECT' : 'PROJET'} </a>
-                            </li>
+                            </li> */}
                             <li class="nav-item" data-tip data-for="coming-soon">
                                 <a class="nav-link disabled" href="#" style={{pointerEvents: 'none'}}> {this.state.en ? 'THE NEIGHBORHOOD' : 'LE QUARTIER'} </a>
                             </li>
