@@ -116,7 +116,7 @@ export default class SingleUnit extends React.Component {
                 </div>
 
                 <div class="contact-cta-section">
-                    <p>Nous vous invitons à venir voir de plus près ce beau projet dans nos bureaux où nous vous avons aménagé une belle salle de montre qui vous permettra de vous projeter dans votre nouveau nid douillet tout neuf...</p>
+                    <p>{this.props.en ? '' : 'Nous vous invitons à venir voir de plus près ce beau projet dans nos bureaux où nous vous avons aménagé une belle salle de montre qui vous permettra de vous projeter dans votre nouveau nid douillet tout neuf...'}</p>
                     <div class="link-container">
                         <a onClick={this.props.openContactOverlay}> {this.props.en == true ? 'Contact Us' : 'Contactez Nous'} </a>
                     </div>
