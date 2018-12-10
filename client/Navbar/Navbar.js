@@ -77,12 +77,9 @@ export default class Navbar extends React.Component{
                             {/* <li class="nav-item" data-tip data-for="coming-soon">
                                 <a class="nav-link disabled" href="#" style={{pointerEvents: 'none'}}> {this.state.en ? 'PROJECT' : 'PROJET'} </a>
                             </li> */}
-                            <li class="nav-item" data-tip data-for="coming-soon">
-                                <a class="nav-link disabled" href="#" style={{pointerEvents: 'none'}}> {this.state.en ? 'THE NEIGHBORHOOD' : 'LE QUARTIER'} </a>
+                            <li className={this.props.route.includes('quartier') ? "nav-item active" : "nav-item"}>
+                                <Link class="nav-link" to={this.state.en ? '/en/quartier' : '/quartier'} > {this.state.en ? 'THE NEIGHBORHOOD' : 'LE QUARTIER'} </Link>
                             </li>
-                            <ReactTooltip id="coming-soon" type="light" className="disabled-tooltip" place="bottom">
-                                <p>{this.state.en ? 'Coming soon !' : 'Prochainement disponible !'}</p>
-                            </ReactTooltip>
                         </ul>
                         <span class="contact-button" onClick={this.props.openContactOverlay}>
                             <a> {this.state.en ? 'CONTACT US' : 'CONTACTEZ NOUS'} </a>

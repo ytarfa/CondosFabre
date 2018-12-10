@@ -9,6 +9,7 @@ import NavbarContainer from './Navbar/NavbarContainer';
 import ContactOverlayContainer from './components/ContactOverlayContainer';
 
 import HomeContainer from './routes/Home/HomeContainer';
+import QuartierContainer from './routes/Quartier/QuartierContainer';
 
 import units from './units.json';
 import ENunits from './ENunits.json';
@@ -68,6 +69,7 @@ export default class App extends React.Component{
                                     {unitRoutes}
                                     <Route exact path="/en" component={ HomeContainer } />
                                     {ENunitRoutes}
+                                    <Route path="/quartier" component={ QuartierContainer } />
                                 </Switch>
                         </CSSTransition>
                 </TransitionGroup>
