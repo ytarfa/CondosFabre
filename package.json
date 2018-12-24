@@ -21,7 +21,8 @@
     "react-dom": "^16.4.0",
     "react-router-dom": "^4.3.1",
     "react-tooltip": "^3.9.0",
-    "react-transition-group": "^2.5.0"
+    "react-transition-group": "^2.5.0",
+    "recompose": "^0.30.0"
   },
   "devDependencies": {
     "autoprefixer": "^8.6.1",

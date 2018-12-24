@@ -5,7 +5,7 @@ import Quartier from './Quartier';
 
 const mapStateToProps = state => {
     return {
-
+        position: state.interfaceReducer.ypos
     }
 }
 
