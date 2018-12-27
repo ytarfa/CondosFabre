@@ -19,18 +19,12 @@
     .map-animation-container {
         height: 2000px;
         .feature-container {
+            width: 60%;
             float: left;
-            width: 50%;
-            height: 100px;
-            .feature {
-                height: 90vh;
-                width: 200px;
-                background-color: blue;
-                margin: 50px 0 50px 0;
-            }
         }
         .map-container {
-            right: 50px;
+            box-sizing: border-box;
+            right: 0;
             width: 40%;
             height: 100vh;
             position: fixed;

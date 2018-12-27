@@ -4,6 +4,8 @@ import '../../scss/Quartier/main.scss';
 
 import Video from './Video';
 import QuartierMap from './QuartierMap';
+import LazyImage from '../../components/LazyImage';
+import CarouselComponent from './CarouselComponent';
 
 export default class QuartierContainer extends React.Component {
 
@@ -53,13 +55,6 @@ export default class QuartierContainer extends React.Component {
         return (
             <div class="Quartier">
                 {/* <Video /> */}
-                <div style={{
-                    position: 'fixed',
-                    top: '200px',
-                    left: '250px',
-                }}>
-                    {this.props.position}
-                </div>
 
                 <div class="quartier-nav">
                     <ul>
@@ -73,7 +68,13 @@ export default class QuartierContainer extends React.Component {
                 <div class="map-animation-container">
 
                     <div class="feature-container">
-                        <div class="feature"></div>
+                        <div class="feature lafontaine">
+                            <div class="title">
+                                <h1 class="background-title"> Parc Lafontaine </h1>
+                                <h1 class="foreground-title"> Parc Lafontaine </h1>
+                            </div>
+                            <CarouselComponent array={[{imageScaled: 'plateau-park-scaled.jpg', image: 'plateau-park.jpg', description: 'hi'}, {imageScaled: 'plateau-park-scaled.jpg', image: 'plateau-park.jpg', description: 'hi'}]}/>
+                        </div>
                         <div class="feature"></div>
                         <div class="feature"></div>
                     </div>
