@@ -1,32 +1,71 @@
 .Quartier {
     padding-top: 75px;
-    .quartier-nav {
-        position: fixed;
-        right: 0;
-        top: 0;
-        width: 50px;
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        align-content: center;
-        justify-content: space-around;
-        ul {
-            p {
-                display: none;
+    height: 1200px;
+    .map-animation-container {
+        height: 100%;
+        .feature-container {
+            z-index: 2;
+            position: absolute;
+            width: 70%;
+            left: 0;
+            top: 0;
+            padding-top: 75px;
+            height: 1200px;
+            overflow: hidden;
+            -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+            -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+            -ms-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+            -o-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+            .feature {
+                position: absolute;
+                top: 0;
+                height: 100%;
+                width: 100%;
+                overflow: hidden;
+                transition: 0.25s;
+            }
+            .controls {
+                position: absolute;
+                height: 200px;
+                width: 100%;
+                bottom: 100px;
+                left: 0;
+                background-color: #F3F3F3;
+                .button-container {
+                    position: absolute;
+                    left: 50%; transform: translate(-50%);
+                    bottom: 10px;
+                    button {
+                        background: none;
+                        border-radius: 50%; border: none;
+                        margin: 10px;
+                        transition: background-color 0.25s, opacity 0.25s;
+                        &:focus {
+                            outline: 0;
+                        }
+                        i {
+                            padding: 20px;
+                        }
+                        &:hover {
+                            background-color: #E3E3E3;
+                        }
+                    }
+                }
+            }
+            .footer-container {
+                position: absolute;
+                width: 100%;
+                bottom: 0;
+                left: 0;
             }
         }
-    }
-    .map-animation-container {
-        height: 2000px;
-        .feature-container {
-            width: 60%;
-            float: left;
-        }
         .map-container {
+            z-index: 1;
             box-sizing: border-box;
             right: 0;
-            width: 40%;
-            height: 100vh;
+            width: 30%;
+            height: 1200px;
             position: fixed;
         }
     }
