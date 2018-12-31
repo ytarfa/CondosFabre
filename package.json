@@ -20,6 +20,7 @@
     "react-addons-css-transition-group": "^15.6.2",
     "react-dom": "^16.4.0",
     "react-router-dom": "^4.3.1",
+    "react-spring": "^7.2.7",
     "react-tooltip": "^3.9.0",
     "react-transition-group": "^2.5.0",
     "recompose": "^0.30.0"
