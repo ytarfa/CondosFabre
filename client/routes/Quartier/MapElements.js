@@ -8,6 +8,11 @@ class PolylineSpring extends React.Component{
     render() {
         return (
             <Spring
+                delay={250}
+                config={{
+                    tension: 280,
+                    friction: 60
+                }}
                 from={{
                     strokeOpacity: this.props.featureToggle ? 0 : 1, 
                     fillOpacity: this.props.featureToggle ? 0 : 0.3
@@ -46,6 +51,11 @@ class PolygonSpring extends React.Component{
     render() {
         return (
             <Spring
+                delay={250}
+                config={{
+                    tension: 280,
+                    friction: 60
+                }}
                 from={{
                     strokeOpacity: this.props.featureToggle ? 0 : 1, 
                     fillOpacity: this.props.featureToggle ? 0 : 0.3
