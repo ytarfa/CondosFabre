@@ -4,8 +4,8 @@ export function togglePlateau() {
     return {
         type: TOGGLE_FEATURE,
         payload: {
-            zoom: 14,
-            center: {},
+            zoom: 13,
+            center: {lat: 45.5218361, lng: -73.5821731},
             feature: 'plateau' 
         }
     }
@@ -17,7 +17,7 @@ export function toggleRachel() {
         type: TOGGLE_FEATURE,
         payload: {
             zoom: 14,
-            center: {},
+            center: {lat: 45.529815, lng: -73.571351},
             feature: 'rachel'           
         }
     }
@@ -27,8 +27,8 @@ export function toggleParclafontaine() {
     return {
         type: TOGGLE_FEATURE,
         payload: {
-            zoom: 14,
-            center: {},
+            zoom: 15,
+            center: {lat: 45.5262503, lng: -73.5689312746046},
             feature: 'parclafontaine'           
         }
     }
