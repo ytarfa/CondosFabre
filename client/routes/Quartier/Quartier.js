@@ -5,18 +5,15 @@ import '../../scss/Quartier/main.scss';
 import Video from './Video';
 import QuartierMap from './QuartierMap';
 import * as mapData from './mapData';
-import LazyImage from '../../components/LazyImage';
 import Footer from '../../components/Footer';
-import CarouselComponent from './CarouselComponent';
 
 export default class QuartierContainer extends React.Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            featureCounter: 0,
+            featureCounter: 0
         }
-        this.panMap = this.panMap.bind(this);
         this.counter = this.counter.bind(this);
     }
 
@@ -44,21 +41,14 @@ export default class QuartierContainer extends React.Component {
         }
     }
 
-    panMap(coordinates) {
-        this.refs.map._map.panTo(coordinates);
-    }
-
     componentDidUpdate(prevProps, prevState) {
         if (prevState != this.state) {
             if(this.state.featureCounter == 0) {
                 this.props.togglePlateau()
-                // this.panMap()
             } else if (this.state.featureCounter == -1) {
                 this.props.toggleRachel()
-                // this.panMap()
             } else if (this.state.featureCounter == -2) {
                 this.props.toggleParclafontaine()
-                // this.panMap()
             }
         }
     }
@@ -125,9 +115,8 @@ export default class QuartierContainer extends React.Component {
 
                     <div class="map-container">
                         <QuartierMap
-                            zoom={this.props.zoom}
                             center={this.props.center}
-                            ref='map'
+                            zoom={this.props.zoom}
                         />
                     </div>
                 </div>
