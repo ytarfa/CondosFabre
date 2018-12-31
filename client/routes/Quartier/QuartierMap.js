@@ -1,7 +1,6 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { GoogleMap, Marker, withGoogleMap, withScriptjs } from 'react-google-maps';
-import map from 'lodash/map';
+import { GoogleMap, Marker, withGoogleMap, withScriptjs, Polygon, Polyline } from 'react-google-maps';
+import MapElementsContainer from './MapElementsContainer';
 
 const Map = withScriptjs(withGoogleMap((props) => {
     //MARKERS
@@ -15,10 +14,7 @@ const Map = withScriptjs(withGoogleMap((props) => {
             }}
             ref={props.onMapMounted}
         >
-            <Marker 
-                // position={{ lat:  45.529591, lng: -73.571390 }}
-                position={props.markerPosition}
-            />
+            <MapElementsContainer />
         </GoogleMap>
     )
 }));
@@ -26,14 +22,9 @@ const Map = withScriptjs(withGoogleMap((props) => {
 export default class QuartierMap extends React.Component {
     constructor(props) {
         super(props);
-        this.state={
-            mapMounted: false
-        }
     }
-
     handleMapMounted = (map) => {
         this._map = map;
-        this.setState({mapMounted: this._map});
     }
 
     render() {
@@ -47,6 +38,7 @@ export default class QuartierMap extends React.Component {
                 center={this.props.center}
                 markerPosition={this.props.markerPosition}
                 onMapMounted={this.handleMapMounted}
+                polygonVisible={this.props.polygonVisible}
             />
         )
     }

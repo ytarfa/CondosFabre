@@ -4,6 +4,7 @@ import '../../scss/Quartier/main.scss';
 
 import Video from './Video';
 import QuartierMap from './QuartierMap';
+import * as mapData from './mapData';
 import LazyImage from '../../components/LazyImage';
 import Footer from '../../components/Footer';
 import CarouselComponent from './CarouselComponent';
@@ -14,8 +15,6 @@ export default class QuartierContainer extends React.Component {
         super(props);
         this.state = {
             featureCounter: 0,
-            zoom: 14,
-            center: { lat:  45.517726, lng: -73.576570 }
         }
         this.panMap = this.panMap.bind(this);
         this.counter = this.counter.bind(this);
@@ -25,41 +24,46 @@ export default class QuartierContainer extends React.Component {
         this.props.pushCurrentRoute(this.props.location.pathname);
     }
 
-    panMap(coordinates) {
-        this.refs.map._map.panTo(coordinates)
-    }
-
     counter(x) {
-        let coordinateArray = [
-            {lat:  45.526461, lng: -73.569323},
-            {lat:  45.517726, lng: -73.576570},
-            {lat:  45.519380, lng: -73.572821}
-        ]
         if (this.state.featureCounter == -2) {
             if (x==1) {
                 this.setState((state) => {
-                    this.panMap(coordinateArray[-(state.featureCounter + x)])
                     return { featureCounter: state.featureCounter + x}
                 });
             }
         } else if (this.state.featureCounter == 0) {
             if (x==-1) {
                 this.setState((state) => {
-                    this.panMap(coordinateArray[-(state.featureCounter + x)])
                     return { featureCounter: state.featureCounter + x}
-                })
+                });
             }
         } else {
             this.setState((state) => {
-                this.panMap(coordinateArray[-(state.featureCounter + x)])
                 return { featureCounter: state.featureCounter + x}
             })
         }
     }
 
-    render() {
+    panMap(coordinates) {
+        this.refs.map._map.panTo(coordinates);
+    }
 
-        let features = ['1', '2', '3', '4'];
+    componentDidUpdate(prevProps, prevState) {
+        if (prevState != this.state) {
+            if(this.state.featureCounter == 0) {
+                this.props.togglePlateau()
+                // this.panMap()
+            } else if (this.state.featureCounter == -1) {
+                this.props.toggleRachel()
+                // this.panMap()
+            } else if (this.state.featureCounter == -2) {
+                this.props.toggleParclafontaine()
+                // this.panMap()
+            }
+        }
+    }
+
+    render() {
 
         return (
             <div class="Quartier">
@@ -84,8 +88,8 @@ export default class QuartierContainer extends React.Component {
                             opacity: this.state.featureCounter == -1 ? 1 : 0
                         }}>
                             <div class="title">
-                                <h1 class="background-title"> Boul. St-Laurent </h1>
-                                <h1 class="foreground-title"> Boul. St-Laurent </h1>
+                                <h1 class="background-title"> Rue Rachel </h1>
+                                <h1 class="foreground-title"> Rue Rachel </h1>
                             </div>
                         </div>
 
@@ -94,8 +98,8 @@ export default class QuartierContainer extends React.Component {
                             opacity: this.state.featureCounter == -2 ? 1 : 0
                         }}>
                             <div class="title">
-                                <h1 class="background-title"> Rue Rachel </h1>
-                                <h1 class="foreground-title"> Rue Rachel </h1>
+                                <h1 class="background-title"> Parc Lafontaine </h1>
+                                <h1 class="foreground-title"> Parc Lafontaine </h1>
                             </div>
                         </div>
 
@@ -121,9 +125,8 @@ export default class QuartierContainer extends React.Component {
 
                     <div class="map-container">
                         <QuartierMap
-                            zoom={this.state.zoom}
-                            center={this.state.center}
-                            markerPosition={{ lat:  45.517726, lng: -73.576570 }}
+                            zoom={this.props.zoom}
+                            center={this.props.center}
                             ref='map'
                         />
                     </div>
