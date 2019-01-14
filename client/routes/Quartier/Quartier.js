@@ -69,8 +69,7 @@ export default class QuartierContainer extends React.Component {
                                 <h1 class="background-title"> Le Plateau </h1>
                                 <h1 class="foreground-title"> Le Plateau </h1>
                             </div>
-                            {/* <Video /> */}
-                            {/* <CarouselComponent array={[{imageScaled: 'plateau-park-scaled.jpg', image: 'plateau-park.jpg', description: 'hi'}, {imageScaled: 'plateau-park-scaled.jpg', image: 'plateau-park.jpg', description: 'hi'}]}/> */}
+                            <p> L’architecture du Plateau Mont-Royal est unique en son genre. Sans doute l’un des quartiers les plus charmants de Montréal avec ses rues bordées d’arbres et ses façades colorées. S’y promener est un réel plaisir en passant d’une ruelle verte à une rue plus typique dégageant toute l’originalité du quartier et inspirant le bonheur de vivre. </p>
                         </div>
 
                         <div class="feature lafontaine" style={{
@@ -108,9 +107,6 @@ export default class QuartierContainer extends React.Component {
                             </div>
                         </div>
 
-                        <div class="footer-container">
-                            <Footer />
-                        </div>
                     </div>
 
                     <div class="map-container">
@@ -119,6 +115,11 @@ export default class QuartierContainer extends React.Component {
                             zoom={this.props.zoom}
                         />
                     </div>
+
+                </div>
+
+                <div class="footer-container">
+                    <Footer />
                 </div>
             </div>
         )

@@ -63,9 +63,9 @@ export default class QuartierMap extends React.Component {
             >
                 {springProps => (<Map
                     googleMapURL={`https://maps.googleapis.com/maps/api/js?key=AIzaSyDD9kCrw_904LVFzIzNndmNTwhZWjzYq8Y&v=3.exp&libraries=geometry,drawing,places`}
-                    loadingElement={<div style={{ height: `100%` }} />}
+                    loadingElement={<div style={{ height: `100%`, width: `100%` }} />}
                     containerElement={<div style={{ height: `100%`, width: `100%` }} />}
-                    mapElement={<div style={{ height: `100%` }} />}
+                    mapElement={<div style={{ height: `100%`, width: `100%` }} />}
                     zoom={springProps.zoom}
                     center={{lat: springProps.lat, lng: springProps.lng}}
                 />)}

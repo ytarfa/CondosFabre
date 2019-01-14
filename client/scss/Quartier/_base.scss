@@ -1,22 +1,16 @@
 .Quartier {
-    padding-top: 75px;
-    height: 1200px;
+    padding-top: 100px;
     .map-animation-container {
         height: 100%;
         .feature-container {
             z-index: 2;
             position: absolute;
-            width: 70%;
+            height: 100vh;
+            width: 60%;
             left: 0;
             top: 0;
-            padding-top: 75px;
-            height: 1200px;
+            padding-top: 100px;
             overflow: hidden;
-            -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-            -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-            -ms-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-            -o-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
             .feature {
                 position: absolute;
                 top: 0;
@@ -53,20 +47,27 @@
                     }
                 }
             }
-            .footer-container {
-                position: absolute;
-                width: 100%;
-                bottom: 0;
-                left: 0;
-            }
         }
         .map-container {
             z-index: 1;
             box-sizing: border-box;
-            right: 0;
+            margin-top: 100px;
+            top: 0;
+            right: 50px;
             width: 30%;
-            height: 1200px;
-            position: fixed;
+            height: 100%;
+            position: absolute;
+            -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+            -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+            -ms-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+            -o-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+        }
+        .footer-container {
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+            left: 0;
         }
     }
 }
