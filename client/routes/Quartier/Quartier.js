@@ -9,6 +9,7 @@ import Footer from '../../components/Footer';
 import Plateau from './Features/Plateau';
 import ParcLaFontaine from './Features/ParcLaFontaine';
 import AvenueMontRoyal from './Features/AvenueMontRoyal';
+import Transport from './Features/Transport';
 
 export default class QuartierContainer extends React.Component {
 
@@ -35,7 +36,7 @@ export default class QuartierContainer extends React.Component {
             }, 250)
         }
 
-        if (this.state.featureCounter == -2) {
+        if (this.state.featureCounter == -3) {
             if (x==1) {
                 // scrollReset();
                 this.setState((state) => {
@@ -81,6 +82,7 @@ export default class QuartierContainer extends React.Component {
                         <Plateau featureCounter={this.state.featureCounter} />
                         <ParcLaFontaine featureCounter={this.state.featureCounter} />
                         <AvenueMontRoyal featureCounter={this.state.featureCounter} />
+                        <Transport featureCounter={this.state.featureCounter} />
 
                         <div class="controls">
                             <div class="button-container">
@@ -92,7 +94,7 @@ export default class QuartierContainer extends React.Component {
                                     
                                 <button onClick={() => this.counter(-1)}
                                     style={{
-                                        opacity: this.state.featureCounter == -2 ? '0.2' : '1'
+                                        opacity: this.state.featureCounter == -3 ? '0.2' : '1'
                                     }}
                                 > <i class="fas fa-chevron-right fa-3x"></i> </button>
                             </div>
