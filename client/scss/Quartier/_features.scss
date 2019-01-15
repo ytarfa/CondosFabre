@@ -106,8 +106,12 @@
                     }
                     i {
                         padding: 20px;
+                        color: #E3E3E3;
                     }
                     &:hover {
+                        i {
+                            color: #333333;
+                        }
                         background-color: #E3E3E3;
                     }
                 }
