@@ -32,7 +32,7 @@
         .plateau {
             .img-container {
                 position: relative;
-                height: 700px;
+                height: 600px;
                 width: 100%;
                 padding-top: 50px;
                 box-sizing: border-box; 
@@ -76,7 +76,7 @@
 
             .img-carousel {
                 position: relative;
-                height: 700px;
+                height: 500px;
                 width: 100%;
                 overflow: hidden;
                 white-space: nowrap;
@@ -119,6 +119,51 @@
                     right: 50px;
                 }
             }
+        }
+
+        .avenue-montroyal {
+
+            .text-container {
+                width: 100%;
+                white-space: normal;
+
+                p {
+                    margin: auto;
+                    padding: 50px;
+                    width: 750px;
+                    text-align: center;
+                    line-height: 1.8;
+                    box-sizing: border-box;
+                }
+            }
+
+            .img-container {
+                position: relative;
+                height: 500px;
+                width: 100%;
+                box-sizing: border-box; 
+
+                img {
+                    object-fit: cover;
+                    height: 100%;
+                    width: 100%;
+                }
+
+                p {
+                    width: 50%;
+                    position: absolute;
+                    right: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    padding: 50px;
+                    box-sizing: border-box;
+                    white-space: normal;
+                    background-color: #F3F3F3;
+                    line-height: 1.8;
+                }
+
+            }
+
         }
     }
 }
