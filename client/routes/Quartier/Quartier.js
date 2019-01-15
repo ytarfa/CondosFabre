@@ -6,6 +6,9 @@ import Video from './Video';
 import QuartierMap from './QuartierMap';
 import * as mapData from './mapData';
 import Footer from '../../components/Footer';
+import Plateau from './Features/Plateau';
+import ParcLaFontaine from './Features/ParcLaFontaine';
+import AvenueMontRoyal from './Features/AvenueMontRoyal';
 
 export default class QuartierContainer extends React.Component {
 
@@ -22,19 +25,32 @@ export default class QuartierContainer extends React.Component {
     }
 
     counter(x) {
+
+        function scrollReset() {
+            setTimeout(() => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                })
+            }, 250)
+        }
+
         if (this.state.featureCounter == -2) {
             if (x==1) {
+                // scrollReset();
                 this.setState((state) => {
                     return { featureCounter: state.featureCounter + x}
                 });
             }
         } else if (this.state.featureCounter == 0) {
             if (x==-1) {
+                // scrollReset();
                 this.setState((state) => {
                     return { featureCounter: state.featureCounter + x}
                 });
             }
         } else {
+            // scrollReset();
             this.setState((state) => {
                 return { featureCounter: state.featureCounter + x}
             })
@@ -46,9 +62,9 @@ export default class QuartierContainer extends React.Component {
             if(this.state.featureCounter == 0) {
                 this.props.togglePlateau()
             } else if (this.state.featureCounter == -1) {
-                this.props.toggleRachel()
-            } else if (this.state.featureCounter == -2) {
                 this.props.toggleParclafontaine()
+            } else if (this.state.featureCounter == -2) {
+                this.props.toggleMontRoyal()
             }
         }
     }
@@ -59,38 +75,12 @@ export default class QuartierContainer extends React.Component {
             <div class="Quartier">
                 <div class="map-animation-container">
 
+
                     <div class="feature-container">
-
-                        <div class="feature lafontaine" style={{
-                            left: `${this.state.featureCounter * 100}%`,
-                            opacity: this.state.featureCounter == 0 ? 1 : 0
-                        }}>
-                            <div class="title">
-                                <h1 class="background-title"> Le Plateau </h1>
-                                <h1 class="foreground-title"> Le Plateau </h1>
-                            </div>
-                            <p> L’architecture du Plateau Mont-Royal est unique en son genre. Sans doute l’un des quartiers les plus charmants de Montréal avec ses rues bordées d’arbres et ses façades colorées. S’y promener est un réel plaisir en passant d’une ruelle verte à une rue plus typique dégageant toute l’originalité du quartier et inspirant le bonheur de vivre. </p>
-                        </div>
-
-                        <div class="feature lafontaine" style={{
-                            left: `${(this.state.featureCounter+1) * 100}%`,
-                            opacity: this.state.featureCounter == -1 ? 1 : 0
-                        }}>
-                            <div class="title">
-                                <h1 class="background-title"> Rue Rachel </h1>
-                                <h1 class="foreground-title"> Rue Rachel </h1>
-                            </div>
-                        </div>
-
-                        <div class="feature lafontaine" style={{
-                            left: `${(this.state.featureCounter+2) * 100}%`,
-                            opacity: this.state.featureCounter == -2 ? 1 : 0
-                        }}>
-                            <div class="title">
-                                <h1 class="background-title"> Parc Lafontaine </h1>
-                                <h1 class="foreground-title"> Parc Lafontaine </h1>
-                            </div>
-                        </div>
+                        
+                        <Plateau featureCounter={this.state.featureCounter} />
+                        <ParcLaFontaine featureCounter={this.state.featureCounter} />
+                        <AvenueMontRoyal featureCounter={this.state.featureCounter} />
 
                         <div class="controls">
                             <div class="button-container">
@@ -99,6 +89,7 @@ export default class QuartierContainer extends React.Component {
                                         opacity: this.state.featureCounter == 0 ? '0.2' : '1'
                                     }}
                                 > <i class="fas fa-chevron-left fa-3x"></i> </button>
+                                    
                                 <button onClick={() => this.counter(-1)}
                                     style={{
                                         opacity: this.state.featureCounter == -2 ? '0.2' : '1'
@@ -106,7 +97,6 @@ export default class QuartierContainer extends React.Component {
                                 > <i class="fas fa-chevron-right fa-3x"></i> </button>
                             </div>
                         </div>
-
                     </div>
 
                     <div class="map-container">
@@ -119,7 +109,7 @@ export default class QuartierContainer extends React.Component {
                 </div>
 
                 <div class="footer-container">
-                    <Footer />
+                    {/* <Footer /> */}
                 </div>
             </div>
         )

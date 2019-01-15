@@ -1,8 +1,9 @@
 .Quartier {
     .feature-container {
-        .lafontaine {
-            margin-top: 100px;
-            margin-bottom: 100px;
+        .feature {
+            padding: 50px;
+            box-sizing: border-box;
+            display: inline-block;
             .title {
                 position: relative;
                 height: 200px;
@@ -26,27 +27,96 @@
                     font-size: 75px;
                 }
             }
-            .content {
+        }
+
+        .plateau {
+            .img-container {
+                position: relative;
+                height: 700px;
                 width: 100%;
-                box-sizing: border-box;
-                display: flex;
-                justify-content: space-around;
-                padding: 50px;
-                .img-container {
-                    width: 50%;
-                    -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-                    -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-                    -ms-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-                    -o-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-                    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-                    transition: 0.25s box-shadow;
-                    margin-right: 25px;
+                padding-top: 50px;
+                box-sizing: border-box; 
+
+                img {
+                    object-fit: cover;
+                    height: 100%;
+                    width: 100%;
                 }
+
                 p {
                     width: 50%;
-                    padding: 0;
-                    margin: 0 0 0 25px;
+                    position: absolute;
+                    right: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    padding: 50px;
+                    box-sizing: border-box;
+                    white-space: normal;
+                    background-color: #F3F3F3;
                     line-height: 1.8;
+                }
+
+            }
+        }
+
+        .parc-lafontaine {
+            .text-container {
+                width: 100%;
+                white-space: normal;
+
+                p {
+                    margin: auto;
+                    padding: 50px;
+                    width: 750px;
+                    text-align: center;
+                    line-height: 1.8;
+                    box-sizing: border-box;
+                }
+            }
+
+            .img-carousel {
+                position: relative;
+                height: 700px;
+                width: 100%;
+                overflow: hidden;
+                white-space: nowrap;
+
+                .img-container {
+                    display: inline-block;
+                    width: 100%;
+                    height: 100%;
+                    img {
+                        object-fit: cover;
+                        height: 100%;
+                        width: 100%;
+                    }
+                    transition: 0.25s;
+                }
+
+                button {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    background: none;
+                    border-radius: 50%; border: none;
+                    margin: 10px;
+                    transition: background-color 0.25s, opacity 0.25s;
+                    &:focus {
+                        outline: 0;
+                    }
+                    i {
+                        padding: 20px;
+                    }
+                    &:hover {
+                        background-color: #E3E3E3;
+                    }
+                }
+
+                .left {
+                    left: 50px;
+                }
+                .right {
+                    right: 50px;
                 }
             }
         }
