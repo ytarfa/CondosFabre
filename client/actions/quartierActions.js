@@ -49,7 +49,7 @@ export function toggleParcMontRoyal() {
     return {
         type: TOGGLE_FEATURE,
         payload: {
-            zoom: 14,
+            zoom: 15,
             center: {lat: 45.5075198, lng: -73.5900540},
             feature: 'parcmontroyal'
         }
@@ -60,7 +60,7 @@ export function toggleTransport() {
     return {
         type: TOGGLE_FEATURE,
         payload: {
-            zoom: 13,
+            zoom: 14,
             center: {lat: 45.5218361, lng: -73.5821731},
             feature: 'transport' 
         }

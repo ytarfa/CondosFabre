@@ -133,7 +133,10 @@ export default class MapElement extends React.Component{
         const metroPositionArray = [
             mapData.metroLaurier,
             mapData.metroMontRoyal,
-            mapData.metroSherbrooke
+            mapData.metroSherbrooke,
+            mapData.metroBeaubien,
+            mapData.metroRosemont,
+            mapData.metroJeanTalon
         ]
 
         const busPathArray = [
