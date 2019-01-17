@@ -14,8 +14,8 @@ class PolylineSpring extends React.Component{
                     friction: 60
                 }}
                 from={{
-                    strokeOpacity: this.props.featureToggle ? 0 : 1, 
-                    fillOpacity: this.props.featureToggle ? 0 : 0.3
+                    strokeOpacity: 0,
+                    fillOpacity: 0
                 }} 
                 to={{
                     strokeOpacity: this.props.featureToggle ? 1 : 0, 
@@ -57,8 +57,8 @@ class PolygonSpring extends React.Component{
                     friction: 60
                 }}
                 from={{
-                    strokeOpacity: this.props.featureToggle ? 0 : 1, 
-                    fillOpacity: this.props.featureToggle ? 0 : 0.3
+                    strokeOpacity: 0,
+                    fillOpacity: 0
                 }} 
                 to={{
                     strokeOpacity: this.props.featureToggle ? 1 : 0, 
@@ -102,7 +102,7 @@ class MarkerSpring extends React.Component {
                     friction: 60
                 }}
                 from={{
-                    opacity: this.props.featureToggle ? 0 : 1
+                    opacity: 0
                 }} 
                 to={{
                     opacity: this.props.featureToggle ? 1 : 0

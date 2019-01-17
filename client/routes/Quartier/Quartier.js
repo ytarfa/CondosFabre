@@ -11,19 +11,33 @@ import ParcLaFontaine from './Features/ParcLaFontaine';
 import AvenueMontRoyal from './Features/AvenueMontRoyal';
 import Transport from './Features/Transport';
 import ParcMontRoyal from './Features/ParcMontRoyal';
+import { Spring } from 'react-spring';
 
 export default class QuartierContainer extends React.Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            featureCounter: 0
+            featureCounter: 0,
+            mapSlideIn: false
         }
         this.counter = this.counter.bind(this);
     }
 
     componentDidMount() {
         this.props.pushCurrentRoute(this.props.location.pathname);
+        if (this.props.feature != 'plateau') {
+            if (this.props.feature == 'parclafontaine') {
+                this.setState({featureCounter: -1});
+            } else if (this.props.feature == 'avenuemontroyal') {
+                this.setState({featureCounter: -2});
+            } else if (this.props.feature == 'parcmontroyal') {
+                this.setState({featureCounter: -3});
+            } else if (this.props.feature == 'transport') {
+                this.setState({featureCounter: -4});
+            }
+        }
+        this.setState({mapSlideIn: true});
     }
 
     counter(x) {
@@ -107,12 +121,33 @@ export default class QuartierContainer extends React.Component {
                         </div>
                     </div>
 
-                    <div class="map-container">
-                        <QuartierMap
-                            center={this.props.center}
-                            zoom={this.props.zoom}
-                        />
-                    </div>
+                    <Spring
+                        delay={500}
+                        config={{
+                            tension: 280,
+                            friction: 60
+                        }}
+                        from={{
+                            shift: 120
+                        }} 
+                        to={{
+                            shift: this.state.mapSlideIn ? 0 : 120
+                        }}
+                    >
+                        {springProps => (
+                            <div 
+                                class="map-container"
+                                style={{
+                                    transform: `translateX(${springProps.shift}%)`
+                                }}
+                            >
+                                <QuartierMap
+                                    center={this.props.center}
+                                    zoom={this.props.zoom}
+                                />
+                            </div>
+                        )}
+                    </Spring>
 
                 </div>
 

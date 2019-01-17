@@ -8,7 +8,8 @@ const mapStateToProps = state => {
     return {
         position: state.interfaceReducer.ypos,
         center: state.quartierReducer.center,
-        zoom: state.quartierReducer.zoom
+        zoom: state.quartierReducer.zoom,
+        feature: state.quartierReducer.feature
     }
 }
 
