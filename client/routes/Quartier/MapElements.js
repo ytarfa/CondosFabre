@@ -92,8 +92,49 @@ class PolygonSpringContent extends React.Component{
     }
 }
 
+class MarkerSpring extends React.Component {
+    render() {
+        return (
+            <Spring
+                delay={250}
+                config={{
+                    tension: 280,
+                    friction: 60
+                }}
+                from={{
+                    opacity: this.props.featureToggle ? 0 : 1
+                }} 
+                to={{
+                    opacity: this.props.featureToggle ? 1 : 0
+                }}
+            >
+                {springProps => <MarkerSpringContent position={this.props.position} icon={this.props.icon} {...springProps} />}
+
+            </Spring>
+        )
+    }
+}
+
+class MarkerSpringContent extends React.Component {
+    render() {
+        return (
+            <Marker
+                position={this.props.position}
+                icon={this.props.icon}
+                opacity={this.props.opacity}
+            />
+        )
+    }
+}
+
 export default class MapElement extends React.Component{
     render() {
+
+        const metroPositionArray = [
+            mapData.metroLaurier,
+            mapData.metroMontRoyal,
+            mapData.metroSherbrooke
+        ]
 
         const busPathArray = [
             mapData.rachelBusPath,
@@ -115,13 +156,6 @@ export default class MapElement extends React.Component{
                     path={mapData.plateau_path}
                 />
 
-
-                {/* Rachel */}
-                <PolylineSpring
-                    featureToggle={this.props.feature == 'rachel'}
-                    path={mapData.rachel_path}
-                />
-
                 {/* Parc Lafontaine */}
                 <PolygonSpring
                     featureToggle={this.props.feature == 'parclafontaine'}
@@ -140,29 +174,16 @@ export default class MapElement extends React.Component{
                     featureToggle={this.props.feature == 'transport'}
                     path={mapData.orangeLine_path}
                 />
-                <Marker 
-                    position={mapData.metroMontRoyal}
-                    icon={{
-                        url : '/images/circle-solid.svg',
-                        anchor: new google.maps.Point(0, 2) 
-                    }}
-                />
-                <Marker 
-                    position={mapData.metroSherbrooke}
-                    icon={{
-                        url : '/images/circle-solid.svg',
-                        anchor: new google.maps.Point(0, 2) 
-                    }}
-                />
-                <Marker 
-                    position={mapData.metroLaurier}
-                    icon={{
-                        url : '/images/circle-solid.svg',
-                        anchor: new google.maps.Point(0, 2) 
-                    }}
-                />
-
-                
+                {metroPositionArray.map((metroPosition) => (
+                    <MarkerSpring
+                        featureToggle={this.props.feature == 'transport'}
+                        position={metroPosition}
+                        icon={{
+                            url : '/images/circle-solid.svg',
+                            anchor: new google.maps.Point(0, 2) 
+                        }}
+                    />
+                ))}
                 {busPathArray.map((busPath) => (
                     <PolylineSpring
                         styleOptions={{strokeColor: '#59BAFF'}}
