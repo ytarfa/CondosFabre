@@ -150,6 +150,15 @@ export default class MapElement extends React.Component{
 
         return (
             <div>
+                {/* Condos Faber */}
+                <MarkerSpring
+                    featureToggle={true}
+                    position={{lat: 45.529591, lng: -73.571390}}
+                    icon={{
+                        url: '/images/cf_pin.png'
+                    }}
+                />
+
                 {/* Plateau */}
                 <PolygonSpring
                     featureToggle={this.props.feature == 'plateau'}
