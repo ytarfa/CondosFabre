@@ -6,7 +6,7 @@ export default class Transport extends React.Component {
             <div class="feature transport"
                 style={{
                     transform: `translateX(${this.props.featureCounter * 100}%)`,
-                    opacity: this.props.featureCounter == -3 ? 1 : 0
+                    opacity: this.props.featureCounter == -4 ? 1 : 0
                 }}
             >
 

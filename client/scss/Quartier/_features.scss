@@ -170,6 +170,23 @@
 
         }
 
+        .parc-mont-royal {
+            .text-container {
+                width: 100%;
+                white-space: normal;
+
+                p {
+                    margin: auto;
+                    padding: 50px;
+                    width: 750px;
+                    text-align: center;
+                    line-height: 1.8;
+                    box-sizing: border-box;
+                }
+            }
+            
+        }
+
         .transport {
 
             .intro-text-container {

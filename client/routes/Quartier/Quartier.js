@@ -10,6 +10,7 @@ import Plateau from './Features/Plateau';
 import ParcLaFontaine from './Features/ParcLaFontaine';
 import AvenueMontRoyal from './Features/AvenueMontRoyal';
 import Transport from './Features/Transport';
+import ParcMontRoyal from './Features/ParcMontRoyal';
 
 export default class QuartierContainer extends React.Component {
 
@@ -36,7 +37,7 @@ export default class QuartierContainer extends React.Component {
             }, 250)
         }
 
-        if (this.state.featureCounter == -3) {
+        if (this.state.featureCounter == -4) {
             if (x==1) {
                 // scrollReset();
                 this.setState((state) => {
@@ -67,6 +68,8 @@ export default class QuartierContainer extends React.Component {
             } else if (this.state.featureCounter == -2) {
                 this.props.toggleMontRoyal()
             } else if (this.state.featureCounter == -3) {
+                this.props.toggleParcMontRoyal()
+            } else if (this.state.featureCounter == -4) {
                 this.props.toggleTransport()
             }
         }
@@ -84,6 +87,7 @@ export default class QuartierContainer extends React.Component {
                         <Plateau featureCounter={this.state.featureCounter} />
                         <ParcLaFontaine featureCounter={this.state.featureCounter} />
                         <AvenueMontRoyal featureCounter={this.state.featureCounter} />
+                        <ParcMontRoyal featureCounter={this.state.featureCounter} />
                         <Transport featureCounter={this.state.featureCounter} />
 
                         <div class="controls">
@@ -96,7 +100,7 @@ export default class QuartierContainer extends React.Component {
                                     
                                 <button onClick={() => this.counter(-1)}
                                     style={{
-                                        opacity: this.state.featureCounter == -3 ? '0.2' : '1'
+                                        opacity: this.state.featureCounter == -4 ? '0.2' : '1'
                                     }}
                                 > <i class="fas fa-chevron-right fa-3x"></i> </button>
                             </div>
