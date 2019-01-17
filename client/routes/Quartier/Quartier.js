@@ -66,6 +66,8 @@ export default class QuartierContainer extends React.Component {
                 this.props.toggleParclafontaine()
             } else if (this.state.featureCounter == -2) {
                 this.props.toggleMontRoyal()
+            } else if (this.state.featureCounter == -3) {
+                this.props.toggleTransport()
             }
         }
     }

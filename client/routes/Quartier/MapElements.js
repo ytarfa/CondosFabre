@@ -22,7 +22,7 @@ class PolylineSpring extends React.Component{
                     fillOpacity: this.props.featureToggle ? 0.3 : 0
                 }}
             >
-                {springProps => <PolylineSpringContent path={this.props.path} {...springProps} />}
+                {springProps => <PolylineSpringContent path={this.props.path} styleOptions={this.props.styleOptions} {...springProps} />}
 
             </Spring>
         )
@@ -31,7 +31,7 @@ class PolylineSpring extends React.Component{
 class PolylineSpringContent extends React.Component{
     render() {
 
-        const styleOptions = {
+        const styleOptions = this.props.styleOptions ? this.props.styleOptions : {
             strokeColor: '#DB4437'
         }
 
@@ -65,7 +65,7 @@ class PolygonSpring extends React.Component{
                     fillOpacity: this.props.featureToggle ? 0.3 : 0
                 }}
             >
-                {springProps => <PolygonSpringContent path={this.props.path} {...springProps} />}
+                {springProps => <PolygonSpringContent path={this.props.path} styleOptions={this.props.styleOptions} {...springProps} />}
 
             </Spring>
         )
@@ -74,7 +74,7 @@ class PolygonSpring extends React.Component{
 class PolygonSpringContent extends React.Component{
     render() {
 
-        const styleOptions = {
+        const styleOptions = this.props.styleOptions ? this.props.styleOptions : {
             strokeColor: '#DB4437',
             fillColor: '#DB4437'
         }
@@ -94,6 +94,18 @@ class PolygonSpringContent extends React.Component{
 
 export default class MapElement extends React.Component{
     render() {
+
+        const busPathArray = [
+            mapData.rachelBusPath,
+            mapData.parcDuMontRoyalBusPath,
+            mapData.amherstBusPath,
+            mapData.saintDenisBusPath,
+            mapData.montRoyalBusPath,
+            mapData.saintJosephBusPath,
+            mapData.coteSainteCatherineBusPath,
+            mapData.massonBusPath,
+            mapData.sherbrookeBusPath
+        ]
 
         return (
             <div>
@@ -122,7 +134,42 @@ export default class MapElement extends React.Component{
                     path={mapData.montRoyal_path}
                 />
 
-                {/* St-Laurent */}
+                {/* Transport */}
+                <PolylineSpring
+                    styleOptions={{strokeColor: '#EB7200'}}
+                    featureToggle={this.props.feature == 'transport'}
+                    path={mapData.orangeLine_path}
+                />
+                <Marker 
+                    position={mapData.metroMontRoyal}
+                    icon={{
+                        url : '/images/circle-solid.svg',
+                        anchor: new google.maps.Point(0, 2) 
+                    }}
+                />
+                <Marker 
+                    position={mapData.metroSherbrooke}
+                    icon={{
+                        url : '/images/circle-solid.svg',
+                        anchor: new google.maps.Point(0, 2) 
+                    }}
+                />
+                <Marker 
+                    position={mapData.metroLaurier}
+                    icon={{
+                        url : '/images/circle-solid.svg',
+                        anchor: new google.maps.Point(0, 2) 
+                    }}
+                />
+
+                
+                {busPathArray.map((busPath) => (
+                    <PolylineSpring
+                        styleOptions={{strokeColor: '#59BAFF'}}
+                        featureToggle={this.props.feature == 'transport'}
+                        path={busPath}
+                    />
+                ))}
 
             </div>
         )
