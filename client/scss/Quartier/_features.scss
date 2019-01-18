@@ -188,29 +188,70 @@
         }
 
         .transport {
-
+            
             .intro-text-container {
-                width: 100%;
-                white-space: normal;
-
+                margin: 50px 0 50px 0;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
                 p {
-                    margin: auto;
-                    padding: 50px;
-                    width: 775px;
-                    text-align: center;
-                    line-height: 1.8;
+                    flex-shrink: 0;
+                    width: 70%;
                     box-sizing: border-box;
+                    line-height: 1.8;
+                    padding-right: 50px;
+                }
+                ul {
+                    flex-grow: 1;
+                    margin: 0;
+                    padding: 25px;
+                    list-style-type: none;
+                    font-family: 'Open Sans', sans-serif;
+                    background-color: #F3F3F3;
+                    li {
+                        text-align: center;
+                        padding-bottom: 15px;
+                        white-space: nowrap;
+                        i {
+                            border-radius: 50%;
+                            background-color: #E3E3E3;
+                            padding: 5px;
+                        }
+                        a {
+                            display: inline;
+                            padding-left: 15px;
+                            text-decoration: none;
+                            pointer-events: all;
+                            background-color: transparent;
+                            color: #555555;
+                        }
+                        &:last-of-type {
+                            padding-bottom: 0;
+                        }
+                    }
                 }
             }
 
             .stm-text-container {
-                display: flex;
+                @extend .intro-text-container;
                 p {
-                    flex-shrink: 0;
-                    width: 80%;
-                    padding: 50px;
-                    box-sizing: border-box;
-                    line-height: 1.8;
+                    // width: 0%;
+                }
+                .map-intro {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 25px;
+                    box-sizing: content-box;
+                    background-color: #F3F3F3;
+                    p {
+                        padding: 0 10px 0 0;
+                        font-size: 14px;
+                        line-height: 1.3
+                    }
+                    img {
+                        opacity: 0.8;
+                    }
                 }
             }
 
@@ -218,7 +259,8 @@
                 position: relative;
                 height: 500px;
                 width: 100%;
-                box-sizing: border-box; 
+                box-sizing: border-box;
+                margin-top: 50px;
 
                 img {
                     object-fit: cover;
