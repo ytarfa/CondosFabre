@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.1 (39012) - http://www.bohemiancoding.com/sketch -->
+    <title>subway2</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="subway2">
+            <circle id="Oval-3" fill="#EB7200" cx="15" cy="15" r="15"></circle>
+            <path d="M26.8909091,14.9999989 C26.8909091,21.5671669 21.5671675,26.8909085 14.9999995,26.8909085 C8.432832,26.8909085 3.10909085,21.5671669 3.10909085,14.9999989 C3.10909085,8.43283091 8.432832,3.10908927 14.9999995,3.10908927 C21.5671675,3.10908927 26.8909091,8.43283091 26.8909091,14.9999989 Z" id="path2231" fill="#FFFFFF" fill-rule="nonzero"></path>
+            <path d="M23.7272711,15.0000016 C23.7284285,19.8207589 19.8207567,23.7293695 14.9999989,23.7293695 C10.1792416,23.7293695 6.27156955,19.8207589 6.27272684,15.0000016 C6.27156955,10.1792438 10.1792416,6.27063327 14.9999989,6.27063327 C19.8207567,6.27063327 23.7284285,10.1792438 23.7272711,15.0000016 Z" id="path2233" fill="#EB7200" fill-rule="nonzero"></path>
+            <rect id="rect2235" fill="#FFFFFF" fill-rule="nonzero" transform="translate(15.000003, 15.000002) rotate(-135.000000) translate(-15.000003, -15.000002) " x="9.02173624" y="9.02173509" width="11.9565336" height="11.9565336"></rect>
+            <rect id="rect2237" fill="#EB7200" fill-rule="nonzero" transform="translate(15.000002, 12.707727) rotate(135.000000) translate(-15.000002, -12.707727) " x="10.564514" y="8.27223874" width="8.87097569" height="8.87097569"></rect>
+            <rect id="rect2239" fill="#FFFFFF" fill-rule="nonzero" x="13.4181818" y="5.72727605" width="3.16363636" height="13.6363636"></rect>
+        </g>
+    </g>
+</svg>

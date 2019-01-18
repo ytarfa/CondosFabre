@@ -181,8 +181,21 @@ export default class MapElement extends React.Component{
                 />
 
                 {/* Transport */}
+                {busPathArray.map((busPath) => (
+                    <PolylineSpring
+                        styleOptions={{
+                            strokeColor: '#59BAFF',
+                            strokeWeight: 2.5
+                        }}
+                        featureToggle={this.props.feature == 'transport'}
+                        path={busPath}
+                    />
+                ))}
                 <PolylineSpring
-                    styleOptions={{strokeColor: '#EB7200'}}
+                    styleOptions={{
+                        strokeColor: '#EB7200',
+                        strokeWeight: 5
+                    }}
                     featureToggle={this.props.feature == 'transport'}
                     path={mapData.orangeLine_path}
                 />
@@ -191,16 +204,9 @@ export default class MapElement extends React.Component{
                         featureToggle={this.props.feature == 'transport'}
                         position={metroPosition}
                         icon={{
-                            url : '/images/circle-solid.svg',
+                            url : '/images/subway-icon.svg',
                             anchor: new google.maps.Point(0, 2) 
                         }}
-                    />
-                ))}
-                {busPathArray.map((busPath) => (
-                    <PolylineSpring
-                        styleOptions={{strokeColor: '#59BAFF'}}
-                        featureToggle={this.props.feature == 'transport'}
-                        path={busPath}
                     />
                 ))}
 
