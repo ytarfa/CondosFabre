@@ -309,7 +309,7 @@
                         i {
                             border-radius: 50%;
                             background-color: #E3E3E3;
-                            padding: 5px;
+                            padding: 10px;
                         }
                         a {
                             display: inline;
@@ -345,6 +345,14 @@
                         padding: 0 10px 0 0;
                         font-size: 14px;
                         line-height: 1.3;
+                        .metro {
+                            font-weight: 600;
+                            color: #EB7101;
+                        }
+                        .bus {
+                            font-weight: 600;
+                            color: #62BDFF;
+                        }
                     }
                     img {
                         opacity: 0.8;
