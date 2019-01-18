@@ -105,19 +105,23 @@
                     background: none;
                     border-radius: 50%; border: none;
                     margin: 10px;
-                    transition: background-color 0.25s, opacity 0.25s;
+                    transition: 0.25s;
+                    background-color: #E3E3E3;
+                    opacity: 0.8;
+                    cursor: pointer;
                     &:focus {
                         outline: 0;
                     }
                     i {
                         padding: 20px;
-                        color: #E3E3E3;
+                        color: #333333;
                     }
                     &:hover {
-                        i {
-                            color: #333333;
-                        }
-                        background-color: #E3E3E3;
+                        -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+                        -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+                        -ms-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+                        -o-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+                        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
                     }
                 }
 
