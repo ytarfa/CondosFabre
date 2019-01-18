@@ -6,7 +6,7 @@
             position: relative;
             display: flex;
             flex-wrap: nowrap;
-            z-index: 2;
+            z-index: 1;
             width: 70%;
             overflow: hidden;
             // white-space: nowrap;
@@ -51,7 +51,7 @@
             }
         }
         .map-container {
-            z-index: 1;
+            z-index: 2;
             box-sizing: border-box;
             margin-top: 100px;
             top: 0;
