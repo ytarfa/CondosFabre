@@ -83,15 +83,16 @@
         }
 
         .parc-lafontaine {
+            padding: 50px;
+            .title {
+                padding: 0;
+            }
             .text-container {
-                width: 100%;
+                width: 70%;
                 white-space: normal;
 
                 p {
-                    margin: auto;
                     padding: 50px;
-                    width: 750px;
-                    text-align: center;
                     line-height: 1.8;
                     box-sizing: border-box;
                 }
@@ -99,10 +100,15 @@
 
             .img-carousel {
                 position: relative;
-                height: 500px;
+                height: 600px;
                 width: 100%;
                 overflow: hidden;
                 white-space: nowrap;
+                -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+                -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+                -ms-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+                -o-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+                box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 
                 .img-container {
                     display: inline-block;
