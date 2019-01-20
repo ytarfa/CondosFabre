@@ -2,6 +2,7 @@ import React from 'react';
 import { GoogleMap, Marker, withGoogleMap, withScriptjs, Polygon, Polyline } from 'react-google-maps';
 import { Spring } from 'react-spring';
 import MapElementsContainer from './MapElementsContainer';
+import mapStyles from './mapStyles';
 
 const Map = withScriptjs(withGoogleMap((props) => {
     //MARKERS
@@ -13,6 +14,9 @@ const Map = withScriptjs(withGoogleMap((props) => {
                 disableDefaultUI: true
             }}
             zoom={props.zoom}
+            options={{
+                styles: mapStyles
+            }}
         >
             <MapElementsContainer />
         </GoogleMap>
