@@ -1,4 +1,5 @@
 import React from 'react';
+import LazyImage from '../../../components/LazyImage';
 
 export default class ParcLaFontaine extends React.Component {
 
@@ -54,7 +55,7 @@ export default class ParcLaFontaine extends React.Component {
                             transform: `translateX(${this.state.imgCounter * 100}%)`
                         }}
                     >
-                        <img src="/images/quartier/parclafontaine/lake-birds.jpg" />
+                        <LazyImage preload={"/images/quartier/parclafontaine/lake-birds-scaled.jpg"} hd={"/images/quartier/parclafontaine/lake-birds.jpg"} />
                     </div>
                     <div class="img-container"
                         style={{
@@ -62,6 +63,7 @@ export default class ParcLaFontaine extends React.Component {
                         }}
                     >
                         <img src="/images/quartier/parclafontaine/field.jpg" />
+                        <LazyImage preload={"/images/quartier/parclafontaine/lake-birds-scaled.jpg"} hd={"/images/quartier/parclafontaine/lake-birds.jpg"} />
                     </div>
                     <div class="img-container"
                         style={{
@@ -69,6 +71,7 @@ export default class ParcLaFontaine extends React.Component {
                         }}
                     >
                         <img src="/images/quartier/parclafontaine/plateau-marche.jpg" />
+                        
                     </div>
 
 
