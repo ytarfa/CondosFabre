@@ -1,4 +1,5 @@
 import React from 'react';
+import LazyImage from '../../../components/LazyImage';
 
 export default class Plateau extends React.Component {
     render() {
@@ -14,22 +15,15 @@ export default class Plateau extends React.Component {
                     <h1 class="foreground-title"> Le Plateau </h1>
                 </div>
 
-                {/* <div class="text-container">
-                </div>
-                
-                <div class="img-container">
-                <img src="/images/quartierCarousel/plateau-houses.jpg" />
-            </div> */}
-
                 <div class="content">
                     <div class="img-container houses">
-                        <img src="/images/quartier/plateau/houses.jpg"/>
+                        <LazyImage preload={"/images/quartier/plateau/houses-scaled.jpg"} hd={"/images/quartier/plateau/houses.jpg"} />
                     </div>
                     <div class="text-container">
                         <p> L’architecture du Plateau Mont-Royal est unique en son genre. Sans doute l’un des quartiers les plus charmants de Montréal avec ses rues bordées d’arbres et ses façades colorées. S’y promener est un réel plaisir en passant d’une ruelle verte à une rue plus typique dégageant toute l’originalité du quartier et inspirant le bonheur de vivre. </p>
                     </div>
                     <div class="img-container nice-trees">
-                        <img src="/images/quartier/plateau/nice-trees.jpg"/>
+                        <LazyImage preload={"/images/quartier/plateau/nice-trees-scaled.jpg"} hd={"/images/quartier/plateau/nice-trees.jpg"} />
                     </div>
                 </div>
                 
