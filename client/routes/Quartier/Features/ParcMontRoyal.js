@@ -1,4 +1,5 @@
 import React from 'react';
+import LazyImage from '../../../components/LazyImage';
 
 export default class ParcMontRoyal extends React.Component {
 
@@ -11,7 +12,7 @@ export default class ParcMontRoyal extends React.Component {
     }
 
     carouselCounter(x) {
-        if (this.state.carouselCounter == -3) {
+        if (this.state.carouselCounter == -2) {
             if (x==1) {
                 this.setState((state) => {
                     return { carouselCounter: state.carouselCounter + x}
@@ -58,6 +59,7 @@ export default class ParcMontRoyal extends React.Component {
                                 }} 
                             >
                                 <img src="/images/quartierParcMontRoyal/vue-belvedere.jpg" />
+                                {/* <LazyImage preload={} hd={} /> */}
                             </div>
                             <div
                                 style={{
@@ -66,6 +68,7 @@ export default class ParcMontRoyal extends React.Component {
                                 }} 
                             >
                                 <img src="/images/quartierParcMontRoyal/tam-tam.jpg" />
+                                {/* <LazyImage preload={} hd={} /> */}
                             </div>
                         </div>
                         <div class="description-container">
