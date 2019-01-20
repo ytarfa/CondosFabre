@@ -38,7 +38,7 @@ export function toggleMontRoyal() {
     return {
         type: TOGGLE_FEATURE,
         payload: {
-            zoom: 13,
+            zoom: 14,
             center: {lat:  45.5249800, lng: -73.5817850},
             feature: 'montroyal'           
         }

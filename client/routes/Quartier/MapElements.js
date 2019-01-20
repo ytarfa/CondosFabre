@@ -178,7 +178,18 @@ export default class MapElement extends React.Component{
                 <PolylineSpring
                     featureToggle={this.props.feature == 'montroyal'}
                     path={mapData.montRoyal_path}
+                    styleOptions={{
+                        strokeColor: '#7F9470'
+                    }}
                 />
+                <MarkerSpring
+                        featureToggle={this.props.feature == 'montroyal'}
+                        position={{lat:45.5270235, lng:-73.5801347}}
+                        icon={{
+                            url : '/images/ave-mont-royal.svg',
+                            anchor: new google.maps.Point(0, 75) 
+                        }}
+                    />
 
                 {/* Transport */}
                 {busPathArray.map((busPath) => (

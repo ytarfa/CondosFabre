@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="174px" height="1744px" viewBox="0 0 174 1744" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.1 (39012) - http://www.bohemiancoding.com/sketch -->
+    <title>street</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="45.027027" y="0" width="124.972973" height="26.657857"></rect>
+        <filter x="-5.6%" y="-18.8%" width="111.2%" height="152.5%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="street" transform="translate(0.000000, 2.000000)">
+            <ellipse id="Oval-3" fill="#7F9470" cx="31.2432432" cy="67.1042607" rx="13.7837838" ry="13.7885467"></ellipse>
+            <g id="circle-solid" transform="translate(0.000000, 1727.245286)" fill-rule="nonzero" fill="#EB7200">
+                <path d="M6.89189189,0 C3.08467742,0 0,3.08574332 0,6.89427336 C0,10.7028034 3.08467742,13.7885467 6.89189189,13.7885467 C10.6991064,13.7885467 13.7837838,10.7028034 13.7837838,6.89427336 C13.7837838,3.08574332 10.6991064,0 6.89189189,0 Z" id="Shape"></path>
+            </g>
+            <g id="Rectangle">
+                <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                <use fill="#FEFEFE" fill-rule="evenodd" xlink:href="#path-1"></use>
+            </g>
+            <text id="AVE.-MONT-ROYAL" font-family="OpenSans-Regular, Open Sans" font-size="10" font-weight="normal" letter-spacing="0.49327597" fill="#7F9470">
+                <tspan x="60" y="16">AVE. MONT-ROYAL</tspan>
+            </text>
+            <path d="M31.7027027,66.6446425 L45.4864865,26.1982388" id="Line" stroke="#FEFEFE" stroke-linecap="square"></path>
+        </g>
+    </g>
+</svg>

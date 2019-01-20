@@ -8,7 +8,7 @@ import * as mapData from './mapData';
 import Footer from '../../components/Footer';
 import Plateau from './Features/Plateau';
 import ParcLaFontaine from './Features/ParcLaFontaine';
-import AvenueMontRoyal from './Features/AvenueMontRoyal';
+import RestaurantsCommerces from './Features/RestaurantsCommerces';
 import Transport from './Features/Transport';
 import ParcMontRoyal from './Features/ParcMontRoyal';
 import { Spring } from 'react-spring';
@@ -102,7 +102,7 @@ export default class QuartierContainer extends React.Component {
                         
                         <Plateau featureCounter={this.state.featureCounter} />
                         <ParcLaFontaine featureCounter={this.state.featureCounter} />
-                        <AvenueMontRoyal featureCounter={this.state.featureCounter} />
+                        <RestaurantsCommerces featureCounter={this.state.featureCounter} />
                         <ParcMontRoyal featureCounter={this.state.featureCounter} />
                         <Transport featureCounter={this.state.featureCounter} />
 
