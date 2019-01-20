@@ -22,6 +22,7 @@ export default class QuartierContainer extends React.Component {
             mapSlideIn: false
         }
         this.counter = this.counter.bind(this);
+        this.handleArrowKeys = this.handleArrowKeys.bind(this);
     }
 
     componentDidMount() {
@@ -38,35 +39,33 @@ export default class QuartierContainer extends React.Component {
             }
         }
         this.setState({mapSlideIn: true});
+        window.addEventListener('keydown', (event) => { this.handleArrowKeys(event) });
+    }
+
+    handleArrowKeys(e) {
+        let key = e.key;
+        if(key == 'ArrowLeft') {
+            this.counter(1);
+        } 
+        if (key == 'ArrowRight') {
+            this.counter(-1);
+        }
     }
 
     counter(x) {
-
-        function scrollReset() {
-            setTimeout(() => {
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                })
-            }, 250)
-        }
-
         if (this.state.featureCounter == -4) {
             if (x==1) {
-                // scrollReset();
                 this.setState((state) => {
                     return { featureCounter: state.featureCounter + x}
                 });
             }
         } else if (this.state.featureCounter == 0) {
             if (x==-1) {
-                // scrollReset();
                 this.setState((state) => {
                     return { featureCounter: state.featureCounter + x}
                 });
             }
         } else {
-            // scrollReset();
             this.setState((state) => {
                 return { featureCounter: state.featureCounter + x}
             })
@@ -76,17 +75,21 @@ export default class QuartierContainer extends React.Component {
     componentDidUpdate(prevProps, prevState) {
         if (prevState != this.state) {
             if(this.state.featureCounter == 0) {
-                this.props.togglePlateau()
+                this.props.togglePlateau();
             } else if (this.state.featureCounter == -1) {
-                this.props.toggleParclafontaine()
+                this.props.toggleParclafontaine();
             } else if (this.state.featureCounter == -2) {
-                this.props.toggleMontRoyal()
+                this.props.toggleMontRoyal();
             } else if (this.state.featureCounter == -3) {
-                this.props.toggleParcMontRoyal()
+                this.props.toggleParcMontRoyal();
             } else if (this.state.featureCounter == -4) {
-                this.props.toggleTransport()
+                this.props.toggleTransport();
             }
         }
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('keydown', (event) => {this.handleArrowKeys(event)});
     }
 
     render() {
@@ -94,7 +97,6 @@ export default class QuartierContainer extends React.Component {
         return (
             <div class="Quartier">
                 <div class="map-animation-container">
-
 
                     <div class="feature-container">
                         
