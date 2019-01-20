@@ -10,12 +10,12 @@ const Map = withScriptjs(withGoogleMap((props) => {
     return (
         <GoogleMap
             center={props.center}
-            defaultOptions={{
-                disableDefaultUI: true
-            }}
             zoom={props.zoom}
             options={{
-                styles: mapStyles
+                disableDefaultUI: true,
+                styles: mapStyles,
+                gestureHandling: 'none',
+                zoomControl: false
             }}
         >
             <MapElementsContainer />
