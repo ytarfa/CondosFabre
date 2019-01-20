@@ -3,6 +3,18 @@
         margin-top: 100px;
         width: 100%;
 
+        .video-container {
+            width: 100vw;
+            padding: 50px;
+            box-sizing: border-box; 
+            height: 58.25vh;
+            margin: auto;
+            iframe {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
         .title-section {
             position: relative;
             width: 100%;
@@ -34,96 +46,33 @@
             }
         }
 
-        .quartier-info-section {
-            width: 100%;
+        .link-container {
             text-align: center;
-            p {
+            a {
+                width: 400px;
                 margin: auto;
-                padding: 0;
-                width: 600px;
-            }
-        }
-
-        .quartier-carousel {
-            margin-top: 25px;
-            height: 700px;
-            width: 1000px;
-            margin: auto;
-
-            .description-control-container {
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                height: 200px;
-                width: 100%;
-                background-color: #e0e0e0;
-                opacity: 0.8;
-            }
-
-            .diapos-container {
-                position: relative;
-                height: 100%;
-                width: 50%;
-                overflow: hidden;
-                float: left;
-                .diapo {
-                    position: absolute;
-                    height: 100%;
-                    width: 100%;
-                    img {
-                        height: 100%;
-                        width: 100%;
-                        object-fit: cover;
-                    }
-                    .lazy-image-hd {
-                        background-position: center;
-                    }
-                    .lazy-image-preload {
-                        background-position: center;
-                    }
-                }
-            }
-            .description-container {
-                position: relative;
-                width: 50%;
-                height: 100%;
-                float: right;
                 display: flex;
-                flex-direction: column;
-                justify-content: space-around;
-                background-color: #F8F8F8;
-                .description {
-                    position: relative;
-                    height: 500px;
-                    p {
-                        width: 80%;
-                        position: absolute;
-                        top: 50%; left: 50%;
-                        transform: translate(-50%, -50%);
-                    }
+                justify-content: center;
+                align-items: center;
+                text-decoration: none;
+                padding: 0px;
+                padding: 10px 25px 10px 25px;
+                p {
+                    display: inline;
+                    font-weight: 500;
+                    font-size: 30px;
+                    padding-right: 15px;
+                    transition: 0.25s;
+                    color: #7F9470;
+                    border-bottom: solid 1px #7F9470;
                 }
-                .controls {
-                    height: 100px;
-                    width: 100%;
-                    .button-container {
-                        position: absolute;
-                        left: 50%; transform: translate(-50%);
-                        bottom: 90px;
-                        button {
-                            background: none;
-                            border-radius: 50%; border: none;
-                            margin: 10px;
-                            transition: background-color 0.25s, opacity 0.25s;
-                            &:focus {
-                                outline: 0;
-                            }
-                            i {
-                                padding: 20px;
-                            }
-                            &:hover {
-                                background-color: #E3E3E3;
-                            }
-                        }
+    
+                cursor: pointer;
+            }
+            &:hover {
+                a {
+                    p {
+                        padding-right: 20px;
                     }
                 }
             }

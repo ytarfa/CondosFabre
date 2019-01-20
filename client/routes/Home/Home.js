@@ -1,6 +1,7 @@
 import React from 'react';
 import '../../scss/Home/main.scss';
 import ReactTooltip from 'react-tooltip';
+import { Link } from 'react-router-dom';
 
 import Footer from '../../components/Footer';
 import MapComponent from '../../components/MapComponent';
@@ -20,11 +21,9 @@ export default class Home extends React.Component{
         super(props);
         this.state = {
             counter: 0,
-            plateauCounter: 0,
             en: false
         };
         this.counter = this.counter.bind(this);
-        this.plateauCounter = this.plateauCounter.bind(this);
     }
 
     counter(x) {
@@ -44,26 +43,6 @@ export default class Home extends React.Component{
             this.setState((state) => {
                 return { counter: state.counter + x }
             });
-        }
-    }
-
-    plateauCounter(x) {
-        if (this.state.plateauCounter == -(quartierDiapos.diapos.length-1)) {
-            if (x==1) {
-                this.setState((state) => {
-                    return { plateauCounter: state.plateauCounter + x}
-                })
-            }
-        } else if (this.state.plateauCounter == 0) {
-            if (x==-1) {
-                this.setState((state) => {
-                    return { plateauCounter: state.plateauCounter + x}
-                })
-            }
-        } else {
-            this.setState((state) => {
-                return { plateauCounter: state.plateauCounter + x}
-            })
         }
     }
 
@@ -100,41 +79,6 @@ export default class Home extends React.Component{
                 counter={this.state.counter}
                 unit={unit}
             />
-        )
-
-        const quartierCarousel = quartierDiapos.diapos.map((diapo, index) => 
-                <div class="diapo" key={index}
-                    style={{
-                        top: 0,
-                        left: index*500 + "px",
-                        transform: 'translate('+ this.state.plateauCounter*500 + 'px)',
-                        transition: 'all 0.25s'
-                    }}
-                >
-                    <LazyImage preload={'/images/quartierCarousel/' + diapo.imageScaled} hd={'/images/quartierCarousel/' + diapo.image}/>
-                </div>
-        )
-        const quartierCarouselDescription = quartierDiapos.diapos.map((diapo, index) => 
-                    <p 
-                        key="index"
-                        style= {{
-                            opacity: this.state.plateauCounter == -index ? '1' : '0',
-                            transition: 'all 0.25s'
-                        }}
-                    >
-                        {diapo.description}
-                    </p>
-        )
-        const quartierCarouselDescriptionEN = quartierDiapos.diaposEN.map((diapo, index) => 
-                    <p 
-                        key="index"
-                        style= {{
-                            opacity: this.state.plateauCounter == -index ? '1' : '0',
-                            transition: 'all 0.25s'
-                        }}
-                    >
-                        {diapo.description}
-                    </p>
         )
 
         return (
@@ -204,29 +148,12 @@ export default class Home extends React.Component{
                         <h1 class="title">{this.state.en ? 'The Plateau' : 'Le Plateau'} </h1>
                     </div>
 
-                    <div class="quartier-carousel">
-                        <div class="diapos-container"> 
-                            {quartierCarousel}
-                        </div>
-                        <div class="description-container">
-                            <div class="description">
-                                {this.state.en == true ? quartierCarouselDescriptionEN : quartierCarouselDescription}
-                            </div>
-                            <div class="controls">
-                                <div class="button-container">
-                                    <button onClick={() => this.plateauCounter(1)}
-                                    style={{
-                                        opacity: this.state.plateauCounter == 0 ? '0.2' : '1'
-                                    }}
-                                    > <i class="fas fa-chevron-left fa-3x"></i> </button>
-                                    <button onClick={() => this.plateauCounter(-1)}
-                                        style={{
-                                            opacity: this.state.plateauCounter == -(quartierDiapos.diapos.length-1) ? '0.2' : '1'
-                                        }}
-                                    > <i class="fas fa-chevron-right fa-3x"></i> </button>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="video-container">
+                        <iframe width="80%" height="500vh" src="https://www.youtube.com/embed/bUi3H7lArNc" frameborder="0" autoplay="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="link-container">
+                        <Link to="/quartier"> <p>En apprendre plus</p> <img src="/images/right-arrow-light.png" /></Link>
                     </div>
                 </div>
 
