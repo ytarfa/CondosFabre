@@ -48,7 +48,8 @@ export default class ParcMontRoyal extends React.Component {
                     <p> Vivre au Plateau Mont-Royal c’est aussi vivre au pied de la montagne du Mont-Royal. À seulement quelques minutes, vous pourrez vous resourcer et explorer la nature de Montréal. Été comme hiver, le Mont-Royal regorge d’activités uniques à faire seul avec des amis ou en famille. Un vrai poumon tout juste à côté de chez-soi. </p>
                 </div>
 
-                <div class="img-carousel">
+                <div class="img-carousel-container">
+                    <div class="img-carousel">
                         <div class="img-container"> 
                             <div
                                 style={{
@@ -76,7 +77,7 @@ export default class ParcMontRoyal extends React.Component {
                                         opacity: this.state.carouselCounter == 0 ? 1 : 0
                                     }}
                                 > 
-                                    <p>Lorem idivsum dolor amet.</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet. Quam elementum pulvinar etiam non quam lacus. Netus et malesuada fames ac turpis egestas. Nisl pretium fusce id velit. Consectetur libero id faucibus nisl tincidunt eget nullam. Feugiat nisl pretium fusce id velit. At ultrices mi tempus imperdiet nulla malesuada. Aliquet eget sit amet tellus cras adipiscing enim eu turpis. Semper eget duis at tellus at. Eu nisl nunc mi ipsum faucibus vitae aliquet nec.</p>
                                 </div>
 
                                 <div
@@ -85,11 +86,11 @@ export default class ParcMontRoyal extends React.Component {
                                         opacity: this.state.carouselCounter == -1 ? 1 : 0
                                     }}
                                 > 
-                                    <p>Lorem idivsum dolor amet2.</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet. Quam elementum pulvinar etiam non quam lacus. Netus et malesuada fames ac turpis egestas. Nisl pretium fusce id velit. Consectetur libero id faucibus nisl tincidunt eget nullam. Feugiat nisl pretium fusce id velit. At ultrices mi tempus imperdiet nulla malesuada. </p>
                                 </div>
 
                             </div>
-                            <div class="controls">
+                            <div class="img-carousel-controls">
                                 <div class="button-container">
                                     <button onClick={() => this.carouselCounter(1)}
                                     style={{
@@ -105,6 +106,7 @@ export default class ParcMontRoyal extends React.Component {
                             </div>
                         </div>
                     </div>
+                </div>
 
             </div>
         )

@@ -240,25 +240,29 @@
 
         .parc-mont-royal {
             .text-container {
-                width: 100%;
+                width: 70%;
                 white-space: normal;
-                padding: 0 50px 0 50px;
 
                 p {
-                    margin: auto;
                     padding: 50px;
-                    width: 750px;
-                    text-align: center;
                     line-height: 1.8;
                     box-sizing: border-box;
                 }
             }
-            
+            .img-carousel-container {
+                padding: 0 50px 50px 50px;
+                box-sizing: border-box;
+            }
             .img-carousel {
                 margin-top: 25px;
                 height: 700px;
                 width: 100%;
-                margin: auto;
+                overflow: hidden;
+                -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+                -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+                -ms-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+                -o-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+                box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
     
                 .img-container {
                     position: relative;
@@ -291,6 +295,8 @@
                     height: 100%;
                     float: right;
                     background-color: #F8F8F8;
+                    display: flex;
+                    flex-direction: column;
 
                     .description {
                         display: flex;
@@ -301,15 +307,24 @@
                             flex-shrink: 0;
                             height: 100%;
                             width: 100%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            p {
+                                padding: 50px;
+                                white-space: normal;
+                                line-height: 1.8;
+                            }
                         }
                     }
-                    .controls {
-                        height: 100px;
+                    .img-carousel-controls {
+                        position: relative;
+                        height: 200px;
                         width: 100%;
                         .button-container {
                             position: absolute;
-                            left: 50%; transform: translate(-50%);
-                            bottom: 90px;
+                            top: 50%; left: 50%; 
+                            transform: translate(-50%, -50%);
                             button {
                                 background: none;
                                 border-radius: 50%; border: none;
