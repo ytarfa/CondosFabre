@@ -78,7 +78,7 @@ export default class ParcLaFontaine extends React.Component {
                             class="left"
                             onClick={() => this.counter(1)}
                             style={{
-                                opacity: this.state.featureCounter == 0 ? '0.2' : '1'
+                                opacity: this.state.imgCounter == 0 ? '0.2' : '1'
                             }}
                         > <i class="fas fa-chevron-left fa-3x"></i> </button>
                             
@@ -86,7 +86,7 @@ export default class ParcLaFontaine extends React.Component {
                         class="right"
                         onClick={() => this.counter(-1)}
                         style={{
-                            opacity: this.state.featureCounter == -2 ? '0.2' : '1'
+                            opacity: this.state.imgCounter == -2 ? '0.2' : '1'
                         }}
                     > <i class="fas fa-chevron-right fa-3x"></i> </button>
 
