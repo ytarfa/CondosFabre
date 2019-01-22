@@ -63,7 +63,6 @@ export default class ParcLaFontaine extends React.Component {
                         }}
                     >
                         <img src="/images/quartier/parclafontaine/field.jpg" />
-                        <LazyImage preload={"/images/quartier/parclafontaine/lake-birds-scaled.jpg"} hd={"/images/quartier/parclafontaine/lake-birds.jpg"} />
                     </div>
                     <div class="img-container"
                         style={{
