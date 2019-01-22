@@ -62,14 +62,14 @@ export default class ParcLaFontaine extends React.Component {
                             transform: `translateX(${this.state.imgCounter * 100}%)`
                         }}
                     >
-                        <img src="/images/quartier/parclafontaine/field.jpg" />
+                        <img src="/images/quartier/parclafontaine/parclafontaine_ducks.jpg" />
                     </div>
                     <div class="img-container"
                         style={{
                             transform: `translateX(${this.state.imgCounter * 100}%)`
                         }}
                     >
-                        <img src="/images/quartier/parclafontaine/plateau-marche.jpg" />
+                        <img src="/images/quartier/parclafontaine/parclafontaine_ice.jpg" />
                         
                     </div>
 
