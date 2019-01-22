@@ -25,7 +25,7 @@ export default class Transport extends React.Component {
                 </div>
         
                 <div class="stm-text-container">
-                    <p>Pour ceux qui préfèrent utiliser les transports, le quartier met à disposition ses nombreuses lignes de bus, et plusieurs entrées de métro. Le Plateau Mont-Royal agit comme un carrefour central entre les nombreux accès qui l’entourent. Vous n’aurez jamais aucun mal à vous rendre à votre destination.</p>
+                    <p>Pour ceux qui préfèrent utiliser les transports, le quartier met à disposition ses nombreuses lignes de bus, et plusieurs stations de métro. Le Plateau Mont-Royal agit comme un carrefour central entre les nombreux accès qui l’entourent. Vous n’aurez jamais aucun mal à vous rendre à votre destination.</p>
                     <div class="map-intro">
                         <p>Vous pouvez voir sur la carte les nombreuses <span class="metro">stations de métro</span> et <span class="bus">lignes de bus</span> à proximité.</p>
                         <img src="/images/right-arrow-light.png" />
