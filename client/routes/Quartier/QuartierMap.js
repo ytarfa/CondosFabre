@@ -2,7 +2,7 @@ import React from 'react';
 import { GoogleMap, Marker, withGoogleMap, withScriptjs, Polygon, Polyline } from 'react-google-maps';
 import { Spring } from 'react-spring';
 import MapElementsContainer from './MapElementsContainer';
-import mapStyles from './mapStyles';
+import mapStyles from '../../mapStyles';
 
 const Map = withScriptjs(withGoogleMap((props) => {
     //MARKERS
