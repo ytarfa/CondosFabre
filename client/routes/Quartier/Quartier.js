@@ -24,6 +24,13 @@ export default class QuartierContainer extends React.Component {
         this.counter = this.counter.bind(this);
         this.handleArrowKeys = this.handleArrowKeys.bind(this);
     }
+    
+    componentWillMount() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
 
     componentDidMount() {
         this.props.pushCurrentRoute(this.props.location.pathname);
