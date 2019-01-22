@@ -4,10 +4,8 @@
         width: 100%;
 
         .video-container {
-            width: 100vw;
-            padding: 50px;
-            box-sizing: border-box; 
-            height: 58.25vh;
+            padding: 0 50px 50px 50px;
+            box-sizing: border-box;
             margin: auto;
             iframe {
                 width: 100%;
@@ -49,31 +47,31 @@
         .link-container {
             text-align: center;
             a {
-                width: 400px;
-                margin: auto;
-                display: flex;
-                justify-content: center;
-                align-items: center;
+                display: inline;
+                background-color: #7F9470;
+                padding: 10px 20px 10px 20px;
                 text-decoration: none;
-                padding: 0px;
-                padding: 10px 25px 10px 25px;
-                p {
-                    display: inline;
-                    font-weight: 500;
-                    font-size: 30px;
-                    padding-right: 15px;
-                    transition: 0.25s;
-                    color: #7F9470;
-                    border-bottom: solid 1px #7F9470;
-                }
-    
-                cursor: pointer;
+                color: white;
+                font-family: 'Open Sans', sans-serif;
+                font-size: 20px;
+                -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+                -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+                -ms-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+                -o-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+                box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+                -webkit-transition: all 0.25s ease-in-out;
+                -moz-transition: all 0.25s ease-in-out;
+                -ms-transition: all 0.25s ease-in-out;
+                -o-transition: all 0.25s ease-in-out;
+                transition: all 0.25s ease-in-out;
             }
             &:hover {
                 a {
-                    p {
-                        padding-right: 20px;
-                    }
+                    -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+                    -moz-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+                    -ms-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+                    -o-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+                    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
                 }
             }
         }

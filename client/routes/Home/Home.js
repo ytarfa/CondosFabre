@@ -153,7 +153,7 @@ export default class Home extends React.Component{
                     </div>
 
                     <div class="link-container">
-                        <Link to="/quartier"> <p>En apprendre plus</p> <img src="/images/right-arrow-light.png" /></Link>
+                        <Link to="/quartier">En apprendre plus sur le Plateau</Link>
                     </div>
                 </div>
 
