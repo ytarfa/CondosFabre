@@ -19,7 +19,8 @@ export default class QuartierContainer extends React.Component {
         super(props);
         this.state = {
             featureCounter: 0,
-            mapSlideIn: false
+            mapSlideIn: false,
+            en: false
         }
         this.counter = this.counter.bind(this);
         this.handleArrowKeys = this.handleArrowKeys.bind(this);
@@ -34,6 +35,13 @@ export default class QuartierContainer extends React.Component {
 
     componentDidMount() {
         this.props.pushCurrentRoute(this.props.location.pathname);
+
+        if (this.props.location.pathname.includes('/en')) {
+            this.setState({en: true})
+        } else {
+            this.setState({en: false})
+        }
+
         if (this.props.feature != 'plateau') {
             if (this.props.feature == 'parclafontaine') {
                 this.setState({featureCounter: -1});
@@ -107,11 +115,11 @@ export default class QuartierContainer extends React.Component {
 
                     <div class="feature-container">
                         
-                        <Plateau featureCounter={this.state.featureCounter} />
-                        <ParcLaFontaine featureCounter={this.state.featureCounter} />
-                        <RestaurantsCommerces featureCounter={this.state.featureCounter} />
-                        <ParcMontRoyal featureCounter={this.state.featureCounter} />
-                        <Transport featureCounter={this.state.featureCounter} />
+                        <Plateau featureCounter={this.state.featureCounter} en={this.state.en} />
+                        <ParcLaFontaine featureCounter={this.state.featureCounter} en={this.state.en} />
+                        <RestaurantsCommerces featureCounter={this.state.featureCounter} en={this.state.en} />
+                        <ParcMontRoyal featureCounter={this.state.featureCounter} en={this.state.en} />
+                        <Transport featureCounter={this.state.featureCounter} en={this.state.en} />
 
                         <div class="controls">
                             <div class="button-container">

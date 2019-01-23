@@ -40,12 +40,12 @@ export default class ParcLaFontaine extends React.Component {
                 }}
             >
                 <div class="title">
-                    <h1 class="background-title"> Parc La Fontaine </h1>
-                    <h1 class="foreground-title"> Parc La Fontaine </h1>
+                    <h1 class="background-title"> {this.props.en ? 'La Fontaine Park' : 'Parc La Fontaine'} </h1>
+                    <h1 class="foreground-title"> {this.props.en ? 'La Fontaine Park' : 'Parc La Fontaine'} </h1>
                 </div>
 
                 <div class="text-container">
-                    <p> Juste à côté des Condos Fabre, est l’un des plus beaux parcs que connaît Montréal : le parc La Fontaine. Ce lieu est le théâtre d’une multitude d’activités toutes plus sympathiques les unes que les autres : sport, promenade, ou activités culturelles! Le parc La Fontaine est le point de rassemblement des habitants du quartier, car il promet de passer une superbe journée. Les coins de verdure sont très importants, et Le Plateau Mont-Royal vous donne l’occasion de vivre dans un quartier vivant et relaxant! </p>
+                    <p> {this.props.en ? 'Located right next to Les Condos Fabre, is one of the most beautiful parks in Montreal: La Fontaine Park. This place is the scene of a multitude of activities, each more enjoyable than the next: sports, running, tennis, walking, or cultural activities! La Fontaine Park is the meeting point for the residents of the district, as it promises to be a wonderful day out. Green spaces are very important, and Plateau Mont-Royal gives you the opportunity to live in a lively and relaxing neighbourhood!' : 'Juste à côté des Condos Fabre, est l’un des plus beaux parcs que connaît Montréal : le parc La Fontaine. Ce lieu est le théâtre d’une multitude d’activités toutes plus sympathiques les unes que les autres : sport, promenade, ou activités culturelles! Le parc La Fontaine est le point de rassemblement des habitants du quartier, car il promet de passer une superbe journée. Les coins de verdure sont très importants, et Le Plateau Mont-Royal vous donne l’occasion de vivre dans un quartier vivant et relaxant!'} </p>
                 </div>
 
                 <div class="img-carousel">

@@ -41,12 +41,12 @@ export default class ParcMontRoyal extends React.Component {
                 }}
             >
                 <div class="title">
-                    <h1 class="background-title"> Parc Mont-Royal </h1>
-                    <h1 class="foreground-title"> Parc Mont-Royal </h1>
+                    <h1 class="background-title"> {this.props.en ? 'Mont-Royal Park' : 'Parc Mont-Royal'} </h1>
+                    <h1 class="foreground-title"> {this.props.en ? 'Mont-Royal Park' : 'Parc Mont-Royal'} </h1>
                 </div>
 
                 <div class="text-container">
-                    <p> Vivre au Plateau Mont-Royal c’est aussi vivre au pied de la montagne du Mont-Royal. À seulement quelques minutes, vous pourrez vous resourcer et explorer la nature de Montréal. Été comme hiver, le Mont-Royal regorge d’activités uniques à faire seul avec des amis ou en famille. Un vrai poumon tout juste à côté de chez-soi. </p>
+                    <p> {this.props.en ? 'Living in Le Plateau Mont-Royal is also living at the foot of Mount Royal mountain. Only a few minutes away, you can recharge your batteries and explore Montreal\'s nature. In summer and winter, Mount Royal abounds in unique activities to do alone, with friends or with the family. A true lung right next door to home.' : 'Vivre au Plateau Mont-Royal c’est aussi vivre au pied de la montagne du Mont-Royal. À seulement quelques minutes, vous pourrez vous resourcer et explorer la nature de Montréal. Été comme hiver, le Mont-Royal regorge d’activités uniques à faire seul avec des amis ou en famille. Un vrai poumon tout juste à côté de chez-soi.'} </p>
                 </div>
 
                 <div class="img-carousel">

@@ -70,6 +70,7 @@ export default class App extends React.Component{
                                     <Route exact path="/en" component={ HomeContainer } />
                                     {ENunitRoutes}
                                     <Route path="/quartier" component={ QuartierContainer } />
+                                    <Route path="/en/quartier" component={ QuartierContainer } />
                                 </Switch>
                         </CSSTransition>
                 </TransitionGroup>
