@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="169px" height="77px" viewBox="0 0 169 77" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.1 (39012) - http://www.bohemiancoding.com/sketch -->
+    <title>street</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="21.027027" y="0" width="143.972973" height="26.657857"></rect>
+        <filter x="-4.9%" y="-18.8%" width="109.7%" height="152.5%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="street" transform="translate(0.000000, 2.000000)">
+            <ellipse id="Oval-3" fill="#7F9470" cx="7.27027027" cy="67.2727825" rx="7.27027027" ry="7.27278249"></ellipse>
+            <path d="M7.7027027,66.6446425 L21.4864865,26.1982388" id="Line" stroke="#7F9470" stroke-width="3" stroke-linecap="square"></path>
+            <g id="Rectangle">
+                <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                <use fill="#FEFEFE" fill-rule="evenodd" xlink:href="#path-1"></use>
+            </g>
+            <text id="BOUL.-SAINT-LAURENT" font-family="OpenSans-Regular, Open Sans" font-size="10" font-weight="normal" letter-spacing="0.49327597" fill="#7F9470">
+                <tspan x="35" y="16">BOUL. SAINT-LAURENT</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

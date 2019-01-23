@@ -153,7 +153,7 @@ export default class MapElement extends React.Component{
 
         return (
             <div>
-                {/* Condos Faber */}
+                {/* Condos Fabre */}
                 <MarkerSpring
                     featureToggle={true}
                     position={{lat: 45.529591, lng: -73.571390}}
@@ -182,14 +182,44 @@ export default class MapElement extends React.Component{
                         strokeColor: '#7F9470'
                     }}
                 />
+                <PolylineSpring
+                    featureToggle={this.props.feature == 'montroyal'}
+                    path={mapData.saintLaurent_path}
+                    styleOptions={{
+                        strokeColor: '#7F9470'
+                    }}
+                />
+                <PolylineSpring
+                    featureToggle={this.props.feature == 'montroyal'}
+                    path={mapData.saintDenis_path}
+                    styleOptions={{
+                        strokeColor: '#7F9470'
+                    }}
+                />
                 <MarkerSpring
-                        featureToggle={this.props.feature == 'montroyal'}
-                        position={{lat:45.5270235, lng:-73.5801347}}
-                        icon={{
-                            url : '/images/ave-mont-royal.svg',
-                            anchor: new google.maps.Point(0, 75) 
-                        }}
-                    />
+                    featureToggle={this.props.feature == 'montroyal'}
+                    position={{lat: 45.530753, lng: -73.576697}}
+                    icon={{
+                        url : '/images/quartier/mont-royal-street.svg',
+                        anchor: new google.maps.Point(7.25, 67.75) 
+                    }}
+                />
+                <MarkerSpring
+                    featureToggle={this.props.feature == 'montroyal'}
+                    position={{lat: 45.519637, lng: -73.585302}}
+                    icon={{
+                        url : '/images/quartier/saint-laurent-street.svg',
+                        anchor: new google.maps.Point(7.25, 67.75) 
+                    }}
+                />
+                <MarkerSpring
+                    featureToggle={this.props.feature == 'montroyal'}
+                    position={{lat: 45.526346, lng: -73.588435}}
+                    icon={{
+                        url : '/images/quartier/saint-denis-street.svg',
+                        anchor: new google.maps.Point(7.25, 67.75) 
+                    }}
+                />
 
                 {/* Transport */}
                 {busPathArray.map((busPath) => (
