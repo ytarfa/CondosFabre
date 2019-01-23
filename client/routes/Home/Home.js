@@ -142,6 +142,19 @@ export default class Home extends React.Component{
                     </div>
                 </div>
 
+                <div class="temoignage">
+                    <div class="temoignage-title">
+                        <h1 class="foreground-title"> {this.state.en ? 'Testimony' : 'Témoignage'} </h1>
+                        <h1 class="background-title"> {this.state.en ? 'Testimony' : 'Témoignage'} </h1>
+                    </div>
+                    <p class="temoignage-intro"> {this.state.en  ? 'Read the review of one of the buyers of Condos Milieu, from the same builder as Condos Fabre:' : 'Lisez le témoignage d\'un des acheteurs de Condos Milieu, du même constructeur que Condos Fabre:' } </p>
+                    <div class="temoignage-text-container">
+                        <span class="background-quote left"> <img src="/images/left-quote.png" /> </span>
+                        <span class="background-quote right"> <img src="/images/right-quote.png" /> </span>
+                        <p class="quote"> &laquo; {this.state.en  ? 'The purchase of my condo in the Condos Milieu Project was simple and without complications. I began the process while I was out of the country and they were understanding and helpful throughout the process. Since I moved in, not only am I loving the perfect location but the builder surpassed himself on many occasions, demonstrating all the qualities you would expect from a real estate promoter.' : 'L\'achat de mon condo dans le projet Condos Milieu a été une expérience simple et sans complications. J\'ai commencé l\'achat quand j\'étais à l\'extérieur du pays et ils ont été compréhensifs et de bonne nature tout au long du processus. Depuis que j\'ai emménagé dans l\'immeuble, non seulement j\'ai pu profiter de l\'emplacement fantastique, mais le constructeur s\'est personnellement surpassé à plusieurs reprises - démontrant toutes les qualités que vous attendez d\'un promoteur immobilier.'} &raquo; <br/> <br/> - Joe M.</p>
+                    </div>
+                </div>
+
                 <div class="home-quartier">
                     <div class="title-section">
                         <h1 class="background-title">{this.state.en ? 'The Plateau' : 'Le Plateau'} </h1>
