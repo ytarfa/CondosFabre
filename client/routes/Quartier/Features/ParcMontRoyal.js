@@ -56,21 +56,21 @@ export default class ParcMontRoyal extends React.Component {
                             transform: `translateX(${this.state.imgCounter * 100}%)`
                         }}
                     >
-                        <img src="/images/quartier/parcmontroyal/belvedere_view.jpg" />
+                        <LazyImage preload={"/images/quartier/parcmontroyal/belvedere_view-scaled.jpg"} hd={"/images/quartier/parcmontroyal/belvedere_view.jpg"} />
                     </div>
                     <div class="img-container"
                         style={{
                             transform: `translateX(${this.state.imgCounter * 100}%)`
                         }}
                     >
-                        <img src="/images/quartier/parcmontroyal/belvedere_top.jpg" />
+                        <LazyImage preload={"/images/quartier/parcmontroyal/belvedere_top-scaled.jpg"} hd={"/images/quartier/parcmontroyal/belvedere_top.jpg"} />
                     </div>
                     <div class="img-container"
                         style={{
                             transform: `translateX(${this.state.imgCounter * 100}%)`
                         }}
                     >
-                        <img src="/images/quartier/parcmontroyal/volleyball.jpg" />
+                        <LazyImage preload={"/images/quartier/parcmontroyal/volleyball-scaled.jpg"} hd={"/images/quartier/parcmontroyal/volleyball.jpg"} />
                         
                     </div>
                     <div class="img-container"
@@ -78,7 +78,7 @@ export default class ParcMontRoyal extends React.Component {
                             transform: `translateX(${this.state.imgCounter * 100}%)`
                         }}
                     >
-                        <img src="/images/quartier/parcmontroyal/parcmontroyal_tamtam.jpg" />
+                        <LazyImage preload={"/images/quartier/parcmontroyal/parcmontroyal_tamtam-scaled.jpg"} hd={"/images/quartier/parcmontroyal/parcmontroyal_tamtam.jpg"} />
                         
                     </div>
 

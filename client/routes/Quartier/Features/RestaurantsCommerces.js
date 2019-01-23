@@ -1,4 +1,5 @@
 import React from 'react';
+import LazyImage from '../../../components/LazyImage';
 
 export default class RestaurantsCommerces extends React.Component {
     render() {
@@ -24,7 +25,7 @@ export default class RestaurantsCommerces extends React.Component {
                 </div>
 
                 <div class="img-container">
-                    <img src="/images/quartierCarousel/plateau-restaurant.jpg" />
+                <LazyImage preload={"/images/quartierCarousel/plateau-restaurant-scaled.jpg"} hd={"/images/quartierCarousel/plateau-restaurant.jpg"} />
                     <p> {this.props.en ? 'There is no shortage of restaurants on the Plateau Mont-Royal. It\'s the perfect place to have brunch, lunch or dinner with friends. From the most classic to the most original cuisine, a wide range of flavours are available to the palate. The Plateau is home to some of Montreal\'s most famous restaurants such as La Banquise for its heartwarming poutine and Saint Viateur for their delicious Bagels.This is the neighborhood where you’ll find Schwartz\'s, the restaurant that made Montreal\’s smoked meat a staple.' : 'La restauration ne manque pas sur le Plateau Mont-Royal. C’est le quartier parfait pour bruncher entre amis. De la cuisine la plus classique à la plus originale, une panoplie de saveurs s’offrent au palais. on y trouve également certains des restaurants les plus célèbres de Montréal comme La Banquise et sa fameuse poutine ou bien Saint Viateur et ses délicieux Bagels.'} </p>
                 </div>
 

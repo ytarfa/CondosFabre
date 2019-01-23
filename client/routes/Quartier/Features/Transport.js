@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactTooltip from 'react-tooltip';
+import LazyImage from '../../../components/LazyImage';
 
 export default class Transport extends React.Component {
     render() {
@@ -34,7 +34,7 @@ export default class Transport extends React.Component {
                 </div>
 
                 <div class="img-container">
-                    <img src="/images/quartierCarousel/plateau-marche.jpg" />
+                    <LazyImage preload={"/images/quartierCarousel/plateau-marche-scaled.jpg"} hd={"/images/quartierCarousel/plateau-marche.jpg"} />
                     <p>{this.props.en ? 'What is missing from this pleasant, lively, accessible neighbourhood? Plateau Mont-Royal is the perfect environment for your family life: your children will thrive in the schools that are located here. The district is self-sufficient because it has a hospital, shops, many restaurants, and daycare centres. Plateau Mont-Royal is not just a neighbourhood, it\'s a lifestyle! Choose a life that borders on perfection, with everything you need within reach... and walking distance.' : 'Que manque-t-il à ce quartier agréable, vivant, et accessible? Le Plateau Mont-Royal est le parfait environnement pour votre vie de famille :  vos enfants s’épanouiront dans les écoles qui s’y trouvent. Le quartier se suffit à lui même, car il possède un hôpital, des commerces, de nombreux restaurants, et des garderies. Le Plateau Mont-Royal n’est pas qu’un quartier, c’est un style de vie! Faites le choix d’une vie frôlant la perfection, avec tout le nécessaire à portée de main.. et de marche.'}</p>
                 </div>
 
