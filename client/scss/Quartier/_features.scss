@@ -208,10 +208,7 @@
                 padding: 0 50px 0 50px;
                 width: 100%;
                 box-sizing: border-box;
-                img {
-                    object-fit: cover;
-                    height: 100%;
-                    width: 100%;
+                .lazy-image-container {
                     -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
                     -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
                     -ms-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
@@ -468,10 +465,8 @@
                 margin-top: 50px;
                 padding: 0 50px 0 50px;
 
-                img {
-                    object-fit: cover;
-                    height: 100%;
-                    width: 100%;
+                .lazy-image-container {
+                    overflow: auto;
                     -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
                     -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
                     -ms-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
