@@ -21,11 +21,13 @@ export default class Navbar extends React.Component{
     static getDerivedStateFromProps(props, state, prevProps) {
         let enRegex = RegExp('\/en');
         if (enRegex.test(props.route)) {
+            document.documentElement.setAttribute('lang', 'en');
             return {
                 route: props.route,
                 en: true
             }
         } else {
+            document.documentElement.setAttribute('lang', 'fr');
             return {
                 route: props.route,
                 en: false
