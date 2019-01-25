@@ -4,6 +4,7 @@ import {applyMiddleware, createStore, compose} from 'redux';
 import {Provider} from 'react-redux';
 import thunk from 'redux-thunk';
 import { BrowserRouter, Route } from 'react-router-dom';
+import '@babel/polyfill';
 
 //REDUX SET-UP
 import rootReducer from './reducers/index';
