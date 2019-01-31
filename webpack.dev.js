@@ -1,10 +1,9 @@
-require("@babel/polyfill");
 const webpack = require('webpack');
 const path = require("path");
 
 
 module.exports = {
-  entry: ['@babel/polyfill', './client/index.js'],
+  entry: './client/index.js',
   output: {
     path: path.resolve(__dirname, "dist/client"),
     filename: "client.bundle.js",
