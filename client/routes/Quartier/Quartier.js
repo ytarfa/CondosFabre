@@ -2,9 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import '../../scss/Quartier/main.scss';
 
-import Video from './Video';
 import QuartierMap from './QuartierMap';
-import * as mapData from './mapData';
 import Footer from '../../components/Footer';
 import Plateau from './Features/Plateau';
 import ParcLaFontaine from './Features/ParcLaFontaine';
@@ -137,6 +135,7 @@ export default class QuartierContainer extends React.Component {
                             </div>
                         </div>
                     </div>
+
 
                     <Spring
                         delay={500}

@@ -1,6 +1,7 @@
 const webpack = require('webpack');
 const path = require("path");
-const MinifyPlugin = require("babel-minify-webpack-plugin");
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+var CompressionPlugin = require('compression-webpack-plugin');
 
 module.exports = {
     entry: ['./client/index.js'],
@@ -31,15 +32,28 @@ module.exports = {
                     }, {
                         loader: "sass-loader",
                         options: {
-                            includePaths: ["absolute/path/a", "absolute/path/b"]
+                            // includePaths: ["absolute/path/a", "absolute/path/b"]
                         }
                     }
                 ]
             }
         ]
     },
+    devtool: 'source-map',
+    optimization: {
+        minimizer: [new UglifyJsPlugin({
+            sourceMap: true
+        })]
+    },
     plugins: [
-        new MinifyPlugin()
+        new webpack.optimize.AggressiveMergingPlugin(),
+        new CompressionPlugin({
+            filename: "[path].gz[query]",
+            algorithm: "gzip",
+            test: /\.js$|\.css$|\.html$/,
+            threshold: 10240,
+            minRatio: 0.8
+        })
     ],
     mode: 'production'
 };

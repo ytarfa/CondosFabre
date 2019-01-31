@@ -6,6 +6,12 @@ app.use('/dist', express.static(path.resolve(__dirname, 'dist/')));
 app.use('/images', express.static(path.resolve(__dirname, 'images/')));
 app.use('/vendor', express.static(path.resolve(__dirname, 'vendor/')));
 
+app.get('*.js', function (req, res, next) {
+    req.url = req.url + '.gz';
+    res.set('Content-Encoding', 'gzip');
+    next();
+});
+
 app.get('*', (req, res) => {
     res.sendFile(path.resolve(__dirname, './index.html'));
 });
