@@ -78,7 +78,7 @@ export default class Navbar extends React.Component{
                             </li>
                             <li className={this.props.route.includes('projet') ? "nav-item active" : "nav-item"}>
                                 <Link class="nav-link" to="/projet"> {this.state.en ? 'PROJECT' : 'PROJET'} </Link>
-                            <li/>
+                            </li>
                             <li className={this.props.route.includes('quartier') ? "nav-item active" : "nav-item"}>
                                 <Link class="nav-link" to={this.state.en ? '/en/quartier' : '/quartier'} > {this.state.en ? 'THE NEIGHBORHOOD' : 'LE QUARTIER'} </Link>
                             </li>
