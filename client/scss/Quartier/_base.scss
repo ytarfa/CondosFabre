@@ -1,0 +1,99 @@
+.Quartier {
+    padding-top: 100px;
+    .map-animation-container {
+        height: 100%;
+        .feature-container {
+            position: relative;
+            display: flex;
+            flex-wrap: nowrap;
+            z-index: 1;
+            width: 70%;
+            overflow: hidden;
+            // white-space: nowrap;
+            .feature {
+                flex-shrink: 0;
+                width: 100%;
+                overflow: hidden;
+                transition: 0.25s;
+            }
+            .controls {
+                position: absolute;
+                top: 0;
+                margin-top: 50px;
+                height: 200px;
+                width: 100%;
+
+                .button-container {
+                    position: absolute;
+                    width: 100%;
+                    left: 50%; top: 50%;
+                    transform: translate(-50%, -50%);
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    button {
+                        background: none;
+                        border-radius: 50%; border: none;
+                        margin: 10px;
+                        transition: background-color 0.25s, opacity 0.25s;
+                        &:focus {
+                            outline: 0;
+                        }
+                        i {
+                            padding: 20px;
+                        }
+                        &:hover {
+                            background-color: #E3E3E3;
+                        }
+                    }
+                }
+            }
+        }
+        .map-container {
+            z-index: 2;
+            box-sizing: border-box;
+            margin-top: 100px;
+            top: 0;
+            right: 0;
+            width: 30%;
+            height: 100%;
+            position: fixed;
+            -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+            -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+            -ms-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+            -o-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+        }
+        .footer-container {
+            width: 100%;
+        }
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .Quartier {
+        .map-animation-container {
+            .map-container {
+                margin-top: 75px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .Quartier {
+        .map-animation-container {
+            .feature-container {
+                width: 100%;
+                flex-wrap: wrap;
+                .feature {
+                    opacity: 1 !important;
+                }
+            }
+            .map-container {
+                display: none;
+            }
+        }
+    }
+}

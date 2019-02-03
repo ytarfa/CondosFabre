@@ -1,6 +1,5 @@
-import React from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
-const _ = require('lodash');
+import React, {Suspense, lazy} from 'react';
+import { Route, Switch } from 'react-router-dom';
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 
 import './scss/App.scss';
@@ -9,6 +8,7 @@ import NavbarContainer from './Navbar/NavbarContainer';
 import ContactOverlayContainer from './components/ContactOverlayContainer';
 
 import HomeContainer from './routes/Home/HomeContainer';
+import QuartierContainer from './routes/Quartier/QuartierContainer';
 
 import units from './units.json';
 import ENunits from './ENunits.json';
@@ -19,19 +19,6 @@ export default class App extends React.Component{
 
     constructor(props){
         super(props);
-        this.pushScrollPosition = this.pushScrollPosition.bind(this);
-    }
-
-    pushScrollPosition() {
-        this.props.pushScrollValues([0, document.body.scrollTop])
-    }
-
-    componentDidMount() {
-        window.addEventListener('scroll', _.throttle(this.pushScrollPosition, 500));
-    }
-
-    componentWillUnmount() {
-        window.removeEventListener('scroll', _.throttle(this.pushScrollPosition, 500));
     }
 
     render() {
@@ -56,24 +43,26 @@ export default class App extends React.Component{
                 <ContactOverlayContainer />
                 <NavbarContainer />
                 <div>
-                <Route render={({location}) =>
-                    <TransitionGroup>
-                        <CSSTransition
-                            classNames="fade"
-                            appear={true}
-                            timeout={750}
-                            key={location.key}
-                        >
+                    <Route render={({location}) =>
+                        <TransitionGroup>
+                            <CSSTransition
+                                classNames="fade"
+                                appear={true}
+                                timeout={750}
+                                key={location.key}
+                            >
                                 <Switch location={location}>
-                                    <Route exact path="/" component={ HomeContainer } />
+                                    <Route exact path="/" component={HomeContainer} />
                                     {unitRoutes}
-                                    <Route exact path="/en" component={ HomeContainer } />
+                                    <Route exact path="/en" component={HomeContainer} />
                                     {ENunitRoutes}
                                     <Route path="/projet" component={ ProjetContainer } />
+                                    <Route path="/quartier" component={QuartierContainer} />
+                                    <Route path="/en/quartier" component={QuartierContainer} />
                                 </Switch>
-                        </CSSTransition>
-                </TransitionGroup>
-                } />
+                            </CSSTransition>
+                    </TransitionGroup>
+                    } />
                 </div>
             </div>
         )

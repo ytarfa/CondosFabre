@@ -1,16 +1,56 @@
 {
     "diapos": [
         {
-            "image": "quartier-placeholder.jpg",
-            "description": "The laid-back Plateau area is known as a young, student-friendly neighborhood with streets full of charming townhouses. Avenue du Mont-Royal and Rue Saint-Denis are lined with casual cafes, laid-back eateries, busy bars, and contemporary galleries and theatres. Nearby, Mount Royal Park has popular trails, a lake and views from its namesake mountain. Lawns surround the ponds at tranquil Parc La Fontaine."
+            "image": "plateau-houses.jpg",
+            "imageScaled": "plateau-houses-scaled.jpg",
+            "description": "L’architecture du Plateau Mont-Royal est unique en son genre. Sans doute l’un des quartiers les plus charmants de Montréal avec ses rues bordées d’arbres et ses façades colorées. S’y promener est un réel plaisir en passant d’une ruelle verte à une rue plus typique dégageant toute l’originalité du quartier et inspirant le bonheur de vivre."
         },
         {
-            "image": "quartier-placeholder2.jpeg",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et euismod erat, eget consectetur neque. Phasellus lobortis eget erat fringilla accumsan. Curabitur imperdiet pretium orci nec malesuada. Donec dictum et nunc et congue. Interdum et malesuada fames ac ante ipsum primis in faucibus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer id cursus ex, non hendrerit magna. In venenatis gravida est, in elementum nisl auctor vel. Cras luctus porttitor dignissim. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            "image": "plateau-park.jpg",
+            "imageScaled": "plateau-park-scaled.jpg",
+            "description": "Vivre au Plateau Mont-Royal c’est aussi vivre au pied de la montagne du Mont-Royal. À seulement quelques minutes, vous pourrez vous ressourcer et explorer la nature de Montréal. Été comme hiver, le Mont-Royal regorge d’activités uniques à faire seul ou en famille. Un vrai poumon tout juste à côté de chez soi."
         },
         {
-            "image": "quartier-placeholder3.jpeg",
-            "description": "The laid-back Plateau area is known as a young, student-friendly neighborhood with streets full of charming townhouses. Avenue du Mont-Royal and Rue Saint-Denis are lined with casual cafes, laid-back eateries, busy bars, and contemporary galleries and theatres. Nearby, Mount Royal Park has popular trails, a lake and views from its namesake mountain. Lawns surround the ponds at tranquil Parc La Fontaine."
+            "image": "plateau-restaurant.jpg",
+            "imageScaled": "plateau-restaurant-scaled.jpg",
+            "description": "Le Plateau Mont-Royal est un quartier jeune et dynamique. On y trouve sans doute les meilleurs restaurants, bars et pubs de la ville. C’est l’endroit idéal pour se détendre autour d’un bon verre et prendre du bon temps. Les styles de cafés et boutiques qui s’y trouvent se comptent par dizaines et offrent une large gamme de produits, de décorations intérieures, d’ambiances et d'atmosphères."
+        },
+        {
+            "image": "plateau-marche.jpg",
+            "imageScaled": "plateau-marche-scaled.jpg",
+            "description": "Niveau scolarité, le Plateau Mont-Royal dispose d’un grand nombre d’écoles de quartier. Il est aussi tout proche du centre-ville de Montréal et donc accessible facilement aux étudiants fréquentant les grandes universités. Le Plateau Mont-Royal est particulièrement bien situé et équipé pour les enfants, il sied donc parfaitement aux familles avec des enfants."
+        },
+        {
+            "image": "plateau-bagel.jpg",
+            "imageScaled": "plateau-bagel-scaled.jpg",
+            "description": "La restauration ne manque pas sur le Plateau Mont-Royal. C’est le quartier parfait pour bruncher entre amis. De la cuisine la plus classique à la plus originale, une panoplie de saveurs s’offrent au palais. On y trouve également certains des restaurants les plus célèbres de Montréal comme La Banquise et sa fameuse poutine ou bien Saint Viateur et ses délicieux Bagels."
+        }
+    ],
+    "diaposEN": [
+        {
+            "image": "plateau-houses.jpg",
+            "imageScaled": "plateau-houses-scaled.jpg",
+            "description": "The architecture of Le Plateau Mont-Royal is unique. Undoubtedly one of the most charming neighbourhoods in Montreal with its tree-lined streets and colourful facades. Walking the neighborhood is a real pleasure, going from a green alley to a more typical street that reveals the originality of the borough and inspiring the joy of living."
+        },
+        {
+            "image": "plateau-park.jpg",
+            "imageScaled": "plateau-park-scaled.jpg",
+            "description": "Living in Le Plateau Mont-Royal is also living at the foot of Mount Royal mountain. Only a few minutes away, you can recharge your batteries and explore Montreal's nature. In summer and winter, Mount Royal abounds in unique activities to do alone, with friends or with the family. A true lung right next door to home."
+        },
+        {
+            "image": "plateau-restaurant.jpg",
+            "imageScaled": "plateau-restaurant-scaled.jpg",
+            "description": "Le Plateau Mont-Royal is a young and dynamic neighbourhood. There are probably the best venus for cocktails, drinks and pubs in the city. It is the ideal place to relax over a drink and have a good time. There are dozens of coffee shops to choose from, offering a wide range of products, interior decorations, ambiences and atmospheres."
+        },
+        {
+            "image": "plateau-marche.jpg",
+            "imageScaled": "plateau-marche-scaled.jpg",
+            "description": "The Plateau has a large number of neighbourhood schools.  Located very close to downtown Montreal and therefore easily accessible to students attending major universities. Plateau Mont-Royal is particularly well located and offering child-friendly activities, a perfect base for families with children."
+        },
+        {
+            "image": "plateau-bagel.jpg",
+            "imageScaled": "plateau-bagel-scaled.jpg",
+            "description": "There is no shortage of restaurants on the Plateau Mont-Royal. It's the perfect place to have brunch, lunch or dinner with friends. From the most classic to the most original cuisine, a wide range of flavours are available to the palate. The Plateau is home to some of Montreal's most famous restaurants such as La Banquise for its heartwarming poutine and Saint Viateur for their delicious Bagels.This is the neighborhood where you’ll find Schwart’s, the restaurant that made Montreal’s smoked meat a staple."
         }
     ]
 }

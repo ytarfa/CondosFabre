@@ -1,6 +1,7 @@
 import React from 'react';
 import '../../scss/Home/main.scss';
 import ReactTooltip from 'react-tooltip';
+import { Link } from 'react-router-dom';
 
 import Footer from '../../components/Footer';
 import MapComponent from '../../components/MapComponent';
@@ -10,8 +11,6 @@ import SimpleCarousel from '../../components/SimpleCarousel';
 import unitArray from '../../units.json';
 import CarouselUnit from './CarouselUnit';
 import MobileCarouselUnit from './MobileCarouselUnit';
-// Neighborhood Carousel related imports
-import quartierDiapos from './quartierDiapos.json';
 
 export default class Home extends React.Component{
 
@@ -19,11 +18,9 @@ export default class Home extends React.Component{
         super(props);
         this.state = {
             counter: 0,
-            plateauCounter: 0,
             en: false
         };
         this.counter = this.counter.bind(this);
-        this.plateauCounter = this.plateauCounter.bind(this);
     }
 
     counter(x) {
@@ -43,26 +40,6 @@ export default class Home extends React.Component{
             this.setState((state) => {
                 return { counter: state.counter + x }
             });
-        }
-    }
-
-    plateauCounter(x) {
-        if (this.state.plateauCounter == -2) {
-            if (x==1) {
-                this.setState((state) => {
-                    return { plateauCounter: state.plateauCounter + x}
-                })
-            }
-        } else if (this.state.plateauCounter == 0) {
-            if (x==-1) {
-                this.setState((state) => {
-                    return { plateauCounter: state.plateauCounter + x}
-                })
-            }
-        } else {
-            this.setState((state) => {
-                return { plateauCounter: state.plateauCounter + x}
-            })
         }
     }
 
@@ -101,40 +78,10 @@ export default class Home extends React.Component{
             />
         )
 
-        const quartierCarousel = quartierDiapos.diapos.map((diapo, index) => 
-                <div class="diapo" key={index}
-                    style={{
-                        top: 0,
-                        left: index*500 + "px",
-                        transform: 'translate('+ this.state.plateauCounter*500 + 'px)',
-                        transition: 'all 0.25s'
-                    }}
-                >
-                    {/* <img src={"/images/quartierCarousel/" + diapo.image} />  */}
-                    <div class="description">
-                        {diapo.description}
-                    </div>
-                </div>
-        )
-        const quartierCarouselDescription = quartierDiapos.diapos.map((diapo, index) => 
-                    <p 
-                        key="index"
-                        style= {{
-                            opacity: this.state.plateauCounter == -index ? '1' : '0',
-                            transition: 'all 0.25s'
-                        }}
-                    >
-                        {diapo.description}
-                    </p>
-        )
-
         return (
             <div class="Home page">
 
                 <div class="home-header">
-                    {/* <div class="home-carousel">
-                        <LazyImage hd="/images/facade-cropped.jpg" preload="/images/facade-cropped-scaled.jpg" />
-                    </div> */}
                     <SimpleCarousel 
                         class="home-carousel" 
                         imageList={
@@ -147,15 +94,20 @@ export default class Home extends React.Component{
                         }
                     />
                 </div>
+                <div class="delivery-date">{this.state.en ? (<h1>On sale now. <br/> Delivery July 2019</h1>) : (<h1>En vente dès maintenant. <br/> Livraison en Juillet 2019 </h1>)}</div>
+
                 <div class="home-header-intro">
                     <h1> {this.state.en == true ? 'Feel at home at first glance' : 'Sentez vous à la maison au premier regard.'}</h1>
                     <ul>
-                        <li><i class="fas fa-map-marker-alt fa-fw"></i> <p> {this.state.en ? 'Ideal location in the Plateau' : 'Emplacement idéal au sein du Plateau'} </p> </li>
-                        <li><i class="fas fa-tree fa-fw"></i> <p> {this.state.en ? 'A minute away from beautiful LaFontaine park' : 'À deux pieds du parc LaFontaine'}</p> </li>
+                        <li><i class="fas fa-map-marker-alt fa-fw"></i> <p> {this.state.en ? 'Prime location in the Plateau' : 'Emplacement idéal au coeur du Plateau'} </p> </li>
+                        <li><i class="fas fa-tree fa-fw"></i> <p> {this.state.en ? 'A skip away from beautiful LaFontaine park' : 'À deux pas du parc LaFontaine'}</p> </li>
                         <li><i class="fas fa-parking fa-fw"></i> <p> {this.state.en ? 'Parking spots available' : 'Places de parking disponibles'} </p> </li>
                         <li><i class="fas fa-bicycle fa-fw"></i> <p> {this.state.en ? 'Ideal for cycling and walking' : 'Location idéale pour se déplacer à pied ou à vélo'} </p> </li>
                         <li><i class="fas fa-bus fa-fw"></i> <p> {this.state.en ? 'Bus and metro stations close by' : 'Lignes de bus et métros à proximité'} </p> </li>
                     </ul>
+                </div>
+                <div class="intro-paragraph">
+                    <p>{this.state.en ? 'Condos Fabre is the result of the thorough work of devoted professionals that have real estate, not only as a job, but also as a passion. The idea for this project is to offer brand new spacious and luminous spaces in one of Montreal’s most dynamic and lively neighborhoods.' : 'Condos Fabre est le fruit d’un travail minutieux de professionnels dévoués qui ont l’habitat comme métier mais également comme passion. Le concept est de pouvoir offrir des espaces de vie spacieux, lumineux et neufs  dans l’un des quartiers les plus sympathiques et les plus dynamiques de Montréal. '}</p>
                 </div>
 
                 <div class="home-units">
@@ -187,35 +139,31 @@ export default class Home extends React.Component{
                     </div>
                 </div>
 
+                <div class="temoignage">
+                    <div class="temoignage-title">
+                        <h1 class="foreground-title"> {this.state.en ? 'Testimony' : 'Témoignage'} </h1>
+                        <h1 class="background-title"> {this.state.en ? 'Testimony' : 'Témoignage'} </h1>
+                    </div>
+                    <p class="temoignage-intro"> {this.state.en  ? 'Read the review of one of the buyers of Condos Milieu, from the same builder as Condos Fabre:' : 'Lisez le témoignage d\'un des acheteurs de Condos Milieu, du même constructeur que Condos Fabre:' } </p>
+                    <div class="temoignage-text-container">
+                        <span class="background-quote left"> <img src="/images/left-quote.png" /> </span>
+                        <span class="background-quote right"> <img src="/images/right-quote.png" /> </span>
+                        <p class="quote"> &laquo; {this.state.en  ? 'The purchase of my condo in the Condos Milieu Project was simple and without complications. I began the process while I was out of the country and they were understanding and helpful throughout the process. Since I moved in, not only am I loving the perfect location but the builder surpassed himself on many occasions, demonstrating all the qualities you would expect from a real estate promoter.' : 'L\'achat de mon condo dans le projet Condos Milieu a été une expérience simple et sans complications. J\'ai commencé l\'achat quand j\'étais à l\'extérieur du pays et ils ont été compréhensifs et de bonne nature tout au long du processus. Depuis que j\'ai emménagé dans l\'immeuble, non seulement j\'ai pu profiter de l\'emplacement fantastique, mais le constructeur s\'est personnellement surpassé à plusieurs reprises - démontrant toutes les qualités que vous attendez d\'un promoteur immobilier.'} &raquo; <br/> <br/> - Joe M.</p>
+                    </div>
+                </div>
+
                 <div class="home-quartier">
                     <div class="title-section">
                         <h1 class="background-title">{this.state.en ? 'The Plateau' : 'Le Plateau'} </h1>
                         <h1 class="title">{this.state.en ? 'The Plateau' : 'Le Plateau'} </h1>
                     </div>
 
-                    <div class="quartier-carousel">
-                        <div class="diapos-container"> 
-                            {quartierCarousel}
-                        </div>
-                        <div class="description-container">
-                            <div class="description">
-                                {quartierCarouselDescription}
-                            </div>
-                            <div class="controls">
-                                <div class="button-container">
-                                    <button onClick={() => this.plateauCounter(1)}
-                                    style={{
-                                        opacity: this.state.plateauCounter == 0 ? '0.2' : '1'
-                                    }}
-                                    > <i class="fas fa-chevron-left fa-3x"></i> </button>
-                                    <button onClick={() => this.plateauCounter(-1)}
-                                        style={{
-                                            opacity: this.state.plateauCounter == -2 ? '0.2' : '1'
-                                        }}
-                                    > <i class="fas fa-chevron-right fa-3x"></i> </button>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="video-container">
+                        <iframe width="80%" height="500vh" src="https://www.youtube.com/embed/bUi3H7lArNc" frameborder="0" autoplay="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="link-container">
+                        <Link to="/quartier">En apprendre plus sur le Plateau</Link>
                     </div>
                 </div>
 
@@ -248,7 +196,7 @@ export default class Home extends React.Component{
                                 </ReactTooltip>
                             </ul>
                             <ul class="contact-info">
-                                <li><i class="fas fa-phone"></i> <a href="tel:1-514-597-2121" data-tip data-for="phone-tooltip"> 514 597 2121 </a> </li>
+                                <li><i class="fas fa-phone"></i> <a href="tel:1-514-572-1213" data-tip data-for="phone-tooltip"> 514 572 1213 </a> </li>
                                 <ReactTooltip id="phone-tooltip" type="light" className="disabled-tooltip">
                                     <p>{this.state.en == true ?  'Click here to call' : 'Cliquez ici pour appeler'}</p>
                                 </ReactTooltip>

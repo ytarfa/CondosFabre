@@ -36,6 +36,96 @@
             }
         }
     }
+    .intro-paragraph {
+        text-align: center;
+        margin-top: 50px;
+        p {
+            margin: auto;
+            width: 800px;
+            line-height: 1.8;
+            font-size: 20px;
+        }
+    }
+    .delivery-date {
+        padding: 50px 0 50px 0;
+        background-color: #F3F3F3;
+        text-align: center;
+        h1 {
+            font-size: 50px;
+            font-weight: 400;
+            color: #333333;
+            padding: 0;
+            margin: auto;
+            width: 800px;
+        }
+    }
+
+    .temoignage {
+        margin-top: 150px;
+        .temoignage-title {
+            width: 700px;
+            height: 200px;
+            margin: auto;
+            position: relative;
+            h1 {
+                margin: 0;
+                font-weight: 300;
+            }
+            .foreground-title {
+                position: absolute;
+                left: 0px;
+                bottom: 0;
+                font-size: 75px;
+            }
+            .background-title {
+                position: absolute;
+                color: #333333;
+                left: -50px;
+                bottom: 5px;
+                font-size: 150px;
+                opacity: 0.05;
+            }
+        }
+        .temoignage-intro {
+            width: 700px;
+            margin: auto;
+            line-height: 1.8;
+            padding: 50px 0 25px 0;
+        }
+        .temoignage-text-container {
+            position: relative;
+            background-color: #F3F3F3;
+            padding: 40px 60px 40px 50px;
+            width: 700px;
+            margin: auto;
+            .background-quote {
+                position: absolute;
+                opacity: 0.7;
+                height: 75px;
+                width: 75px;
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+                z-index: 1;
+                &.left {
+                    top: 25px;
+                    left: 25px;
+                }
+                &.right {
+                    right: 25px;
+                    bottom: 25px;
+                }
+            }
+            .quote {
+                position: relative;
+                z-index: 2;
+                text-indent: 20px;
+                line-height: 1.8;
+            }
+        }
+    }
+
     .map-container {
         position: relative;
         margin-top: 150px;
@@ -130,11 +220,7 @@
         }
         
     }
-    // @media only screen and (max-width: 1080px) {
-    //     .map-container {
-            
-    //     }
-    // }
+
     @media only screen and (max-width: 500px) {
         .map-container {
             margin-bottom: 450px;
@@ -180,9 +266,58 @@
             display: block;
             h1 {
                 width: 300px;
+                font-size: 30px;
             }
             ul {
                 width: 300px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .Home{
+        .intro-paragraph {
+            p {
+                width: 100%;
+                font-size: 15px;
+                padding: 0 25px 0 25px;
+                box-sizing: border-box;
+            }
+        }
+        .delivery-date {
+            padding-top: 50px;
+            width: 100%;
+            h1 {
+                font-size: 30px;
+                width: 100%;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 850px) {
+    .Home {
+        .temoignage {
+            .temoignage-title {
+                position: relative;
+                width: 100%;
+                .foreground-title {
+                    left: 50%; top: 50%;
+                    transform: translate(-50%, -50%);
+                }
+                .background-title {
+                    left: 50%; top: 10%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+            .temoignage-intro {
+                box-sizing: border-box;
+                width: 100%;
+                padding: 0 40px 40px 30px;
+            }
+            .temoignage-text-container {
+                box-sizing: border-box;
+                width: 100%;
             }
         }
     }

@@ -21,11 +21,13 @@ export default class Navbar extends React.Component{
     static getDerivedStateFromProps(props, state, prevProps) {
         let enRegex = RegExp('\/en');
         if (enRegex.test(props.route)) {
+            document.documentElement.setAttribute('lang', 'en');
             return {
                 route: props.route,
                 en: true
             }
         } else {
+            document.documentElement.setAttribute('lang', 'fr');
             return {
                 route: props.route,
                 en: false
@@ -64,7 +66,7 @@ export default class Navbar extends React.Component{
                     <div class="collapse navbar-collapse" id="navbarSupportedContent" ref={this.collapseRef}>
                         <ul class="navbar-nav mr-auto" onClick={() => {this.collapseNav()}}>
                             <li className={(this.props.route == '/') || (this.props.route == '/en') || (this.props.route == '/en/') ? "nav-item active" : "nav-item"}>
-                                <Link class="nav-link" to={this.state.en ? '/en/' : '/'}> {this.state.en ? 'HOME' : 'ACCUEIL'} </Link>
+                                <Link class="nav-link" to={this.state.en ? '/en/' : '/'}> {this.state.en ? 'PROJECT' : 'PROJET'} </Link>
                             </li>
                             <li className={this.props.route.includes('unites') ? "nav-item dropdown active" : "nav-item dropdown"}>
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -76,13 +78,10 @@ export default class Navbar extends React.Component{
                             </li>
                             <li className={this.props.route.includes('projet') ? "nav-item active" : "nav-item"}>
                                 <Link class="nav-link" to="/projet"> {this.state.en ? 'PROJECT' : 'PROJET'} </Link>
+                            <li/>
+                            <li className={this.props.route.includes('quartier') ? "nav-item active" : "nav-item"}>
+                                <Link class="nav-link" to={this.state.en ? '/en/quartier' : '/quartier'} > {this.state.en ? 'THE NEIGHBORHOOD' : 'LE QUARTIER'} </Link>
                             </li>
-                            <li class="nav-item" data-tip data-for="coming-soon">
-                                <a class="nav-link disabled" href="#" style={{pointerEvents: 'none'}}> {this.state.en ? 'THE NEIGHBORHOOD' : 'LE QUARTIER'} </a>
-                            </li>
-                            <ReactTooltip id="coming-soon" type="light" className="disabled-tooltip" place="bottom">
-                                <p>{this.state.en ? 'Coming soon !' : 'Prochainement disponible !'}</p>
-                            </ReactTooltip>
                         </ul>
                         <span class="contact-button" onClick={this.props.openContactOverlay}>
                             <a> {this.state.en ? 'CONTACT US' : 'CONTACTEZ NOUS'} </a>

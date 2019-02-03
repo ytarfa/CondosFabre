@@ -3,6 +3,16 @@
         margin-top: 100px;
         width: 100%;
 
+        .video-container {
+            padding: 0 50px 50px 50px;
+            box-sizing: border-box;
+            margin: auto;
+            iframe {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
         .title-section {
             position: relative;
             width: 100%;
@@ -16,7 +26,7 @@
                 top: 0px;
                 z-index: -1;
                 color: #333333;
-                opacity: 0.1;
+                opacity: 0.05;
                 font-size: 200px;
                 font-weight: 300;
                 white-space: nowrap;
@@ -34,91 +44,34 @@
             }
         }
 
-        .quartier-info-section {
-            width: 100%;
+        .link-container {
             text-align: center;
-            p {
-                margin: auto;
-                padding: 0;
-                width: 600px;
+            a {
+                display: inline;
+                background-color: #7F9470;
+                padding: 10px 20px 10px 20px;
+                text-decoration: none;
+                color: white;
+                font-family: 'Open Sans', sans-serif;
+                font-size: 20px;
+                -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+                -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+                -ms-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+                -o-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+                box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+                -webkit-transition: all 0.25s ease-in-out;
+                -moz-transition: all 0.25s ease-in-out;
+                -ms-transition: all 0.25s ease-in-out;
+                -o-transition: all 0.25s ease-in-out;
+                transition: all 0.25s ease-in-out;
             }
-        }
-
-        .quartier-carousel {
-            margin-top: 25px;
-            height: 700px;
-            width: 1000px;
-            margin: auto;
-
-            .description-control-container {
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                height: 200px;
-                width: 100%;
-                background-color: #e0e0e0;
-                opacity: 0.8;
-            }
-
-            .diapos-container {
-                position: relative;
-                height: 100%;
-                width: 50%;
-                overflow: hidden;
-                float: left;
-                .diapo {
-                    position: absolute;
-                    height: 100%;
-                    width: 100%;
-                    img {
-                        height: 100%;
-                        width: 100%;
-                        object-fit: cover;
-                    }
-                }
-            }
-            .description-container {
-                position: relative;
-                width: 50%;
-                height: 100%;
-                float: right;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-around;
-                background-color: #F8F8F8;
-                .description {
-                    position: relative;
-                    height: 500px;
-                    p {
-                        width: 80%;
-                        position: absolute;
-                        top: 50%; left: 50%;
-                        transform: translate(-50%, -50%);
-                    }
-                }
-                .controls {
-                    height: 100px;
-                    width: 100%;
-                    .button-container {
-                        position: absolute;
-                        left: 50%; transform: translate(-50%);
-                        bottom: 90px;
-                        button {
-                            background: none;
-                            border-radius: 50%; border: none;
-                            margin: 10px;
-                            transition: background-color 0.25s, opacity 0.25s;
-                            &:focus {
-                                outline: 0;
-                            }
-                            i {
-                                padding: 20px;
-                            }
-                            &:hover {
-                                background-color: #E3E3E3;
-                            }
-                        }
-                    }
+            &:hover {
+                a {
+                    -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+                    -moz-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+                    -ms-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+                    -o-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+                    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
                 }
             }
         }

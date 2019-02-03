@@ -1,0 +1,66 @@
+.Quartier {
+    .CarouselComponent {
+        height: 400px;
+        margin: 50px auto 0 auto;
+        width: 100%;
+        padding: 25px;
+        box-sizing: border-box;
+    
+        .image-container {
+            position: relative;
+            height: 100%;
+            width: 50%;
+            float: left;
+            overflow: hidden;
+            -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+            -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+            -ms-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+            -o-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+        }
+        .description-container {
+            position: relative;
+            height: 100%;
+            width: 50%;
+            float: right;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            background-color: white;
+            .description {
+                position: relative;
+                height: 500px;
+                p {
+                    position: absolute;
+                    width: 80%;
+                    top: 50%; left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+            .controls {
+                height: 100px;
+                width: 100%;
+                .button-container {
+                    position: absolute;
+                    left: 50%; transform: translate(-50%);
+                    bottom: 10px;
+                    button {
+                        background: none;
+                        border-radius: 50%; border: none;
+                        margin: 10px;
+                        transition: background-color 0.25s, opacity 0.25s;
+                        &:focus {
+                            outline: 0;
+                        }
+                        i {
+                            padding: 20px;
+                        }
+                        &:hover {
+                            background-color: #E3E3E3;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

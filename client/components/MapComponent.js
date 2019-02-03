@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import mapStyles from '../mapStyles';
 
 import { GoogleMap, Marker, withGoogleMap, withScriptjs } from 'react-google-maps';
 
@@ -10,8 +11,9 @@ const Map = withScriptjs(withGoogleMap((props) => {
         <GoogleMap
             defaultZoom={props.zoom}
             center={props.center}
-            defaultOptions={{
-                disableDefaultUI: true
+            options={{
+                disableDefaultUI: true,
+                styles: mapStyles
             }}
         >
             <Marker 

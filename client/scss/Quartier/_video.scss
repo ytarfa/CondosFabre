@@ -1,0 +1,28 @@
+.Quartier {
+    .video-container {
+        position: relative;
+        width: 100%;
+        height: 600px;
+        background-image: url('/images/quartierCarousel/plateau-houses.jpg');
+        background-position: center;
+        background-size: cover;
+        video {
+            position: absolute;
+            top: 0; left: 0;
+            height: 100%;
+            width: 100%;
+            transition: opacity 0.5s;
+            transition-delay: 0.5s;
+            z-index: 3;
+        }
+        .screen {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0; left: 0;
+            background-color: #F3F3F3;
+            transition: opacity 0.25s;
+            z-index: 0;
+        }
+    }
+}
