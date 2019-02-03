@@ -11,9 +11,6 @@ import SimpleCarousel from '../../components/SimpleCarousel';
 import unitArray from '../../units.json';
 import CarouselUnit from './CarouselUnit';
 import MobileCarouselUnit from './MobileCarouselUnit';
-// Neighborhood Carousel related imports
-import quartierDiapos from './quartierDiapos.json';
-import LazyImage from '../../components/LazyImage';
 
 export default class Home extends React.Component{
 

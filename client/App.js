@@ -1,6 +1,5 @@
 import React, {Suspense, lazy} from 'react';
 import { Route, Switch } from 'react-router-dom';
-import throttle from 'lodash/throttle'
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 
 import './scss/App.scss';
@@ -9,7 +8,7 @@ import NavbarContainer from './Navbar/NavbarContainer';
 import ContactOverlayContainer from './components/ContactOverlayContainer';
 
 import HomeContainer from './routes/Home/HomeContainer';
-import QuartierContainer from './routes/Quartier/QuartierContainer';
+import QuartierLoadable from './routes/Quartier/QuartierLoadable';
 
 import units from './units.json';
 import ENunits from './ENunits.json';
@@ -19,19 +18,6 @@ export default class App extends React.Component{
 
     constructor(props){
         super(props);
-        this.pushScrollPosition = this.pushScrollPosition.bind(this);
-    }
-
-    pushScrollPosition() {
-        this.props.pushScrollValues([0, document.body.scrollTop])
-    }
-
-    componentDidMount() {
-        window.addEventListener('scroll', throttle(this.pushScrollPosition, 500));
-    }
-
-    componentWillUnmount() {
-        window.removeEventListener('scroll', throttle(this.pushScrollPosition, 500));
     }
 
     render() {
@@ -69,8 +55,8 @@ export default class App extends React.Component{
                                     {unitRoutes}
                                     <Route exact path="/en" component={HomeContainer} />
                                     {ENunitRoutes}
-                                    <Route path="/quartier" component={QuartierContainer} />
-                                    <Route path="/en/quartier" component={QuartierContainer} />
+                                    <Route path="/quartier" component={QuartierLoadable} />
+                                    <Route path="/en/quartier" component={QuartierLoadable} />
                                 </Switch>
                             </CSSTransition>
                     </TransitionGroup>

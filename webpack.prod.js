@@ -2,6 +2,7 @@ const webpack = require('webpack');
 const path = require("path");
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 var CompressionPlugin = require('compression-webpack-plugin');
+var OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 module.exports = {
     entry: ['./client/index.js'],
@@ -53,6 +54,12 @@ module.exports = {
             test: /\.js$|\.css$|\.html$/,
             threshold: 10240,
             minRatio: 0.8
+        }),
+        new OptimizeCssAssetsPlugin({
+            assetNameRegExp: /\.scss$/g,
+            cssProcessor: require('cssnano'),
+            cssProcessorOptions: { discardComments: { removeAll: true } },
+            canPrint: true
         })
     ],
     mode: 'production'
