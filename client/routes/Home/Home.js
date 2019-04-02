@@ -117,11 +117,13 @@ export default class Home extends React.Component{
 
                         <div class="button-container">
                             <button onClick={() => this.counter(1)}
+                                onTouchEnd={() => this.counter(1)}
                                 style={{
                                     opacity: this.state.counter == 0 ? '0.2' : '1'
                                 }}
                             > <i class="fas fa-chevron-left fa-3x"></i> </button>
                             <button onClick={() => this.counter(-1)}
+                                onTouchEnd={() => this.counter(-1)}
                                 style={{
                                     opacity: this.state.counter == -5 ? '0.2' : '1'
                                 }}
