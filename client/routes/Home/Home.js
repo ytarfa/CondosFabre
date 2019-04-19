@@ -94,7 +94,7 @@ export default class Home extends React.Component{
                         }
                     />
                 </div>
-                <div class="delivery-date">{this.state.en ? (<h1>On sale now. <br/> Delivery July 2019</h1>) : (<h1>En vente dès maintenant. <br/> Livraison en Juillet 2019 </h1>)}</div>
+                <div class="delivery-date">{this.state.en ? (<h1>On sale now. <br/> Delivery December 2019</h1>) : (<h1>En vente dès maintenant. <br/> Livraison en Décembre 2019 </h1>)}</div>
 
                 <div class="home-header-intro">
                     <h1> {this.state.en == true ? 'Feel at home at first glance' : 'Sentez vous à la maison au premier regard.'}</h1>
